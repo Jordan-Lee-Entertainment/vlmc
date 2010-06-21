@@ -1,14 +1,3 @@
-Changes between 0.1.1 and 0.1.2:
-
-Interface:
-* Do not display video informations when an audio file is displayed
-* Adding a filter by name/tags feature
-
-General:
-* Fixed crash (deadlock) with very short videos. 
-
-
--------------------------------------------------------------------------------
 Changes between 0.1.0 and 0.1.1:
 
 Timeline:
@@ -23,6 +12,8 @@ Interface:
 * Add status tips on some widgets
 * New menu accelerators
 * Ask for confirmation when deleting a clip used in the timeline
+* Do not display video informations when an audio file is displayed
+* Adding a filter by name/tags feature
 
 General:
 * Do not consider VLMC crashed last time when launched the first time
@@ -30,6 +21,7 @@ General:
 * Save link between clips when saving a project
 * Fixed crash when importing a hierarchy of 2+ directories
 * Adding missing extensions
+* Fixed crash (deadlock) with very short videos. 
 
 Installer:
 * Associates *.vlmc files on Windows
