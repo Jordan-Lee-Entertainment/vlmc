@@ -25,9 +25,12 @@
 #include "VLCBackend.h"
 #include "VLCSource.h"
 #include "VLCMemorySource.h"
-#include "Settings/SettingsManager.h"
+
 #include "Tools/VlmcDebug.h"
 #include "Tools/VlmcLogger.h"
+
+#include "VlmcDebug.h"
+#include "VlmcLogger.h"
 
 using namespace Backend;
 using namespace Backend::VLC;
