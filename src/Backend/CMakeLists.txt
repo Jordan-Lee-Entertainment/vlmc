@@ -1,3 +1,4 @@
 project("vlmc")
 
+set_property(GLOBAL PROPERTY BACKEND_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 subdirs(VLC)

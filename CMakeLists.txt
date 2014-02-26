@@ -232,6 +232,7 @@ SUBDIRS(ts)
 SUBDIRS(src)
 SUBDIRS(nsis)
 SUBDIRS(effects)
+subdirs(tests)
 
 # Copy stuff to doc subdirectory
 INSTALL (FILES AUTHORS COPYING INSTALL NEWS README THANKS TRANSLATORS
