@@ -59,7 +59,7 @@ class VLCBackend : public IBackend, public Singleton<VLCBackend>
 
 } //VLC
 
-IBackend* getBackend();
+Q_DECL_EXPORT IBackend* getBackend();
 
 
 } //Backend

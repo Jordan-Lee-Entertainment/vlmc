@@ -4,21 +4,13 @@
 #          Ludovic Fauvet <etix@vlmc.org>
 #
 
+project("vlmc")
+
+subdirs(Backend)
+list(APPEND VLMC_LIBS backend_vlc)
+
 SET(VLMC_SRCS
     Commands/Commands.cpp
-    Backend/IBackend.h
-    Backend/ISourceRenderer.h
-    Backend/ISource.h
-    Backend/VLC/EventWaiter.cpp
-    Backend/VLC/VLCBackend.cpp
-    Backend/VLC/VLCSourceRenderer.cpp
-    Backend/VLC/VLCVmemRenderer.cpp
-    Backend/VLC/VLCSource.cpp
-    Backend/VLC/VLCMemorySource.cpp
-    Backend/VLC/LibVLCpp/VLCInstance.cpp
-    Backend/VLC/LibVLCpp/VLCMedia.cpp
-    Backend/VLC/LibVLCpp/VLCMediaPlayer.cpp
-    Backend/VLC/LibVLCpp/VLCpp.hpp
     EffectsEngine/EffectsEngine.cpp
     EffectsEngine/Effect.cpp
     EffectsEngine/EffectUser.cpp
@@ -233,7 +225,7 @@ ELSE(NOT WITH_GUI)
             MACOSX_PACKAGE_LOCATION Resources)
         SET(MACOSX_BUNDLE_ICON_FILE VLMC.icns)
         LIST( APPEND VLMC_SRCS Gui/preview/RenderWidget.mm )
-message(${FOUNDATION_FRAMEWORK})
+
         list( APPEND VLMC_LIBS ${FOUNDATION_FRAMEWORK} ${APPKIT_FRAMEWORK} )
     ELSE( APPLE )
         ## Since there's no implementation on non-apple platforms, we need to process
@@ -241,7 +233,7 @@ message(${FOUNDATION_FRAMEWORK})
         LIST( APPEND VLMC_SRCS Gui/preview/RenderWidget.h )
     ENDIF( APPLE )
 
-    ADD_EXECUTABLE( vlmc ${GUI_TYPE} ${VLMC_SRCS} ${VLMC_MOC_SRCS} ${VLMC_UIS_H} ${VLMC_RCC_SRCS} )
+    ADD_EXECUTABLE( vlmc ${GUI_TYPE} ${VLMC_SRCS} ${VLMC_MOC_SRCS} ${VLMC_UIS_H} ${VLMC_RCC_SRCS})
     TARGET_LINK_LIBRARIES( vlmc ${VLMC_LIBS} )
     if (NOT Qt4_FOUND)
         qt_use_modules(vlmc Core Gui Widgets Xml Network)
