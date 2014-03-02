@@ -4,7 +4,7 @@ include(ExternalProject)
 
 # Fetch gtest
 ExternalProject_Add(
-    gtest
+    gtest-dependency
     SVN_REPOSITORY http://googletest.googlecode.com/svn/trunk/
     TIMEOUT 10
     # Disable install step
@@ -16,7 +16,7 @@ ExternalProject_Add(
 )
 
 # Add its includes to our path
-ExternalProject_Get_Property(gtest source_dir)
+ExternalProject_Get_Property(gtest-dependency source_dir)
 include_directories(${source_dir}/include)
 
 # Fetch our VLC backend module
@@ -28,25 +28,19 @@ set(VLMC_TEST_SRCS
     vlmc-test.cpp
     VLCBackendTest.cpp )
 
+# Also link with gtest:
+# fetch the directory which contains the built libraries (gtest & gtest_main)
+ExternalProject_Get_Property(gtest-dependency binary_dir)
+link_directories(${binary_dir})
+message(STATUS ${binary_dir})
+
 add_executable(vlmc-test ${VLMC_TEST_SRCS})
-add_dependencies(vlmc-test gtest)
+add_dependencies(vlmc-test gtest-dependency)
 
 # Add our backend & vlc to the link dependencies
 target_link_libraries(vlmc-test backend_vlc)
-target_link_libraries(vlmc-test ${LIBVLC_LIBRARY} ${LIBVLCCORE_LIBRARY})
 
-# Also link with gtest:
-# fetch the directory which contains the built libraries (gtest & gtest_main)
-ExternalProject_Get_Property(gtest binary_dir)
-message(STATUS ${binary_dir})
-find_library(GTEST_LIBRARIES NAMES gtest gtest_main
-    # Give cmake the path we just build gtest into
-    PATHS ${binary_dir}
-    # and don't bother trying to find gtest on the system
-    NO_DEFAULT_PATH
-)
-
-target_link_libraries(vlmc-test ${GTEST_LIBRARIES})
+target_link_libraries(vlmc-test gtest gtest_main)
 # Also add pthread, as gtest requires it
 if(UNIX)
     target_link_libraries(vlmc-test "pthread")
