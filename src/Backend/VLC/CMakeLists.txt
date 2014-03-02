@@ -16,4 +16,5 @@ list(APPEND BACKEND_VLC_SRCS
     )
 
 add_library(backend_vlc SHARED ${BACKEND_VLC_SRCS} )
+target_link_libraries(backend_vlc ${LIBVLC_LIBRARY} ${LIBVLCCORE_LIBRARY})
 qt_use_modules(backend_vlc Core Gui)
