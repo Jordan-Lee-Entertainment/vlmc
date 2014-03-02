@@ -21,12 +21,13 @@
  *****************************************************************************/
 
 #include <gtest/gtest.h>
+#include <list>
 
 #include <QDir>
+#include <QProcessEnvironment>
 #include <QString>
 #include <QStack>
-#include <list>
-#include <QProcessEnvironment>
+#include <QDebug>
 
 #include "VLCBackendTest.h"
 
@@ -36,7 +37,11 @@ static std::list<std::string> GetSamples()
     QString samplePath = env.value("VLMC_SAMPLES_PATH");
     std::list<std::string>  files;
     if ( samplePath.isEmpty() )
+    {
+        qWarning() << "Invalid or no value for VLMC_SAMPLES_PATH environment variable";
         return files;
+    }
+    qDebug() << "Using sample dir:" << samplePath;
     QStack<QString> directories;
 
     directories.push(samplePath);
@@ -44,14 +49,12 @@ static std::list<std::string> GetSamples()
     {
         QString path = directories.pop();
         QDir dir(path);
-        foreach (const QFileInfo fInfo, dir.entryInfoList(QDir::Dirs | QDir::Files | QDir::Readable | QDir::NoDotAndDotDot ))
+        foreach (const QFileInfo fInfo, dir.entryInfoList( QDir::Dirs | QDir::Files | QDir::Readable | QDir::NoDotAndDotDot ) )
         {
             if ( fInfo.isDir() )
-                directories.push( fInfo.absolutePath() );
+                directories.push( fInfo.absoluteFilePath() );
             else if ( fInfo.isFile() )
-            {
                 files.push_back( fInfo.absoluteFilePath().toStdString() );
-            }
         }
     }
     return files;
