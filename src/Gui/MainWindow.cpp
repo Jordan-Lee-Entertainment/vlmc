@@ -56,7 +56,6 @@
 
 /* Widgets */
 #include "effectsengine/EffectsListView.h"
-#include "import/ImportController.h"
 #include "library/MediaLibraryView.h"
 #include "widgets/NotificationZone.h"
 #include "preview/PreviewWidget.h"
@@ -122,8 +121,6 @@ MainWindow::MainWindow( Backend::IBackend* backend, QWidget *parent )
     Q_ASSERT( clipRenderer != nullptr );
     connect( m_mediaLibrary, SIGNAL( clipSelected( Clip* ) ),
              clipRenderer, SLOT( setClip( Clip* ) ) );
-    connect( m_mediaLibrary, SIGNAL( importRequired() ),
-             this, SLOT( on_actionImport_triggered() ) );
 
 #ifdef WITH_CRASHHANDLER
     if ( restoreSession() == true )
@@ -140,7 +137,6 @@ MainWindow::~MainWindow()
 {
     m_projectPreview->stop();
     m_clipPreview->stop();
-    delete m_importController;
     delete m_timeline;
 }
 
@@ -393,7 +389,7 @@ MainWindow::on_actionSave_As_triggered()
                                   path, QObject::tr( "VLMC project file(*.vlmc)" ) );
     if ( dest.isEmpty() == true )
         return;
-    if ( !dest.endsWith( ".vlmc" ) ) 
+    if ( !dest.endsWith( ".vlmc" ) )
         dest += ".vlmc";
     Core::instance()->project()->saveAs( dest );
 }
@@ -469,8 +465,6 @@ MainWindow::initializeDockWidgets()
 {
     m_timeline = new Timeline( this );
     setCentralWidget( m_timeline->container() );
-
-    m_importController = new ImportController();
 
     setupLibrary();
     setupEffectsList();
@@ -899,12 +893,6 @@ MainWindow::restoreSession()
     }
     Core::instance()->settings()->setValue( "private/CleanQuit", ret );
     return ret;
-}
-
-void
-MainWindow::on_actionImport_triggered()
-{
-    m_importController->exec();
 }
 
 void
