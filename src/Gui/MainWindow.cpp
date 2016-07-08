@@ -79,8 +79,6 @@ MainWindow::MainWindow( Backend::IBackend* backend, QWidget *parent )
     Core::instance()->logger()->setup();
     //Preferences
     initVlmcPreferences();
-    //All preferences have been created: restore them:
-    Core::instance()->settings()->load();
 
     // GUI
     createGlobalPreferences();
@@ -122,6 +120,10 @@ MainWindow::MainWindow( Backend::IBackend* backend, QWidget *parent )
     if ( restoreSession() == true )
         return ;
 #endif
+
+    //All preferences have been created: restore them:
+    Core::instance()->settings()->load();
+
     // Restore the geometry
     restoreGeometry( VLMC_GET_BYTEARRAY( "private/MainWindowGeometry" ) );
     // Restore the layout
