@@ -54,7 +54,7 @@ const QString   Media::AudioExtensions = "*.a52 *.aac *.ac3 *.aiff *.amr *.aob *
                                          "*.wma *.wv *.xa *.xm";
 const QString   Media::streamPrefix = "stream://";
 
-#ifdef WITH_GUI
+#ifdef HAVE_GUI
 QPixmap*        Media::defaultSnapshot = nullptr;
 #endif
 
@@ -62,7 +62,7 @@ Media::Media(const QString &path )
     : m_input( nullptr )
     , m_fileInfo( nullptr )
     , m_baseClip( nullptr )
-#ifdef WITH_GUI
+#ifdef HAVE_GUI
     , m_snapshotImage( nullptr )
 #endif
 {
@@ -140,7 +140,7 @@ Media::setFilePath( const QString &filePath )
     m_input.reset( new Backend::MLT::MLTInput( qPrintable( filePath ) ) );
 }
 
-#ifdef WITH_GUI
+#ifdef HAVE_GUI
 QPixmap&
 Media::snapshot()
 {

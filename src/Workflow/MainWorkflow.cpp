@@ -30,7 +30,7 @@
 #include "Backend/MLT/MLTMultiTrack.h"
 #include "Backend/MLT/MLTTrack.h"
 #include "Renderer/AbstractRenderer.h"
-#ifdef WITH_GUI
+#ifdef HAVE_GUI
 #include "Gui/WorkflowFileRendererDialog.h"
 #endif
 #include "Project/Project.h"
@@ -309,7 +309,7 @@ MainWorkflow::startRenderToFile( const QString &outputFileName, quint32 width, q
     output.setAudioSampleRate( sampleRate );
     output.connect( *m_multitrack );
 
-#ifdef WITH_GUI
+#ifdef HAVE_GUI
     WorkflowFileRendererDialog  dialog( width, height, m_multitrack->playableLength(), m_renderer->eventWatcher() );
     dialog.setModal( true );
     dialog.setOutputFileName( outputFileName );
@@ -323,7 +323,7 @@ MainWorkflow::startRenderToFile( const QString &outputFileName, quint32 width, q
     m_multitrack->setPosition( 0 );
     output.start();
 
-#ifdef WITH_GUI
+#ifdef HAVE_GUI
     if ( dialog.exec() == QDialog::Rejected )
         return false;
 #else
