@@ -52,7 +52,6 @@ Timeline::Timeline( Settings* projectSettings, MainWindow* parent )
     m_container->setFocusPolicy( Qt::TabFocus );
     auto p = new ThumbnailImageProvider;
     m_view->engine()->addImageProvider( QStringLiteral( "thumbnail" ), p );
-    m_view->rootContext()->setContextProperty( QStringLiteral( "thumbnailProvider" ), p );
     m_view->rootContext()->setContextProperty( QStringLiteral( "timeline" ), this );
     m_view->rootContext()->setContextProperty( QStringLiteral( "mainwindow" ), parent );
     m_view->rootContext()->setContextProperty( QStringLiteral( "workflow" ), Core::instance()->workflow() );
