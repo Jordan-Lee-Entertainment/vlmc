@@ -210,7 +210,6 @@ MainWorkflow::clipInfo( const QString& uuid )
         auto clip = c->clip;
         auto h = clip->toVariant().toHash();
         h["uuid"] = uuid;
-        vlmcWarning() << "library UUID:" << h["libraryUuid"];
         h["length"] = (qint64)( clip->input()->length() );
         h["name"] = clip->media()->title();
         h["audio"] = c->isAudio;
