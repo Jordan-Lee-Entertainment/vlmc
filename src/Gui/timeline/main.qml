@@ -628,8 +628,6 @@ Rectangle {
             linkedClipsDict[uuid] = clipInfo["linkedClips"];
             addClip( type, clipInfo["trackId"], clipInfo );
             adjustTracks( type );
-
-            zoomIn( page.width / sView.flickableItem.contentWidth, false );
         }
 
         onClipMoved: {
