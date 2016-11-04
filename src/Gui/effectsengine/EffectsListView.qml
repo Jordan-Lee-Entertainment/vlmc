@@ -28,7 +28,6 @@ Rectangle {
                 identifier: model.identifier
                 name: model.name
                 description: model.description
-                author: model.author
             }
         }
     }

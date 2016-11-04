@@ -1,52 +1,35 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.3
+
 
 Rectangle {
     id: effect
     color: "#444444"
-    width: parent.width
-    height: 200
     border.color: "#222222"
     border.width: 1
+
+    width: parent.width
+    height: childrenRect.height
 
     property string identifier
     property string name
     property string description
-    property string author
 
     Column {
-        width: sView.viewport.width
-
         Text {
             text: name
-            font.pointSize: 20
+            font.pointSize: 14
             color: "#EEEEEE"
             elide: Text.ElideRight
-            width: parent.width
-        }
-
-        Text {
-            text: identifier
-            color: "#EEEEEE"
-            elide: Text.ElideRight
-            width: parent.width
         }
 
         Text {
             text: description
             color: "#EEEEEE"
             elide: Text.ElideRight
-            width: parent.width
-        }
-
-        Text {
-            text: author
-            color: "#EEEEEE"
-            elide: Text.ElideRight
-            width: parent.width
         }
     }
-
     MouseArea {
         anchors.fill: parent
         onPressed: {
