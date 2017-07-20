@@ -263,8 +263,6 @@ Item {
 
                 while ( toMove.length > 0 ) {
                     target = findClipItem( toMove[0] );
-
-                    var uuid = target.uuid;
                     var oldX = target.pixelPosition();
                     var newX = findNewPosition( Math.max( oldX + deltaX, 0 ), target, drag.source, isMagneticMode );
 
