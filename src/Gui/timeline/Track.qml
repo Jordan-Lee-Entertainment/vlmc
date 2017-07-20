@@ -69,6 +69,9 @@ Item {
                             }
                         }
                     }
+                    // Magnet for the left edge of the timeline
+                    if ( newX < magneticMargin )
+                        newX = 0;
                 }
 
                 // Collision detection
