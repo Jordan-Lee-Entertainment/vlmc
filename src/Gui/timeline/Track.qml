@@ -265,6 +265,7 @@ Item {
                     target = findClipItem( toMove[0] );
                     var oldX = target.pixelPosition();
                     var newX = findNewPosition( Math.max( oldX + deltaX, 0 ), target, drag.source, isMagneticMode );
+                    deltaX = newX - oldX;
 
                     // Let's find newX of the linked clip
                     for ( i = 0; i < target.linkedClips.length; ++i )
