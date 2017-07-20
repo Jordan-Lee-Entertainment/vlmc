@@ -298,7 +298,7 @@ Rectangle {
     // Sort clips in a manner that clips won't overlap each other while they are being moved
     function sortSelectedClips() {
         // Workaround: We cannot sort selectedClips directly maybe because of a Qt bug
-        var sorted = selectedClips.slice();
+        var sorted = selectedClips.concat();
         sorted.sort(
                     function( clipAUuid, clipBUuid )
                     {
@@ -323,6 +323,7 @@ Rectangle {
                         return 0;
                     }
                     );
+        selectedClips = sorted;
     }
 
     function dragFinished() {
