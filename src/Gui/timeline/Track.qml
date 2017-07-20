@@ -94,8 +94,10 @@ Item {
                         var cw = ftop( clip["end"] - clip["begin"] + 1);
                         // Set a right position
                         //
-                        // HACK: If magnetic mode, consider clips bigger.
-                        var clipMargin = useMagneticMode ? magneticMargin : 0;
+                        // HACK: If magnetic mode, consider clips bigger
+                        //       but not if it's also selected because both of them will be moving
+                        //       and we want to keep the same distance between them as much as possible
+                        var clipMargin = useMagneticMode && findClipItem( clip.uuid ).selected === false ? magneticMargin : 0;
                         if ( cx  + cw > newX && newX + sw > cx )
                             isCollided = true;
 
