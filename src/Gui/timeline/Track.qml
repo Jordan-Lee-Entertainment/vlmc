@@ -222,10 +222,31 @@ Item {
                     var oldTrackId = drag.source.newTrackId;
                     drag.source.newTrackId = trackId;
 
+                    // Check if there is any impossible move
                     for ( var i = 0; i < toMove.length; ++i ) {
                         var target = findClipItem( toMove[i] );
                         if ( target !== drag.source ) {
-                            target.newTrackId = Math.max( 0, trackId - oldTrackId + target.trackId );
+                            var newTrackId = trackId - oldTrackId + target.trackId;
+                            if ( newTrackId < 0 )
+                            {
+                                drag.source.newTrackId = oldTrackId;
+                                drag.source.setPixelPosition( drag.source.pixelPosition() );
+
+                                // Direction depends on its type
+                                drag.source.y +=
+                                        drag.source.type === "Video"
+                                        ? -( trackHeight * ( oldTrackId - trackId ) )
+                                        : trackHeight * ( oldTrackId - trackId )
+                                return;
+                            }
+                        }
+                    }
+
+                    for ( i = 0; i < toMove.length; ++i ) {
+                        target = findClipItem( toMove[i] );
+                        if ( target !== drag.source ) {
+                             newTrackId = trackId - oldTrackId + target.trackId;
+                            target.newTrackId = Math.max( 0, newTrackId );
                             if ( target.newTrackId !== target.trackId ) {
                                 // Let's move to the new tracks
                                 target.clipInfo["selected"] = true;
@@ -266,39 +287,49 @@ Item {
 
                                     // And if newX collides again, we don't move
                                     if ( ptof( Math.abs( newLinkedClipX - newX ) ) !== 0 )
-                                        newX = oldX;
+                                        deltaX = 0
+                                    else
+                                        deltaX = newX - oldX;
                                 }
                                 else
-                                    newX = oldX;
+                                    deltaX = 0;
                             }
+                            else
+                                deltaX = newX - oldX;
 
-                            // We only want to update the length when the left edge of the timeline
-                            // is exposed.
-                            if ( sView.flickableItem.contentX + page.width > sView.width &&
-                                    length < ptof( newX + linkedClipItem.width ) ) {
-                                length = ptof( newX + linkedClipItem.width );
-                            }
-
-                            linkedClipItem.setPixelPosition( newX );
                             var ind = toMove.indexOf( linkedClipItem.uuid );
                             if ( ind > 0 )
                                 toMove.splice( ind, 1 );
                         }
                     }
 
+                    newX = oldX + deltaX;
+                    toMove.splice( 0, 1 );
+                }
+                // END of while ( toMove.length > 0 )
+
+                if ( deltaX === 0 && dMode === dropMode.Move ) {
+                    drag.source.setPixelPosition( drag.source.pixelPosition() );
+                    return;
+                }
+
+                for ( i = 0; i < selectedClips.length; ++i ) {
+                    target = findClipItem( selectedClips[i] );
+                    newX = target.pixelPosition() + deltaX;
+
+                    // We only want to update the length when the left edge of the timeline
+                    // is exposed.
                     if ( sView.flickableItem.contentX + page.width > sView.width &&
                             length < ptof( newX + target.width ) ) {
                         length = ptof( newX + target.width );
                     }
 
                     target.setPixelPosition( newX );
-                    toMove.splice( 0, 1 );
 
                     // Scroll if needed
                     if ( drag.source === target || dMode === dropMode.New )
                         target.scrollToThis();
                 }
-                // END of while ( toMove.length > 0 )
 
                 if ( dMode === dropMode.Move )
                     lastX = drag.source.x;
