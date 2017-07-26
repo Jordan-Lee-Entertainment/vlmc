@@ -93,7 +93,6 @@ Rectangle {
         newDict["begin"] = clipDict["begin"];
         newDict["end"] = clipDict["end"];
         newDict["position"] = clipDict["position"];
-        newDict["lastPosition"] = clipDict["position"];
         newDict["length"] = clipDict["length"];
         newDict["libraryUuid"] = clipDict["libraryUuid"];
         newDict["uuid"] = clipDict["uuid"];
@@ -656,6 +655,7 @@ Rectangle {
             var clipInfo = workflow.clipInfo( uuid );
             var clip = findClipItem( uuid );
             clip.position = clipInfo["position"];
+            clip.lastPosition = clipInfo["position"];
             clip.end = clipInfo["end"];
             clip.begin = clipInfo["begin"];
             clip.updateEffects( clipInfo );

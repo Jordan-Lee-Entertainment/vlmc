@@ -348,7 +348,7 @@ Item {
                 uuid: model.uuid
                 libraryUuid: model.libraryUuid
                 position: model.position
-                lastPosition: model.lastPosition
+                lastPosition: model.position
                 begin: model.begin
                 end: model.end
                 clipInfo: model
