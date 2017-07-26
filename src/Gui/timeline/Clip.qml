@@ -56,6 +56,14 @@ Rectangle {
     function resize() {
         // This function updates Backend
         workflow.resizeClip( uuid, begin, end, position );
+        for ( var i = 0; i < linkedClips.length; ++i )
+        {
+            var linkedClip = linkedClips[i];
+            var lc = findClipItem( linkedClip );
+            if ( lc === null )
+                return;
+            workflow.resizeClip( lc.uuid, lc.begin, lc.end, lc.position );
+        }
     }
 
     function selectLinkedClip() {
@@ -93,6 +101,7 @@ Rectangle {
         effectsItem.text = str;
     }
 
+    // This function only resizes clips in the frontend, not updating the backend
     function resizeLinkedClips( oldPos, oldBegin, oldEnd ) {
         for ( var i = 0; i < linkedClips.length; ++i )
         {
