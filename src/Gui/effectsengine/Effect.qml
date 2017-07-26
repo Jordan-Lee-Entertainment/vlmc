@@ -6,7 +6,6 @@ Rectangle {
     border.color: "#222222"
     border.width: 1
 
-    width: parent.width
     height: childrenRect.height
 
     property string identifier

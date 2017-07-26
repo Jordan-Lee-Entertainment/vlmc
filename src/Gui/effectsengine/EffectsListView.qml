@@ -25,6 +25,7 @@ Rectangle {
             width: sView.viewport.width
             model: effects
             delegate: Effect {
+                width: sView.viewport.width
                 identifier: model.identifier
                 name: model.name
                 description: model.description
