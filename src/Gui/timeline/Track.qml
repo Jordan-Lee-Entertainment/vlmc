@@ -41,7 +41,6 @@ Item {
                 "New": 0,
                 "Move": 1,
             }
-            readonly property int magneticMargin: 25
 
             property string currentUuid
             property var aClipInfo: null
@@ -49,86 +48,6 @@ Item {
 
             property int lastPos: 0
             property int deltaPos: 0
-
-            function findNewPosition( newPos, target, dragSource, useMagneticMode ) {
-                if ( useMagneticMode === true ) {
-                    var leastDistance = ptof( magneticMargin );
-                    // Check two times
-                    for ( var k = 0; k < 2; ++k ) {
-                        for ( var j = 0; j < markers.count; ++j ) {
-                            var mPos = markers.get( j ).position;
-                            if ( Math.abs( newPos - mPos ) < leastDistance ) {
-                                leastDistance = Math.abs( newPos - mPos );
-                                newPos = mPos;
-                            }
-                            else if ( Math.abs( newPos + target.length - 1 - mPos ) < leastDistance ) {
-                                leastDistance = Math.abs( newPos + target.length - 1 - mPos );
-                                newPos = mPos - target.length + 1;
-                            }
-                        }
-                    }
-                    // Magnet for the left edge of the timeline
-                    if ( newPos < ptof( magneticMargin ) )
-                        newPos = 0;
-                }
-
-                // Collision detection
-                var isCollided = true;
-                var currentTrack = trackContainer( target.type )["tracks"].get( target.newTrackId );
-                if ( currentTrack )
-                    var clips = currentTrack["clips"];
-                else
-                    return target.position;
-                for ( j = 0; j < clips.count + 2 && isCollided; ++j ) {
-                    isCollided = false;
-                    for ( k = 0; k < clips.count; ++k ) {
-                        var clip = clips.get( k );
-                        if ( clip.uuid === target.uuid ||
-                             ( clip.uuid === dragSource.uuid && target.newTrackId !== dragSource.newTrackId )
-                           )
-                            continue;
-                        var cPos = clip.uuid === dragSource.uuid ? ptof( dragSource.x ) : clip["position"];
-                        var cEndPos = clip["position"] + clip["length"] - 1;
-
-                        if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos )
-                            isCollided = true;
-
-                        // HACK: If magnetic mode, consider clips bigger
-                        //       but not if "clip" is also selected because both of them will be moving
-                        //       and we want to keep the same distance between them as much as possible
-                        var clipMargin = useMagneticMode && findClipItem( clip.uuid ).selected === false ? ptof( magneticMargin ) : 0;
-                        cPos += clipMargin * 2;
-                        cEndPos -= clipMargin;
-                        if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos ) {
-                            if ( cPos >= newPos ) {
-                                if ( cPos - target.length + 1 > 0 )
-                                    newPos = cPos - target.length + clipMargin;
-                                else
-                                    newPos = target.position;
-                            } else {
-                                newPos = cEndPos - clipMargin + 1;
-                            }
-                        }
-
-                        if ( isCollided )
-                            break;
-                    }
-                }
-
-                if ( isCollided ) {
-                    for ( k = 0; k < clips.count; ++k ) {
-                        clip = clips.get( k );
-                        if ( clip.uuid === target.uuid ||
-                             ( clip.uuid === dragSource.uuid && target.newTrackId !== dragSource.newTrackId ) )
-                            continue;
-                        cPos = clip.uuid === dragSource.uuid ? ptof( dragSource.x ) : clip["position"];
-                        cEndPos = clip["position"] + clip["length"] - 1;
-                        newPos = Math.max( newPos, cEndPos + 1 );
-                    }
-                }
-
-                return newPos;
-            }
 
             onDropped: {
                 if ( drop.keys.indexOf( "vlmc/uuid" ) >= 0 ) {
