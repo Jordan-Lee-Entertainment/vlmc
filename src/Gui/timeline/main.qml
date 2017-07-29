@@ -76,8 +76,8 @@ Rectangle {
                 //       but not if "clip" is also selected because both of them will be moving
                 //       and we want to keep the same distance between them as much as possible
                 var clipMargin = useMagneticMode && findClipItem( clip.uuid ).selected === false ? ptof( magneticMargin ) : 0;
-                cPos += clipMargin * 2;
-                cEndPos -= clipMargin;
+                cPos -= clipMargin;
+                cEndPos += clipMargin;
                 if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos ) {
                     if ( cPos >= newPos ) {
                         if ( cPos - target.length + 1 > 0 )

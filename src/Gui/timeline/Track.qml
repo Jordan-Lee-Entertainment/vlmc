@@ -114,6 +114,7 @@ Item {
                     // HACK: Call onPositoinChanged forcely here.
                     // x will be rounded so it won't affect actual its position.
                     drag.source.x = drag.source.x + 0.000001;
+                    drag.source.forcePosition(); // Restore the binding
                 }
             }
 
@@ -126,6 +127,10 @@ Item {
                     var dMode = dropMode.New;
                 else
                     dMode = dropMode.Move;
+
+                // Scroll to the drag source
+                if ( dMode === dropMode.Move )
+                    drag.source.scrollToThis();
 
                 sortSelectedClips();
                 var toMove = selectedClips.concat();
@@ -146,7 +151,7 @@ Item {
                             if ( newTrackId < 0 )
                             {
                                 drag.source.newTrackId = oldTrackId;
-                                drag.source.setPixelPosition( drag.source.pixelPosition() );
+                                drag.source.forcePosition();
 
                                 // Direction depends on its type
                                 drag.source.y +=
@@ -204,13 +209,13 @@ Item {
                                     if ( newLinkedClipPos !== newPos )
                                         deltaPos = 0
                                     else
-                                        deltaPos = newPos - oldPos;
+                                        linkedClipItem.position = target.position; // Link if possible
                                 }
                                 else
                                     deltaPos = 0;
                             }
                             else
-                                deltaPos = newPos - oldPos;
+                                linkedClipItem.position = target.position; // Link if possible
 
                             var ind = toMove.indexOf( linkedClipItem.uuid );
                             if ( ind > 0 )
@@ -232,7 +237,7 @@ Item {
                     target = findClipItem( selectedClips[i] );
                     newPos = target.position + deltaPos;
 
-                    // We only want to update the length when the left edge of the timeline
+                    // We only want to update the length when the right edge of the timeline
                     // is exposed.
                     if ( sView.flickableItem.contentX + page.width > sView.width &&
                             length < newPos + target.length ) {
@@ -247,7 +252,7 @@ Item {
                 }
 
                 if ( dMode === dropMode.Move )
-                    lastPos = ptof( drag.source.x );
+                    lastPos = drag.source.position;
                 else
                     lastPos = ptof( drag.x );
             }
