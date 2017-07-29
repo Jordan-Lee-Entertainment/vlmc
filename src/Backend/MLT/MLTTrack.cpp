@@ -108,7 +108,7 @@ MLTTrack::append( Backend::IInput& input )
 }
 
 bool
-MLTTrack::move( int src, int dist )
+MLTTrack::move( int64_t src, int64_t dist )
 {
     std::unique_ptr<Mlt::Producer> prod(
                 playlist()->replace_with_blank( playlist()->get_clip_index_at( src ) ) );

@@ -37,7 +37,7 @@ namespace Backend
         virtual void        remove( int index ) = 0;
         virtual bool        append( IInput& input ) = 0;
         // src and dist are frames.
-        virtual bool        move( int src, int dist ) = 0;
+        virtual bool        move( int64_t src, int64_t dist ) = 0;
         virtual IInput*     clip( int index ) const = 0;
         virtual IInput*     clipAt( int64_t position ) const = 0 ;
         virtual bool        resizeClip( int clip, int64_t begin, int64_t end ) = 0;

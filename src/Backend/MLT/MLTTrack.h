@@ -54,7 +54,7 @@ class MLTTrack : public ITrack, public MLTInput
         virtual bool        insertAt( IInput& input, int64_t startFrame ) override;
         virtual void        remove( int index ) override;
         virtual bool        append( IInput& input ) override;
-        virtual bool        move( int src, int dist ) override;
+        virtual bool        move( int64_t src, int64_t dist ) override;
         virtual IInput*  clip( int index ) const override;
         virtual IInput*  clipAt( int64_t position ) const override;
         virtual bool        resizeClip( int clip, int64_t begin, int64_t end ) override;
