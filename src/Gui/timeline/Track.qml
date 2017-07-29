@@ -47,31 +47,29 @@ Item {
             property var aClipInfo: null
             property var vClipInfo: null
 
-            property int lastX: 0
-            property int deltaX: 0
+            property int lastPos: 0
+            property int deltaPos: 0
 
-            function findNewPosition( newX, target, dragSource, useMagneticMode ) {
-                var oldX = target.pixelPosition();
-
+            function findNewPosition( newPos, target, dragSource, useMagneticMode ) {
                 if ( useMagneticMode === true ) {
-                    var leastDistance = magneticMargin;
+                    var leastDistance = ptof( magneticMargin );
                     // Check two times
                     for ( var k = 0; k < 2; ++k ) {
                         for ( var j = 0; j < markers.count; ++j ) {
-                            var mx = ftop( markers.get( j ).position );
-                            if ( Math.abs( newX - mx ) < leastDistance ) {
-                                leastDistance = Math.abs( newX - mx );
-                                newX = mx;
+                            var mPos = markers.get( j ).position;
+                            if ( Math.abs( newPos - mPos ) < leastDistance ) {
+                                leastDistance = Math.abs( newPos - mPos );
+                                newPos = mPos;
                             }
-                            else if ( Math.abs( newX + target.width - mx ) < leastDistance ) {
-                                leastDistance = Math.abs( newX + target.width - mx );
-                                newX = mx - target.width;
+                            else if ( Math.abs( newPos + target.length - 1 - mPos ) < leastDistance ) {
+                                leastDistance = Math.abs( newPos + target.length - 1 - mPos );
+                                newPos = mPos - target.length + 1;
                             }
                         }
                     }
                     // Magnet for the left edge of the timeline
-                    if ( newX < magneticMargin )
-                        newX = 0;
+                    if ( newPos < ptof( magneticMargin ) )
+                        newPos = 0;
                 }
 
                 // Collision detection
@@ -80,7 +78,7 @@ Item {
                 if ( currentTrack )
                     var clips = currentTrack["clips"];
                 else
-                    return oldX;
+                    return target.position;
                 for ( j = 0; j < clips.count + 2 && isCollided; ++j ) {
                     isCollided = false;
                     for ( k = 0; k < clips.count; ++k ) {
@@ -89,30 +87,29 @@ Item {
                              ( clip.uuid === dragSource.uuid && target.newTrackId !== dragSource.newTrackId )
                            )
                             continue;
-                        var sw = target.width; // Width of the source clip
-                        var cx = clip.uuid === dragSource.uuid ? dragSource.x : ftop( clip["position"] );
-                        var cw = ftop( clip["end"] - clip["begin"] + 1);
-                        // Set a right position
-                        //
-                        // HACK: If magnetic mode, consider clips bigger
-                        //       but not if it's also selected because both of them will be moving
-                        //       and we want to keep the same distance between them as much as possible
-                        var clipMargin = useMagneticMode && findClipItem( clip.uuid ).selected === false ? magneticMargin : 0;
-                        if ( cx  + cw > newX && newX + sw > cx )
+                        var cPos = clip.uuid === dragSource.uuid ? ptof( dragSource.x ) : clip["position"];
+                        var cEndPos = clip["position"] + clip["length"] - 1;
+
+                        if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos )
                             isCollided = true;
 
-                        cw += clipMargin * 2
-                        cx -= clipMargin
-                        if ( cx + cw > newX && newX + sw > cx ) {
-                            if ( cx > newX ) {
-                                if ( cx - sw > 0 )
-                                    newX = cx - sw + clipMargin;
+                        // HACK: If magnetic mode, consider clips bigger
+                        //       but not if "clip" is also selected because both of them will be moving
+                        //       and we want to keep the same distance between them as much as possible
+                        var clipMargin = useMagneticMode && findClipItem( clip.uuid ).selected === false ? ptof( magneticMargin ) : 0;
+                        cPos += clipMargin * 2;
+                        cEndPos -= clipMargin;
+                        if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos ) {
+                            if ( cPos >= newPos ) {
+                                if ( cPos - target.length + 1 > 0 )
+                                    newPos = cPos - target.length + clipMargin;
                                 else
-                                    newX = oldX;
+                                    newPos = target.position;
                             } else {
-                                newX = cx + cw - clipMargin;
+                                newPos = cEndPos - clipMargin + 1;
                             }
                         }
+
                         if ( isCollided )
                             break;
                     }
@@ -124,13 +121,13 @@ Item {
                         if ( clip.uuid === target.uuid ||
                              ( clip.uuid === dragSource.uuid && target.newTrackId !== dragSource.newTrackId ) )
                             continue;
-                        cx = clip.uuid === dragSource.uuid ? dragSource.x : ftop( clip["position"] );
-                        cw = ftop( clip["end"] - clip["begin"] + 1);
-                        newX = Math.max( newX, cx + cw );
+                        cPos = clip.uuid === dragSource.uuid ? ptof( dragSource.x ) : clip["position"];
+                        cEndPos = clip["position"] + clip["length"] - 1;
+                        newPos = Math.max( newPos, cEndPos + 1 );
                     }
                 }
 
-                return newX;
+                return newPos;
             }
 
             onDropped: {
@@ -191,10 +188,10 @@ Item {
                             vClipInfo = addClip( "Video", trackId, newClipInfo );
                         }
                     }
-                    lastX = drag.x;
+                    lastPos = ptof( drag.x );
                 }
                 else {
-                    lastX = drag.source.x;
+                    lastPos = ptof( drag.source.x );
                     // HACK: Call onPositoinChanged forcely here.
                     // x will be rounded so it won't affect actual its position.
                     drag.source.x = drag.source.x + 0.000001;
@@ -256,16 +253,16 @@ Item {
                         }
                     }
 
-                    deltaX = drag.source.x - lastX;
+                    deltaPos = ptof( drag.source.x ) - lastPos;
                 }
                 else
-                    deltaX = drag.x - lastX;
+                    deltaPos = ptof( drag.x ) - lastPos;
 
                 while ( toMove.length > 0 ) {
                     target = findClipItem( toMove[0] );
-                    var oldX = target.pixelPosition();
-                    var newX = findNewPosition( Math.max( oldX + deltaX, 0 ), target, drag.source, isMagneticMode );
-                    deltaX = newX - oldX;
+                    var oldPos = target.position;
+                    var newPos = findNewPosition( Math.max( oldPos + deltaPos, 0 ), target, drag.source, isMagneticMode );
+                    deltaPos = newPos - oldPos;
 
                     // Let's find newX of the linked clip
                     for ( i = 0; i < target.linkedClips.length; ++i )
@@ -273,28 +270,28 @@ Item {
                         var linkedClipItem = findClipItem( target.linkedClips[i] );
 
                         if ( linkedClipItem ) {
-                            var newLinkedClipX = findNewPosition( newX, linkedClipItem, drag.source, isMagneticMode );
+                            var newLinkedClipPos = findNewPosition( newPos, linkedClipItem, drag.source, isMagneticMode );
 
                             // If linked clip collides
-                            if ( ptof( Math.abs( newLinkedClipX - newX ) ) !== 0 ) {
+                            if ( newLinkedClipPos !== newPos ) {
                                 // Recalculate target's newX
                                 // This time, don't use magnets
                                 if ( isMagneticMode === true )
                                 {
-                                    newLinkedClipX = findNewPosition( newX, linkedClipItem, drag.source, false );
-                                    newX = findNewPosition( newX, target, drag.source, false );
+                                    newLinkedClipPos = findNewPosition( newPos, linkedClipItem, drag.source, false );
+                                    newPos = findNewPosition( newPos, target, drag.source, false );
 
                                     // And if newX collides again, we don't move
-                                    if ( ptof( Math.abs( newLinkedClipX - newX ) ) !== 0 )
-                                        deltaX = 0
+                                    if ( newLinkedClipPos !== newPos )
+                                        deltaPos = 0
                                     else
-                                        deltaX = newX - oldX;
+                                        deltaPos = newPos - oldPos;
                                 }
                                 else
-                                    deltaX = 0;
+                                    deltaPos = 0;
                             }
                             else
-                                deltaX = newX - oldX;
+                                deltaPos = newPos - oldPos;
 
                             var ind = toMove.indexOf( linkedClipItem.uuid );
                             if ( ind > 0 )
@@ -302,28 +299,28 @@ Item {
                         }
                     }
 
-                    newX = oldX + deltaX;
+                    newPos = oldPos + deltaPos;
                     toMove.splice( 0, 1 );
                 }
                 // END of while ( toMove.length > 0 )
 
-                if ( deltaX === 0 && dMode === dropMode.Move ) {
-                    drag.source.setPixelPosition( drag.source.pixelPosition() );
+                if ( deltaPos === 0 && dMode === dropMode.Move ) {
+                    drag.source.forcePosition(); // Use the original position
                     return;
                 }
 
                 for ( i = 0; i < selectedClips.length; ++i ) {
                     target = findClipItem( selectedClips[i] );
-                    newX = target.pixelPosition() + deltaX;
+                    newPos = target.position + deltaPos;
 
                     // We only want to update the length when the left edge of the timeline
                     // is exposed.
                     if ( sView.flickableItem.contentX + page.width > sView.width &&
-                            length < ptof( newX + target.width ) ) {
-                        length = ptof( newX + target.width );
+                            length < newPos + target.length ) {
+                        length = newPos + target.length;
                     }
 
-                    target.setPixelPosition( newX );
+                    target.position = newPos;
 
                     // Scroll if needed
                     if ( drag.source === target || dMode === dropMode.New )
@@ -331,9 +328,9 @@ Item {
                 }
 
                 if ( dMode === dropMode.Move )
-                    lastX = drag.source.x;
+                    lastPos = ptof( drag.source.x );
                 else
-                    lastX = drag.x;
+                    lastPos = ptof( drag.x );
             }
         }
 
@@ -351,6 +348,7 @@ Item {
                 lastPosition: model.position
                 begin: model.begin
                 end: model.end
+                length: model.length
                 clipInfo: model
             }
         }

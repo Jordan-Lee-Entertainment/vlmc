@@ -31,6 +31,7 @@ Rectangle {
     property int lastPosition
     property int begin
     property int end
+    property int length
     property string libraryUuid // Library UUID: For thumbnails
     property string uuid // Instance UUID
     property var linkedClips: linkedClipsDict[uuid] ? linkedClipsDict[uuid] : [] // Uuid
@@ -40,17 +41,10 @@ Rectangle {
 
     property var clipInfo
 
-    function setPixelPosition( pixels )
+    function forcePosition()
     {
-        if ( pixels >= 0 )
-            position = ptof( pixels );
-        // FIXME: Binding can be lost because of dragging.
+        // Reset the binding so that it will reset the x position
         x = Qt.binding( function() { return ftop( position ); } );
-    }
-
-    function pixelPosition()
-    {
-        return ftop( position );
     }
 
     function resize() {
