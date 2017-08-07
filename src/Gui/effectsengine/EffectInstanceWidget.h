@@ -49,7 +49,6 @@ class EffectInstanceWidget : public QWidget
         void                                clear();
     private:
         QList<ISettingsCategoryWidget*>     m_settings;
-        QList<QWidget*>                     m_widgets;
         Ui::EffectSettingWidget             *m_ui;
         std::shared_ptr<EffectHelper>       m_helper;
 

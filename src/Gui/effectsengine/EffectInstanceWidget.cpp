@@ -76,8 +76,6 @@ EffectInstanceWidget::clear()
     m_ui->effectWidget->clear();
     qDeleteAll( m_settings );
     m_settings.clear();
-    qDeleteAll( m_widgets );
-    m_widgets.clear();
 }
 
 ISettingsCategoryWidget*
