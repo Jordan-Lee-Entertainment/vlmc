@@ -217,6 +217,11 @@ Rectangle {
         if ( uuid === "videoUuid" || uuid === "audioUuid" )
             return;
         thumbnailSource = "image://thumbnail/" + libraryUuid + "/0";
+
+        for ( var i = 0; i < allTransitions.length; ++i ) {
+            if ( allTransitions[i].begin === position || allTransitions[i].end === position + length - 1 )
+                allTransitions[i].clips.push( uuid );
+        }
     }
 
     Component.onDestruction: {

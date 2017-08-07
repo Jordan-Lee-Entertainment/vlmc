@@ -9,11 +9,11 @@ Item {
     property int trackId
     property string type
     property ListModel clips
+    property ListModel transitionModel
 
-    Rectangle {
+    Item {
         id: clipArea
         x: trackInfo.width
-        color: "#222222"
         height: parent.height
         width: track.width - initPosOfCursor
 
@@ -34,23 +34,26 @@ Item {
         DropArea {
             id: dropArea
             anchors.fill: parent
-            keys: ["Clip", "vlmc/uuid"]
+            keys: ["Clip", "Transition", "vlmc/uuid", "vlmc/transition_id"]
 
             // Enum for drop mode
             readonly property var dropMode: {
                 "New": 0,
                 "Move": 1,
+                "TransitionNew": 2,
+                "TransitionMove": 3,
             }
 
             property string currentUuid
             property var aClipInfo: null
             property var vClipInfo: null
+            property var mode
 
             property int lastPos: 0
             property int deltaPos: 0
 
             onDropped: {
-                if ( drop.keys.indexOf( "vlmc/uuid" ) >= 0 ) {
+                if ( mode === dropMode.New ) {
                     aClipInfo = findClipFromTrack( "Audio", trackId, "audioUuid" );
                     vClipInfo = findClipFromTrack( "Video", trackId, "videoUuid" );
                     var pos = 0;
@@ -70,17 +73,38 @@ Item {
                     adjustTracks( "Audio" );
                     adjustTracks( "Video" );
                 }
+                else if ( mode === dropMode.TransitionNew ) {
+                    var transition = findTransitionItem( "transitionUuid" );
+                    workflow.addTransitionBetweenTracks(
+                        transition.identifier, transition.begin, transition.end,
+                        transition.trackId - 1, transition.trackId, transition.type );
+                    removeTransitionFromTrack( type, trackId, "transitionUuid" );
+                    currentUuid = "";
+
+                }
             }
 
             onExited: {
-                if ( currentUuid !== "" ) {
+                if ( currentUuid === "transitionUuid" ) {
+                    removeTransitionFromTrack( type, trackId, "transitionUuid" );
+                }
+                else if ( currentUuid !== "" ) {
                     removeClipFromTrack( "Audio", trackId, "audioUuid" );
                     removeClipFromTrack( "Video", trackId, "videoUuid" );
                 }
             }
 
             onEntered: {
-                if ( drag.keys.indexOf( "vlmc/uuid" ) >= 0 ) {
+                if ( drag.keys.indexOf( "vlmc/uuid" ) >= 0 )
+                    mode = dropMode.New;
+                else if ( drag.keys.indexOf( "vlmc/transition_id" ) >= 0 )
+                    mode = dropMode.TransitionNew
+                else if ( drag.keys.indexOf( "Clip" ) >= 0 )
+                    mode = dropMode.Move;
+                else if ( drag.keys.indexOf( "Transition" ) >= 0 )
+                    mode = dropMode.TransitionMove;
+
+                if ( mode === dropMode.New ) {
                     clearSelectedClips();
                     if ( currentUuid === drag.getDataAsString( "vlmc/uuid" ) ) {
                         if ( aClipInfo )
@@ -109,12 +133,30 @@ Item {
                     }
                     lastPos = ptof( drag.x );
                 }
-                else {
+                else if ( mode === dropMode.Move ) {
                     lastPos = ptof( drag.source.x );
                     // HACK: Call onPositoinChanged forcely here.
                     // x will be rounded so it won't affect actual its position.
                     drag.source.x = drag.source.x + 0.000001;
                     drag.source.forcePosition(); // Restore the binding
+                }
+                else if ( mode === dropMode.TransitionNew ) {
+                    if ( trackId > 0 ) {
+                        var transition_id = drag.getDataAsString( "vlmc/transition_id" );
+                        currentUuid = "transitionUuid";
+                        addTransition( type, trackId, {
+                                          "identifier": transition_id,
+                                          "begin": ptof( drag.x ),
+                                          "end": ptof( drag.x + 100 ),
+                                          "uuid": currentUuid,
+                                          "identifier": transition_id }
+                                      );
+                    }
+                    lastPos = ptof( drag.x );
+                }
+                else if ( mode === dropMode.TransitionMove ) {
+                    drag.source.trackId = trackId;
+                    lastPos = ptof( drag.source.x );
                 }
             }
 
@@ -123,26 +165,19 @@ Item {
                 if ( drag.source.resizing === true )
                     return;
 
-                if ( drag.keys.indexOf( "vlmc/uuid" ) >= 0 )
-                    var dMode = dropMode.New;
-                else
-                    dMode = dropMode.Move;
-
-                // Scroll to the drag source
-                if ( dMode === dropMode.Move )
+                if ( mode === dropMode.Move ) {
                     drag.source.scrollToThis();
 
-                if ( dMode === dropMode.Move ) {
-                    deltaPos = ptof( drag.source.x ) - lastPos;
-
                     // Move to the top
-                    drag.source.parent.parent.z = ++maxZ;
+                    drag.source.z = ++maxZ;
 
                     // Prepare newTrackId for all the selected clips
                     var oldTrackId = drag.source.newTrackId;
                     drag.source.newTrackId = trackId;
 
-                    sortSelectedClips( trackId - oldTrackId ,deltaPos );
+                    deltaPos = ptof( drag.source.x ) - lastPos;
+
+                    sortSelectedClips( trackId - oldTrackId, deltaPos );
                     var toMove = selectedClips.concat();
 
                     // Check if there is any impossible move
@@ -179,89 +214,108 @@ Item {
                         }
                     }
                 }
-                else {
+                else if ( mode === dropMode.New ){
                     toMove = selectedClips.concat();
                     deltaPos = ptof( drag.x ) - lastPos;
                 }
+                else if ( mode === dropMode.TransitionNew )
+                {
+                    deltaPos = ptof( drag.x ) - lastPos;
+                    var tItem = findTransitionItem( "transitionUuid" );
+                    tItem.begin += deltaPos;
+                    tItem.end += deltaPos;
+                }
+                else if ( mode === dropMode.TransitionMove ) {
+                    deltaPos = ptof( drag.source.x ) - lastPos;
+                    drag.source.begin += deltaPos;
+                    drag.source.end += deltaPos;
+                }
 
-                while ( toMove.length > 0 ) {
-                    target = findClipItem( toMove[0] );
-                    var oldPos = target.position;
-                    var newPos = findNewPosition( Math.max( oldPos + deltaPos, 0 ), target, drag.source, isMagneticMode );
-                    deltaPos = newPos - oldPos;
+                if ( mode === dropMode.New || mode === dropMode.Move )
+                {
+                    while ( toMove.length > 0 ) {
+                        target = findClipItem( toMove[0] );
+                        var oldPos = target.position;
+                        var newPos = findNewPosition( Math.max( oldPos + deltaPos, 0 ), target, drag.source, isMagneticMode );
+                        deltaPos = newPos - oldPos;
 
-                    // Let's find newX of the linked clip
-                    for ( i = 0; i < target.linkedClips.length; ++i )
-                    {
-                        var linkedClipItem = findClipItem( target.linkedClips[i] );
+                        // Let's find newX of the linked clip
+                        for ( i = 0; i < target.linkedClips.length; ++i )
+                        {
+                            var linkedClipItem = findClipItem( target.linkedClips[i] );
+                            if ( target === drag.source )
+                                linkedClipItem.z = ++maxZ;
 
-                        if ( linkedClipItem ) {
-                            var newLinkedClipPos = findNewPosition( newPos, linkedClipItem, drag.source, isMagneticMode );
+                            if ( linkedClipItem ) {
+                                var newLinkedClipPos = findNewPosition( newPos, linkedClipItem, drag.source, isMagneticMode );
 
-                            // If linked clip collides
-                            if ( newLinkedClipPos !== newPos ) {
-                                // Recalculate target's newX
-                                // This time, don't use magnets
-                                if ( isMagneticMode === true )
-                                {
-                                    newLinkedClipPos = findNewPosition( newPos, linkedClipItem, drag.source, false );
-                                    newPos = findNewPosition( newPos, target, drag.source, false );
+                                // If linked clip collides
+                                if ( newLinkedClipPos !== newPos ) {
+                                    // Recalculate target's newX
+                                    // This time, don't use magnets
+                                    if ( isMagneticMode === true )
+                                    {
+                                        newLinkedClipPos = findNewPosition( newPos, linkedClipItem, drag.source, false );
+                                        newPos = findNewPosition( newPos, target, drag.source, false );
 
-                                    // And if newX collides again, we don't move
-                                    if ( newLinkedClipPos !== newPos )
-                                        deltaPos = 0
+                                        // And if newX collides again, we don't move
+                                        if ( newLinkedClipPos !== newPos )
+                                            deltaPos = 0
+                                        else
+                                            linkedClipItem.position = target.position; // Link if possible
+                                    }
                                     else
-                                        linkedClipItem.position = target.position; // Link if possible
+                                        deltaPos = 0;
                                 }
                                 else
-                                    deltaPos = 0;
+                                    linkedClipItem.position = target.position; // Link if possible
+
+                                var ind = toMove.indexOf( linkedClipItem.uuid );
+                                if ( ind > 0 )
+                                    toMove.splice( ind, 1 );
                             }
-                            else
-                                linkedClipItem.position = target.position; // Link if possible
-
-                            var ind = toMove.indexOf( linkedClipItem.uuid );
-                            if ( ind > 0 )
-                                toMove.splice( ind, 1 );
                         }
+
+                        newPos = oldPos + deltaPos;
+                        toMove.splice( 0, 1 );
+                    }
+                    // END of while ( toMove.length > 0 )
+
+                    if ( deltaPos === 0 && mode === dropMode.Move ) {
+                        drag.source.forcePosition(); // Use the original position
+                        return;
                     }
 
-                    newPos = oldPos + deltaPos;
-                    toMove.splice( 0, 1 );
-                }
-                // END of while ( toMove.length > 0 )
+                    for ( i = 0; i < selectedClips.length; ++i ) {
+                        target = findClipItem( selectedClips[i] );
+                        newPos = target.position + deltaPos;
 
-                if ( deltaPos === 0 && dMode === dropMode.Move ) {
-                    drag.source.forcePosition(); // Use the original position
-                    return;
-                }
+                        // We only want to update the length when the right edge of the timeline
+                        // is exposed.
+                        if ( sView.flickableItem.contentX + page.width > sView.width &&
+                                length < newPos + target.length ) {
+                            length = newPos + target.length;
+                        }
 
-                for ( i = 0; i < selectedClips.length; ++i ) {
-                    target = findClipItem( selectedClips[i] );
-                    newPos = target.position + deltaPos;
+                        target.position = newPos;
 
-                    // We only want to update the length when the right edge of the timeline
-                    // is exposed.
-                    if ( sView.flickableItem.contentX + page.width > sView.width &&
-                            length < newPos + target.length ) {
-                        length = newPos + target.length;
+                        // Scroll if needed
+                        if ( drag.source === target || mode === dropMode.New )
+                            target.scrollToThis();
                     }
-
-                    target.position = newPos;
-
-                    // Scroll if needed
-                    if ( drag.source === target || dMode === dropMode.New )
-                        target.scrollToThis();
                 }
 
-                if ( dMode === dropMode.Move )
+                if ( mode === dropMode.Move )
                     lastPos = drag.source.position;
+                else if ( mode === dropMode.TransitionMove )
+                    lastPos = drag.source.begin;
                 else
                     lastPos = ptof( drag.x );
             }
         }
 
         Repeater {
-            id: repeater
+            id: clipRepeater
             model: clips
             delegate: Clip {
                 height: track.height - 3
@@ -275,6 +329,20 @@ Item {
                 end: model.end
                 length: model.length
                 clipInfo: model
+            }
+        }
+
+        Repeater {
+            id: transitionRepeater
+            model: transitionModel
+            delegate: TransitionItem {
+                identifier: model.identifier
+                uuid: model.uuid
+                begin: model.begin
+                end: model.end
+                trackId: track.trackId
+                type: track.type
+                transitionInfo: model
             }
         }
     }

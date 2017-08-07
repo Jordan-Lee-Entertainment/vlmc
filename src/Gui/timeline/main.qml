@@ -20,10 +20,13 @@ Rectangle {
     property var allClips: [] // Actual clip item objects
     property var allClipsDict: ({}) // Actual clip item objects
     property var selectedClips: [] // Selected clip uuids
+    property var allTransitions: [] // Actual transition item objects
+    property var allTransitionsDict: ({}) // Actual transition item objects
     property var groups: [] // list of lists of clip uuids
     property var linkedClipsDict: ({}) // Uuid
     property alias isMagneticMode: magneticModeButton.selected
     property bool isCutMode: false
+    property bool isTransitionMode: transitionModeButton.selected
     property bool dragging: false
     property int trackHeight: 60
 
@@ -69,23 +72,76 @@ Rectangle {
                 var cPos = clip.uuid === dragSource.uuid ? ptof( dragSource.x ) : clip["position"];
                 var cEndPos = clip["position"] + clip["length"] - 1;
 
-                if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos )
-                    isCollided = true;
+                // Note that in transition mode, they will never collide.
+                if ( isTransitionMode === true ) {
+                    leastDistance = ptof( magneticMargin );
+                    if ( Math.abs( newPos - cPos ) < leastDistance ) {
+                        leastDistance = Math.abs( newPos - cPos );
+                        newPos = cPos;
+                    }
+                    if ( Math.abs( newPos + target.length - 1 - cPos ) < leastDistance ) {
+                        leastDistance = Math.abs( newPos + target.length - 1 - cPos );
+                        newPos = cPos - target.length + 1;
+                    }
+                    if ( Math.abs( newPos - cEndPos ) < leastDistance ) {
+                        leastDistance = Math.abs( newPos - cEndPos );
+                        newPos = cEndPos;
+                    }
+                    if ( Math.abs( newPos + target.length - 1 - cEndPos ) < leastDistance ) {
+                        leastDistance = Math.abs( newPos + target.length - 1 - cEndPos );
+                        newPos = cEndPos - target.length + 1;
+                    }
 
-                // HACK: If magnetic mode, consider clips bigger
-                //       but not if "clip" is also selected because both of them will be moving
-                //       and we want to keep the same distance between them as much as possible
-                var clipMargin = useMagneticMode && findClipItem( clip.uuid ).selected === false ? ptof( magneticMargin ) : 0;
-                cPos -= clipMargin;
-                cEndPos += clipMargin;
-                if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos ) {
-                    if ( cPos >= newPos ) {
-                        if ( cPos - target.length + 1 > 0 )
-                            newPos = cPos - target.length + clipMargin;
-                        else
-                            newPos = target.position;
-                    } else {
-                        newPos = cEndPos - clipMargin + 1;
+                    // If they overlap, create a cross-dissolve transition
+                    if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos )
+                    {
+                        var toCreate = true;
+                        for ( var i = 0; i < allTransitions.length; ++i ) {
+                            var transitionItem = allTransitions[i];
+                            if ( transitionItem.trackId === clip.trackId &&
+                                 transitionItem.type === clip.type &&
+                                 transitionItem.isCrossDissolve === true &&
+                                 transitionItem.clips.indexOf( clip.uuid ) !== -1 &&
+                                 transitionItem.clips.indexOf( target.uuid ) !== -1
+                                ) {
+                                transitionItem.begin = Math.max( newPos, clip["position"] );
+                                transitionItem.end = Math.min( newPos + target.length - 1, clip["position"] + clip["length"] - 1 );
+                                toCreate = false;
+                            }
+                        }
+                        if ( toCreate === true ) {
+                            addTransition( target.type, target.newTrackId,
+                                            { "begin": Math.max( newPos, cPos ),
+                                              "end": Math.min( newPos + target.length - 1, cEndPos ),
+                                              "identifier": "dissolve",
+                                              "uuid": "transitionUuid" } );
+                            transitionItem = allTransitions[allTransitions.length - 1];
+                            transitionItem.clips.push( clip.uuid );
+                            transitionItem.clips.push( target.uuid );
+                        }
+                    }
+                }
+                else {
+                    // In theory, they share the same deltaPos, therefore unable to collide each other.
+                    if ( findClipItem( clip.uuid ).selected === true )
+                        continue;
+
+                    if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos )
+                        isCollided = true;
+
+                    // HACK: If magnetic mode, consider clips bigger
+                    var clipMargin = useMagneticMode ? ptof( magneticMargin ) : 0;
+                    cPos -= clipMargin;
+                    cEndPos += clipMargin;
+                    if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos ) {
+                        if ( cPos >= newPos ) {
+                            if ( cPos - target.length + 1 > 0 )
+                                newPos = cPos - target.length + clipMargin;
+                            else
+                                newPos = target.position;
+                        } else {
+                            newPos = cEndPos - clipMargin + 1;
+                        }
                     }
                 }
 
@@ -159,7 +215,7 @@ Rectangle {
 
     function addTrack( trackType )
     {
-        trackContainer( trackType )["tracks"].append( { "clips": [] } );
+        trackContainer( trackType )["tracks"].append( { "clips": [], "transitions": [] } );
     }
 
     function removeTrack( trackType )
@@ -178,6 +234,7 @@ Rectangle {
         newDict["libraryUuid"] = clipDict["libraryUuid"];
         newDict["uuid"] = clipDict["uuid"];
         newDict["trackId"] = trackId;
+        newDict["type"] = trackType;
         newDict["name"] = clipDict["name"];
         newDict["selected"] = clipDict["selected"] === false ? false : true ;
         var tracks = trackContainer( trackType )["tracks"];
@@ -247,8 +304,89 @@ Rectangle {
         return v;
     }
 
+    function addTransition( trackType, trackId, transitionDict )
+    {
+        var newDict = {};
+        newDict["begin"] = transitionDict["begin"];
+        newDict["end"] = transitionDict["end"];
+        newDict["uuid"] = transitionDict["uuid"];
+        newDict["trackId"] = trackId;
+        newDict["type"] = trackType;
+        newDict["identifier"] = transitionDict["identifier"];
+        newDict["name"] = transitionDict["name"];
+        var tracks = trackContainer( trackType )["tracks"];
+        while ( trackId > tracks.count - 1 )
+            addTrack( trackType );
+        tracks.get( trackId )["transitions"].append( newDict );
+        return newDict;
+    }
+
+    function removeTransitionFromTrack( trackType, trackId, uuid )
+    {
+        var ret = false;
+        var tracks = trackContainer( trackType )["tracks"];
+        var trans = tracks.get( trackId )["transitions"];
+
+        for ( var j = 0; j < trans.count; j++ ) {
+            var t = trans.get( j );
+            if ( t.uuid === uuid ) {
+                trans.remove( j );
+                ret = true;
+                j--;
+            }
+        }
+        return ret;
+    }
+
+    function removeTransitionFromTrackContainer( trackType, uuid )
+    {
+        for ( var i = 0; i < trackContainer( trackType )["tracks"].count; ++i )
+            removeTransitionFromTrack( trackType, i, uuid );
+    }
+
+    function removeTransition( uuid )
+    {
+        removeTransitionFromTrackContainer( "Audio", uuid );
+        removeTransitionFromTrackContainer( "Video", uuid );
+    }
+
+    function findTransitionFromTrack( trackType, trackId, uuid )
+    {
+        var trans = trackContainer( trackType )["tracks"].get( trackId )["transitions"];
+        for ( var j = 0; j < trans.count; ++j ) {
+            var t = trans.get( j );
+            if ( t.uuid === uuid )
+                return t;
+        }
+        return null;
+    }
+
+    function findTransitionFromTrackContainer( trackType, uuid )
+    {
+        var tracks = trackContainer( trackType )["tracks"];
+        for ( var i = 0; i < tracks.count; ++i  ) {
+            var t = findTransitionFromTrack( trackType, i, uuid );
+            if( t )
+                return t;
+        }
+
+        return null;
+    }
+
+    function findTransition( uuid )
+    {
+        var t = findTransitionFromTrackContainer( "Video", uuid );
+        if ( !t )
+            return findTransitionFromTrackContainer( "Audio", uuid );
+        return t;
+    }
+
     function findClipItem( uuid ) {
         return allClipsDict[uuid];
+    }
+
+    function findTransitionItem( uuid ) {
+        return allTransitionsDict[uuid];
     }
 
     function adjustTracks( trackType ) {
@@ -410,10 +548,43 @@ Rectangle {
         dragging = false;
         sortSelectedClips( deltaTrackId, deltaPos );
 
+        var toAdd = [];
+        var toMove = [];
+
+        for ( var i = 0; i < allTransitions.length; ++i ) {
+            var transitionItem = allTransitions[i];
+            if ( transitionItem.inTrack === true ) {
+                if ( transitionItem.uuid === "transitionUuid" ) {
+                    toAdd.push( [transitionItem.identifier, transitionItem.begin, transitionItem.end,
+                                 transitionItem.trackId, transitionItem.type, transitionItem.clips] );
+                }
+            }
+        }
+
+        for ( i = 0; i < allTransitions.length; ++i ) {
+            transitionItem = allTransitions[i];
+            if ( transitionItem.inTrack === true ) {
+                if ( transitionItem.uuid !== "transitionUuid" )
+                    toMove.push( [transitionItem.uuid,
+                                  transitionItem.begin,
+                                  transitionItem.end] );
+            }
+        }
+
+        removeTransition( "transitionUuid" );
+
+        for ( i = 0; i < toAdd.length; ++i ) {
+            var newUuid = workflow.addTransition( toAdd[i][0], toAdd[i][1], toAdd[i][2], toAdd[i][3], toAdd[i][4] );
+            findTransitionItem( newUuid ).clips = toAdd[i][5];
+        }
+
+        for ( i = 0; i < toMove.length; ++i )
+            workflow.moveTransition( toMove[i][0], toMove[i][1], toMove[i][2] );
+
         // We don't want to rely on selectedClips while moving since it "will" be changed
         // I'm aware that it's not the best solution but it's the safest solution for sure
-        var toMove = [];
-        for ( var i = 0; i < selectedClips.length; ++i )
+        toMove = [];
+        for ( i = 0; i < selectedClips.length; ++i )
         {
             var clip = findClipItem( selectedClips[i] );
             toMove.push( [clip.uuid, clip.newTrackId, clip.position] );
@@ -607,6 +778,12 @@ Rectangle {
                         }
 
                         PropertyButton {
+                            id: transitionModeButton
+                            text: "T"
+                            selected: false
+                        }
+
+                        PropertyButton {
                             id: zoomInButton
                             text: "+"
                             selected: false
@@ -721,8 +898,11 @@ Rectangle {
                 addClip( type, clipInfo["trackId"], clipInfo );
                 removeClipFromTrack( type, oldClip["trackId"], uuid );
             }
-            findClipItem( uuid ).position = clipInfo["position"];
-            findClipItem( uuid ).lastPosition = clipInfo["position"];
+            else
+            {
+                findClipItem( uuid ).position = clipInfo["position"];
+                findClipItem( uuid ).lastPosition = clipInfo["position"];
+            }
             adjustTracks( type );
         }
 
@@ -765,6 +945,33 @@ Rectangle {
                 }
             updateLinkedClips( uuidA );
             updateLinkedClips( uuidB );
+        }
+
+        onTransitionAdded: {
+            var transitionInfo = workflow.transitionInfo( uuid );
+            var type = transitionInfo["audio"] ? "Audio" : "Video";
+            if ( transitionInfo["isInTrack"] )
+                addTransition( type, transitionInfo["trackId"], transitionInfo );
+            else
+                addTransition( type, transitionInfo["trackBId"], transitionInfo );
+        }
+
+        onTransitionMoved: {
+            var transitionInfo = workflow.transitionInfo( uuid );
+            var transition = findTransition( uuid );
+            var type = transitionInfo["audio"] ? "Audio" : "Video";
+            if ( transitionInfo["isInTrack"] || transitionInfo["trackBId"] === transition["trackId"] ) {
+                transition["begin"] = transitionInfo["begin"];
+                transition["end"] = transitionInfo["end"];
+            }
+            else {
+                removeTransition( uuid );
+                addTransition( type, transitionInfo["trackBId"], transitionInfo );
+            }
+        }
+
+        onTransitionRemoved: {
+            removeTransition( uuid );
         }
 
         onEffectsUpdated: {
