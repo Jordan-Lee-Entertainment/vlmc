@@ -40,6 +40,7 @@ vlmc_SOURCES = \
 	src/Workflow/Helper.cpp \
 	src/Workflow/MainWorkflow.cpp \
 	src/Workflow/SequenceWorkflow.cpp \
+	src/Workflow/Track.cpp \
 	$(NULL)
 
 vlmc_SOURCES += \
