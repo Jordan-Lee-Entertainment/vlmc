@@ -23,6 +23,7 @@ vlmc_SOURCES = \
 	src/Main/main.cpp \
 	src/Media/Clip.cpp \
 	src/Media/Media.cpp \
+	src/Transition/Transition.cpp \
 	src/Project/Project.cpp \
 	src/Project/Workspace.cpp \
 	src/Project/WorkspaceWorker.cpp \
