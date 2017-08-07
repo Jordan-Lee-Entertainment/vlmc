@@ -60,7 +60,6 @@ SequenceWorkflow::SequenceWorkflow( size_t trackCount )
 
 SequenceWorkflow::~SequenceWorkflow()
 {
-    delete m_multitrack;
     clear();
 }
 
@@ -277,7 +276,7 @@ SequenceWorkflow::loadFromVariant( const QVariant& variant )
 
         EffectHelper::loadFromVariant( m["filters"], clip->input() );
     }
-    EffectHelper::loadFromVariant( variant.toMap()["filters"], m_multitrack );
+    EffectHelper::loadFromVariant( variant.toMap()["filters"], m_multitrack.get() );
 }
 
 void
@@ -317,7 +316,7 @@ SequenceWorkflow::position( const QUuid& uuid )
 Backend::IInput*
 SequenceWorkflow::input()
 {
-    return m_multitrack;
+    return m_multitrack.get();
 }
 
 Backend::IInput*

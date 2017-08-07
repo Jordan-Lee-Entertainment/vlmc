@@ -119,9 +119,9 @@ class SequenceWorkflow : public QObject
 
         QMap<QUuid, QSharedPointer<ClipInstance>>       m_clips;
 
-        Backend::IMultiTrack*           m_multitrack;
         QList<QSharedPointer<Track>>    m_tracks[Workflow::NbTrackType];
         QList<std::shared_ptr<Backend::IMultiTrack>>    m_multiTracks;
+        std::unique_ptr<Backend::IMultiTrack>           m_multitrack;
         const size_t                    m_trackCount;
 
     signals:
