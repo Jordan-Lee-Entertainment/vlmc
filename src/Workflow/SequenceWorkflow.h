@@ -91,7 +91,7 @@ class SequenceWorkflow : public QObject
          *                  clip instance in the sequence workflow.
          *                  This instance UUID must be used to manipulate this new clip instance
          */
-        QUuid                   addClip( QSharedPointer<::Clip> clip, quint32 trackId, qint32 pos,
+        QUuid                   addClip( QSharedPointer<::Clip> clip, quint32 trackId, qint64 pos,
                                          const QUuid& uuid, bool isAudioClip );
         bool                    moveClip( const QUuid& uuid, quint32 trackId, qint64 pos );
         bool                    resizeClip( const QUuid& uuid, qint64 newBegin,
@@ -106,7 +106,7 @@ class SequenceWorkflow : public QObject
 
         QSharedPointer<ClipInstance>    clip( const QUuid& uuid );
         quint32                 trackId( const QUuid& uuid );
-        qint32                  position( const QUuid& uuid );
+        qint64                  position( const QUuid& uuid );
 
         Backend::IInput*        input();
         Backend::IInput*        trackInput( quint32 trackId );

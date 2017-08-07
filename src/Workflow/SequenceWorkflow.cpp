@@ -65,7 +65,7 @@ SequenceWorkflow::~SequenceWorkflow()
 }
 
 QUuid
-SequenceWorkflow::addClip( QSharedPointer<::Clip> clip, quint32 trackId, qint32 pos, const QUuid& uuid, bool isAudioClip )
+SequenceWorkflow::addClip( QSharedPointer<::Clip> clip, quint32 trackId, qint64 pos, const QUuid& uuid, bool isAudioClip )
 {
     auto t = track( trackId, isAudioClip );
     auto ret = t->insertAt( *clip->input(), pos );
@@ -306,7 +306,7 @@ SequenceWorkflow::trackId( const QUuid& uuid )
     return it.value()->trackId;
 }
 
-qint32
+qint64
 SequenceWorkflow::position( const QUuid& uuid )
 {
     auto it = m_clips.find( uuid );
