@@ -129,6 +129,9 @@ class   MainWorkflow : public QObject
         QJsonObject             libraryClipInfo( const QString& uuid );
 
         Q_INVOKABLE
+        QJsonObject             transitionInfo( const QString& uuid );
+
+        Q_INVOKABLE
         void                    moveClip( const QString& uuid, quint32 trackId, qint64 startFrame );
 
         Q_INVOKABLE
@@ -149,6 +152,23 @@ class   MainWorkflow : public QObject
 
         Q_INVOKABLE
         QString                 addEffect( const QString& clipUuid, const QString& effectId );
+
+        Q_INVOKABLE
+        QString                 addTransition( const QString& identifier, qint64 begin, qint64 end,
+                                               quint32 trackId, const QString& type );
+
+        Q_INVOKABLE
+        QString                 addTransitionBetweenTracks( const QString& identifier, qint64 begin, qint64 end,
+                                               quint32 trackAId, quint32 trackBId, const QString& type );
+
+        Q_INVOKABLE
+        void                    moveTransition( const QUuid& uuid, qint64 begin, qint64 end );
+
+        Q_INVOKABLE
+        void                    moveTransitionBetweenTracks( const QUuid& uuid, quint32 trackAId, quint32 trackBId );
+
+        Q_INVOKABLE
+        void                    removeTransition( const QUuid& uuid );
 
         bool                    startRenderToFile( const QString& outputFileName, quint32 width, quint32 height,
                                                    double fps, const QString& ar, quint32 vbitrate, quint32 abitrate,
@@ -246,6 +266,10 @@ class   MainWorkflow : public QObject
         void                    clipMoved( const QString& uuid );
         void                    clipLinked( const QString& uuidA, const QString& uuidB );
         void                    clipUnlinked( const QString& uuidA, const QString& uuidB );
+
+        void                    transitionAdded( const QString& uuid );
+        void                    transitionMoved( const QString& uuid );
+        void                    transitionRemoved( const QString& uuid );
 
         void                    effectsUpdated( const QString& clipUuid );
 };

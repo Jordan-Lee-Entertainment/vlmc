@@ -36,6 +36,7 @@
 #include "AbstractUndoStack.h"
 #include "Backend/IFilter.h"
 #include "Library/Library.h"
+#include "Transition/Transition.h"
 
 #ifdef HAVE_GUI
 # include "Gui/timeline/MarkerManager.h"
@@ -568,6 +569,172 @@ void
 Commands::Effect::Remove::internalUndo()
 {
     m_helper->setTarget( m_target.get() );
+}
+
+Commands::Transition::Add::Add( std::shared_ptr<SequenceWorkflow> const& workflow,
+                                const QString& identifier, qint64 begin, qint64 end,
+                                quint32 trackId, Workflow::TrackType type )
+    : m_identifier( identifier )
+    , m_begin( begin )
+    , m_end( end )
+    , m_trackId( trackId )
+    , m_trackAId( 0 )
+    , m_trackBId( 0 )
+    , m_type( type )
+    , m_workflow( workflow )
+{
+    retranslate();
+}
+
+Commands::Transition::Add::Add( std::shared_ptr<SequenceWorkflow> const& workflow,
+                                const QString& identifier, qint64 begin, qint64 end,
+                                quint32 trackAId, quint32 trackBId,
+                                Workflow::TrackType type )
+    : m_identifier( identifier )
+    , m_begin( begin )
+    , m_end( end )
+    , m_trackAId( trackAId )
+    , m_trackBId( trackBId )
+    , m_type( type )
+    , m_workflow( workflow )
+{
+    retranslate();
+}
+
+void
+Commands::Transition::Add::internalRedo()
+{
+    if ( m_uuid.isNull() == true )
+    {
+        if ( m_trackBId > 0 )
+            m_uuid = m_workflow->addTransitionBetweenTracks( m_identifier, m_begin, m_end, m_trackAId, m_trackBId, m_type );
+        else
+            m_uuid = m_workflow->addTransition( m_identifier, m_begin, m_end, m_trackId, m_type );
+    }
+    else
+        m_workflow->addTransition( m_transitionInstance );
+}
+
+void
+Commands::Transition::Add::internalUndo()
+{
+    m_transitionInstance = m_workflow->removeTransition( m_uuid );
+}
+
+void
+Commands::Transition::Add::retranslate()
+{
+    setText( tr( "Adding transition" ) );
+}
+
+const QUuid&
+Commands::Transition::Add::uuid()
+{
+    return m_uuid;
+}
+
+Commands::Transition::Move::Move( std::shared_ptr<SequenceWorkflow> const& workflow,
+                                  const QUuid& uuid, qint64 begin, qint64 end )
+    : m_uuid( uuid )
+    , m_begin( begin )
+    , m_end( end )
+    , m_workflow( workflow )
+{
+    auto transitionInstance = m_workflow->transition( uuid );
+    if ( transitionInstance == nullptr )
+        invalidate();
+    else
+    {
+        m_oldBegin = transitionInstance->transition->begin();
+        m_oldEnd = transitionInstance->transition->end();
+    }
+    retranslate();
+}
+
+void
+Commands::Transition::Move::internalRedo()
+{
+    bool ret = m_workflow->moveTransition( m_uuid, m_begin, m_end );
+    if ( ret == false )
+        invalidate();
+}
+
+void
+Commands::Transition::Move::internalUndo()
+{
+    bool ret = m_workflow->moveTransition( m_uuid, m_oldBegin, m_oldEnd );
+    if ( ret == false )
+        invalidate();
+}
+
+void
+Commands::Transition::Move::retranslate()
+{
+    setText( tr( "Moving transition" ) );
+}
+
+Commands::Transition::MoveBetweenTracks::MoveBetweenTracks( std::shared_ptr<SequenceWorkflow> const& workflow,
+                                                            const QUuid& uuid, quint32 trackAId, quint32 trackBId )
+    : m_uuid( uuid )
+    , m_trackAId( trackAId )
+    , m_trackBId( trackBId )
+    , m_workflow( workflow )
+{
+    auto transitionInstance = m_workflow->transition( uuid );
+    if ( transitionInstance == nullptr )
+        invalidate();
+    else
+    {
+        m_oldTrackAId = transitionInstance->trackAId;
+        m_oldTrackBId = transitionInstance->trackBId;
+    }
+    retranslate();
+}
+
+void
+Commands::Transition::MoveBetweenTracks::internalRedo()
+{
+    bool ret = m_workflow->moveTransitionBetweenTracks( m_uuid, m_trackAId, m_trackBId );
+    if ( ret == false )
+        invalidate();
+}
+
+void
+Commands::Transition::MoveBetweenTracks::internalUndo()
+{
+    bool ret = m_workflow->moveTransitionBetweenTracks( m_uuid, m_oldTrackAId, m_oldTrackBId );
+    if ( ret == false )
+        invalidate();
+}
+
+void
+Commands::Transition::MoveBetweenTracks::retranslate()
+{
+    setText( tr( "Moving transition" ) );
+}
+
+Commands::Transition::Remove::Remove( std::shared_ptr<SequenceWorkflow> const& workflow, const QUuid& uuid )
+    : m_uuid( uuid )
+    , m_workflow( workflow )
+{
+    retranslate();
+}
+
+void
+Commands::Transition::Remove::internalRedo()
+{
+    m_transitionInstance = m_workflow->removeTransition( m_uuid );
+}
+
+void
+Commands::Transition::Remove::internalUndo()
+{
+    m_workflow->addTransition( m_transitionInstance );
+}
+
+void Commands::Transition::Remove::retranslate()
+{
+    setText( tr( "Removing transition" ) );
 }
 
 #ifdef HAVE_GUI

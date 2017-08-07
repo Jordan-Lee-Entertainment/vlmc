@@ -49,6 +49,7 @@
 #include "Tools/VlmcDebug.h"
 #include "Tools/RendererEventWatcher.h"
 #include "Tools/OutputEventWatcher.h"
+#include "Transition/Transition.h"
 #include "Workflow/Types.h"
 
 #include <QJsonArray>
@@ -67,6 +68,9 @@ MainWorkflow::MainWorkflow( Settings* projectSettings, int trackCount ) :
     connect( m_sequenceWorkflow.get(), &SequenceWorkflow::clipUnlinked, this, &MainWorkflow::clipUnlinked );
     connect( m_sequenceWorkflow.get(), &SequenceWorkflow::clipMoved, this, &MainWorkflow::clipMoved );
     connect( m_sequenceWorkflow.get(), &SequenceWorkflow::clipResized, this, &MainWorkflow::clipResized );
+    connect( m_sequenceWorkflow.get(), &SequenceWorkflow::transitionAdded, this, &MainWorkflow::transitionAdded );
+    connect( m_sequenceWorkflow.get(), &SequenceWorkflow::transitionMoved, this, &MainWorkflow::transitionMoved );
+    connect( m_sequenceWorkflow.get(), &SequenceWorkflow::transitionRemoved, this, &MainWorkflow::transitionRemoved );
     m_renderer->setInput( m_sequenceWorkflow->input() );
 
     connect( m_renderer->eventWatcher().data(), &RendererEventWatcher::lengthChanged, this, &MainWorkflow::lengthChanged );
@@ -244,6 +248,15 @@ MainWorkflow::libraryClipInfo( const QString& uuid )
     return QJsonObject::fromVariantHash( h );
 }
 
+QJsonObject
+MainWorkflow::transitionInfo( const QString& uuid )
+{
+    auto t = m_sequenceWorkflow->transition( uuid );
+    if ( !t )
+        return {};
+    return QJsonObject::fromVariantHash( t->toVariant().toHash() );
+}
+
 void
 MainWorkflow::moveClip( const QString& uuid, quint32 trackId, qint64 startFrame )
 {
@@ -303,6 +316,43 @@ MainWorkflow::addEffect( const QString &clipUuid, const QString &effectId )
     }
 
     return QStringLiteral( "" );
+}
+
+QString
+MainWorkflow::addTransition( const QString& identifier, qint64 begin, qint64 end, quint32 trackId, const QString& type )
+{
+    auto trackType = type == QStringLiteral( "Video" ) ? Workflow::VideoTrack : Workflow::AudioTrack;
+    auto command = new Commands::Transition::Add( m_sequenceWorkflow, identifier, begin, end, trackId, trackType );
+    trigger( command );
+    return command->uuid().toString();
+}
+
+QString
+MainWorkflow::addTransitionBetweenTracks( const QString& identifier, qint64 begin, qint64 end, quint32 trackAId, quint32 trackBId,
+                                          const QString& type )
+{
+    auto trackType = type == QStringLiteral( "Video" ) ? Workflow::VideoTrack : Workflow::AudioTrack;
+    auto command = new Commands::Transition::Add( m_sequenceWorkflow, identifier, begin, end, trackAId, trackBId, trackType );
+    trigger( command );
+    return command->uuid().toString();
+}
+
+void
+MainWorkflow::moveTransition( const QUuid& uuid, qint64 begin, qint64 end )
+{
+    trigger( new Commands::Transition::Move( m_sequenceWorkflow, uuid, begin, end ) );
+}
+
+void
+MainWorkflow::moveTransitionBetweenTracks( const QUuid& uuid, quint32 trackAId, quint32 trackBId )
+{
+    trigger( new Commands::Transition::MoveBetweenTracks( m_sequenceWorkflow, uuid, trackAId, trackBId ) );
+}
+
+void
+MainWorkflow::removeTransition( const QUuid& uuid )
+{
+    trigger( new Commands::Transition::Remove( m_sequenceWorkflow, uuid ) );
 }
 
 bool

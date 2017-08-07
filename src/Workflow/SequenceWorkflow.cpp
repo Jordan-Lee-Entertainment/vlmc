@@ -35,6 +35,7 @@
 #include "Library/Library.h"
 #include "Tools/VlmcDebug.h"
 #include "Media/Media.h"
+#include "Transition/Transition.h"
 
 SequenceWorkflow::SequenceWorkflow( size_t trackCount )
     : m_multitrack( new Backend::MLT::MLTMultiTrack )
@@ -216,9 +217,108 @@ SequenceWorkflow::unlinkClips( const QUuid& uuidA, const QUuid& uuidB )
     return ret;
 }
 
+QUuid
+SequenceWorkflow::addTransition( const QString& identifier, qint64 begin, qint64 end,
+                                 quint32 trackId, Workflow::TrackType type )
+{
+    auto t = track( trackId, type == Workflow::AudioTrack );
+    auto transition = QSharedPointer<Transition>::create( identifier, begin, end, type );
+    t->addTransition( transition );
+    m_transitions.insert( transition->uuid(), QSharedPointer<TransitionInstance>::create( transition, trackId, 0, true ) );
+    emit transitionAdded( transition->uuid().toString() );
+    return transition->uuid();
+}
+
+QUuid
+SequenceWorkflow::addTransitionBetweenTracks( const QString& identifier, qint64 begin, qint64 end,
+                                              quint32 trackAId, quint32 trackBId,
+                                              Workflow::TrackType type )
+{
+    auto transition = QSharedPointer<Transition>::create( identifier, begin, end, type );
+    m_transitions.insert( transition->uuid(), QSharedPointer<TransitionInstance>::create( transition, trackAId, trackBId, false ) );
+    transition->apply( *m_multitrack, trackAId, trackBId );
+    emit transitionAdded( transition->uuid().toString() );
+    return transition->uuid();
+}
+
+bool
+SequenceWorkflow::addTransition( QSharedPointer<TransitionInstance> transitionInstance )
+{
+    auto transition = transitionInstance->transition;
+    auto t = track( transitionInstance->trackAId, transition->type() == Workflow::AudioTrack );
+    m_transitions.insert( transition->uuid(), transitionInstance );
+    emit transitionAdded( transition->uuid().toString() );
+    return t->addTransition( transition );
+}
+
+bool
+SequenceWorkflow::moveTransition( const QUuid& uuid, qint64 begin, qint64 end )
+{
+    auto it = m_transitions.find( uuid );
+    if ( it == m_transitions.end() )
+        return false;
+    auto transitionInstance = it.value();
+    auto transition = transitionInstance->transition;
+    if ( transition->begin() == begin && transition->end() == end )
+        return true;
+    if ( transitionInstance->isInTrack == true )
+    {
+        auto t = track( transitionInstance->trackAId, transition->type() == Workflow::AudioTrack );
+        emit transitionMoved( uuid.toString() );
+        return t->moveTransition( uuid, begin, end );
+    }
+    else
+    {
+        transition->setBoundaries( begin, end );
+        emit transitionMoved( uuid.toString() );
+        return true;
+    }
+}
+
+bool
+SequenceWorkflow::moveTransitionBetweenTracks( const QUuid& uuid, quint32 trackAId, quint32 trackBId )
+{
+    auto it = m_transitions.find( uuid );
+    if ( it == m_transitions.end() )
+        return false;
+    auto transitionInstance = it.value();
+    if ( transitionInstance->isInTrack == true )
+        return false; // Not allowed
+    auto transition = transitionInstance->transition;
+    if ( transitionInstance->trackAId == trackAId && transitionInstance->trackBId == trackBId )
+        return true;
+    transition->setTracks( trackAId, trackBId );
+    transitionInstance->trackAId = trackAId;
+    transitionInstance->trackBId = trackBId;
+    emit transitionMoved( uuid.toString() );
+    return true;
+}
+
+QSharedPointer<SequenceWorkflow::TransitionInstance>
+SequenceWorkflow::removeTransition( const QUuid& uuid )
+{
+    auto it = m_transitions.find( uuid );
+    if ( it == m_transitions.end() )
+        return {};
+    auto transitionInstance = it.value();
+    if ( transitionInstance->isInTrack == true )
+    {
+        auto transition = transitionInstance->transition;
+        auto t = track( transitionInstance->trackAId, transition->type() == Workflow::AudioTrack );
+        t->removeTransition( uuid );
+    }
+    m_transitions.erase( it );
+    emit transitionRemoved( uuid.toString() );
+    return transitionInstance;
+}
+
 QVariant
 SequenceWorkflow::toVariant() const
 {
+    QVariantList transitions;
+    for ( const auto& t : m_transitions )
+        transitions << t->toVariant();
+
     QVariantList l;
     for ( auto it = m_clips.begin(); it != m_clips.end(); ++it )
     {
@@ -237,13 +337,26 @@ SequenceWorkflow::toVariant() const
         h["linkedClips"] = linkedClipList;
         l << h;
     }
-    QVariantHash h{ { "clips", l }, { "filters", EffectHelper::toVariant( m_multitrack ) } };
+    QVariantHash h{ { "transitions", transitions }, { "clips", l },
+                    { "filters", EffectHelper::toVariant( m_multitrack.get() ) } };
     return h;
 }
 
 void
 SequenceWorkflow::loadFromVariant( const QVariant& variant )
 {
+    for ( auto& var : variant.toMap()["transitions"].toList() )
+    {
+        auto m = var.toMap();
+        bool inTrack = m["isInTrack"].toBool();
+        if ( inTrack == true )
+            addTransition( m["identifier"].toString(), m["begin"].toLongLong(), m["end"].toLongLong(),
+                    m["trackId"].toUInt(), m["audio"].toBool() ? Workflow::AudioTrack : Workflow::VideoTrack );
+        else
+            addTransitionBetweenTracks( m["identifier"].toString(), m["begin"].toLongLong(), m["end"].toLongLong(),
+                    m["trackAId"].toUInt(), m["trackBId"].toUInt(), m["audio"].toBool() ? Workflow::AudioTrack : Workflow::VideoTrack );
+    }
+
     for ( auto& var : variant.toMap()["clips"].toList() )
     {
         auto m = var.toMap();
@@ -290,6 +403,15 @@ SequenceWorkflow::clip( const QUuid& uuid )
 {
     auto it = m_clips.find( uuid );
     if ( it == m_clips.end() )
+        return {};
+    return it.value();
+}
+
+QSharedPointer<SequenceWorkflow::TransitionInstance>
+SequenceWorkflow::transition( const QUuid& uuid )
+{
+    auto it = m_transitions.find( uuid );
+    if ( it == m_transitions.end() )
         return {};
     return it.value();
 }
@@ -353,4 +475,31 @@ SequenceWorkflow::ClipInstance::duplicateClipForResize( qint64 begin, qint64 end
     clip = clip->media()->cut( begin, end );
     m_hasClonedClip = true;
     return true;
+}
+
+SequenceWorkflow::TransitionInstance::TransitionInstance( QSharedPointer<Transition> transition,
+                                                          quint32 trackAId, quint32 trackBId, bool isInTrack )
+    : transition( transition )
+    , trackAId( trackAId )
+    , trackBId( trackBId )
+    , isInTrack( isInTrack )
+{
+
+}
+
+QVariant
+SequenceWorkflow::TransitionInstance::toVariant() const
+{
+    auto h = transition->toVariant().toHash();
+    h["isInTrack"] = isInTrack;
+    if ( isInTrack == true )
+    {
+        h["trackId"] = trackAId;
+    }
+    else
+    {
+        h["trackAId"] = trackAId;
+        h["trackBId"] = trackBId;
+    }
+    return h;
 }

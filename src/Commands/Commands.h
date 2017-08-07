@@ -37,13 +37,14 @@
 #include <memory>
 
 class   Clip;
+class   EffectHelper;
+class   Transition;
+class   MarkerManager;
 
 namespace Backend
 {
 class IInput;
 }
-class   EffectHelper;
-class   MarkerManager;
 
 namespace Commands
 {
@@ -278,6 +279,84 @@ namespace Commands
             private:
                 std::shared_ptr<EffectHelper>       m_helper;
                 std::shared_ptr<Backend::IInput>    m_target;
+        };
+    }
+
+    namespace Transition
+    {
+        class   Add : public Generic
+        {
+            public:
+                Add( std::shared_ptr<SequenceWorkflow> const& workflow,
+                     const QString& identifier, qint64 begin, qint64 end,
+                     quint32 trackId, Workflow::TrackType type );
+                Add( std::shared_ptr<SequenceWorkflow> const& workflow,
+                     const QString& identifier, qint64 begin, qint64 end,
+                     quint32 trackAId, quint32 trackBId, Workflow::TrackType type );
+                virtual void    internalRedo();
+                virtual void    internalUndo();
+                virtual void    retranslate();
+
+                const QUuid&    uuid();
+            private:
+                QString                                     m_identifier;
+                qint64                                      m_begin;
+                qint64                                      m_end;
+                quint32                                     m_trackId;
+                quint32                                     m_trackAId;
+                quint32                                     m_trackBId;
+                Workflow::TrackType                         m_type;
+                QUuid                                       m_uuid;
+                QSharedPointer<SequenceWorkflow::TransitionInstance>                m_transitionInstance;
+                std::shared_ptr<SequenceWorkflow>           m_workflow;
+        };
+
+        class   Move : public Generic
+        {
+            public:
+                Move( std::shared_ptr<SequenceWorkflow> const& workflow,
+                      const QUuid& uuid, qint64 begin, qint64 end );
+                virtual void    internalRedo();
+                virtual void    internalUndo();
+                virtual void    retranslate();
+            private:
+                QUuid                                       m_uuid;
+                qint64                                      m_begin;
+                qint64                                      m_end;
+                qint64                                      m_oldBegin;
+                qint64                                      m_oldEnd;
+                std::shared_ptr<SequenceWorkflow>           m_workflow;
+        };
+
+        class   MoveBetweenTracks : public Generic
+        {
+            public:
+                MoveBetweenTracks( std::shared_ptr<SequenceWorkflow> const& workflow,
+                                   const QUuid& uuid, quint32 trackAId, quint32 trackBId );
+                virtual void    internalRedo();
+                virtual void    internalUndo();
+                virtual void    retranslate();
+            private:
+                QUuid                                       m_uuid;
+                quint32                                     m_trackAId;
+                quint32                                     m_trackBId;
+                quint32                                     m_oldTrackAId;
+                quint32                                     m_oldTrackBId;
+                std::shared_ptr<SequenceWorkflow>           m_workflow;
+        };
+
+        class   Remove : public Generic
+        {
+            public:
+                Remove( std::shared_ptr<SequenceWorkflow> const& workflow,
+                        const QUuid& uuid );
+                virtual void    internalRedo();
+                virtual void    internalUndo();
+                virtual void    retranslate();
+            private:
+                QUuid                                       m_uuid;
+                QSharedPointer<SequenceWorkflow::TransitionInstance>                m_transitionInstance;
+                std::shared_ptr<SequenceWorkflow>           m_workflow;
         };
     }
 

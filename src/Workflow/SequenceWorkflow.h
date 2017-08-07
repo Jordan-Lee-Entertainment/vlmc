@@ -33,6 +33,7 @@
 #include "Types.h"
 
 class Track;
+class Transition;
 
 namespace Backend
 {
@@ -82,6 +83,18 @@ class SequenceWorkflow : public QObject
             bool                    m_hasClonedClip;
         };
 
+        struct TransitionInstance
+        {
+            TransitionInstance() = default;
+            TransitionInstance( QSharedPointer<Transition>  transition, quint32 trackAId, quint32 trackBId, bool isInTrack );
+            QSharedPointer<Transition>  transition;
+            quint32                 trackAId;
+            quint32                 trackBId;
+            bool                    isInTrack; // If it's in a track, the transition is between clips.
+
+            QVariant                toVariant() const;
+        };
+
         /**
          * @brief addClip   Adds a clip to the sequence workflow
          * @param clip      A library clip's UUID
@@ -102,11 +115,21 @@ class SequenceWorkflow : public QObject
         bool                    linkClips( const QUuid& uuidA, const QUuid& uuidB );
         bool                    unlinkClips( const QUuid& uuidA, const QUuid& uuidB );
 
+        QUuid                   addTransition( const QString& identifier, qint64 begin, qint64 end,
+                                               quint32 trackId, Workflow::TrackType type );
+        QUuid                   addTransitionBetweenTracks( const QString& identifier, qint64 begin, qint64 end,
+                                               quint32 trackAId, quint32 trackBId, Workflow::TrackType type );
+        bool                    addTransition( QSharedPointer<TransitionInstance> transition );
+        bool                    moveTransition( const QUuid& uuid, qint64 begin, qint64 end );
+        bool                    moveTransitionBetweenTracks( const QUuid& uuid, quint32 trackAId, quint32 trackBId );
+        QSharedPointer<TransitionInstance>     removeTransition( const QUuid& uuid );
+
         QVariant                toVariant() const;
         void                    loadFromVariant( const QVariant& variant );
         void                    clear();
 
         QSharedPointer<ClipInstance>    clip( const QUuid& uuid );
+        QSharedPointer<TransitionInstance>      transition( const QUuid& uuid );
         quint32                 trackId( const QUuid& uuid );
         qint64                  position( const QUuid& uuid );
 
@@ -118,6 +141,7 @@ class SequenceWorkflow : public QObject
         inline QSharedPointer<Track>   track( quint32 trackId, bool audio );
 
         QMap<QUuid, QSharedPointer<ClipInstance>>       m_clips;
+        QMap<QUuid, QSharedPointer<TransitionInstance>>         m_transitions;
 
         QList<QSharedPointer<Track>>    m_tracks[Workflow::NbTrackType];
         QList<std::shared_ptr<Backend::IMultiTrack>>    m_multiTracks;
@@ -131,6 +155,10 @@ class SequenceWorkflow : public QObject
         void                    clipUnlinked( QString, QString );
         void                    clipMoved( QString );
         void                    clipResized( QString );
+
+        void                    transitionAdded( const QString& uuid );
+        void                    transitionMoved( const QString& uuid );
+        void                    transitionRemoved( const QString& uuid );
 };
 
 #endif // SEQUENCEWORKFLOW_H
