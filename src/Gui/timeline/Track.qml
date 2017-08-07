@@ -132,16 +132,18 @@ Item {
                 if ( dMode === dropMode.Move )
                     drag.source.scrollToThis();
 
-                sortSelectedClips();
-                var toMove = selectedClips.concat();
-
                 if ( dMode === dropMode.Move ) {
+                    deltaPos = ptof( drag.source.x ) - lastPos;
+
                     // Move to the top
                     drag.source.parent.parent.z = ++maxZ;
 
                     // Prepare newTrackId for all the selected clips
                     var oldTrackId = drag.source.newTrackId;
                     drag.source.newTrackId = trackId;
+
+                    sortSelectedClips( trackId - oldTrackId ,deltaPos );
+                    var toMove = selectedClips.concat();
 
                     // Check if there is any impossible move
                     for ( var i = 0; i < toMove.length; ++i ) {
@@ -176,11 +178,11 @@ Item {
                             }
                         }
                     }
-
-                    deltaPos = ptof( drag.source.x ) - lastPos;
                 }
-                else
+                else {
+                    toMove = selectedClips.concat();
                     deltaPos = ptof( drag.x ) - lastPos;
+                }
 
                 while ( toMove.length > 0 ) {
                     target = findClipItem( toMove[0] );

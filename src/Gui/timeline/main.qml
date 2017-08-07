@@ -376,7 +376,7 @@ Rectangle {
     }
 
     // Sort clips in a manner that clips won't overlap each other while they are being moved
-    function sortSelectedClips() {
+    function sortSelectedClips( deltaTrackId, deltaPos ) {
         // Workaround: We cannot sort selectedClips directly maybe because of a Qt bug
         var sorted = selectedClips.concat();
         sorted.sort(
@@ -384,19 +384,19 @@ Rectangle {
                     {
                         var clipA = findClipItem( clipAUuid );
                         var clipB = findClipItem( clipBUuid );
-                        if ( clipA.newTrackId > clipA.trackId )
+                        if ( deltaTrackId > 0 )
                         {
                             return - ( clipA.newTrackId - clipB.newTrackId );
                         }
-                        else if ( clipA.newTrackId < clipA.trackId )
+                        else if ( deltaTrackId < 0 )
                         {
                             return clipA.newTrackId - clipB.newTrackId;
                         }
-                        else if ( clipA.position > clipA.lastPosition )
+                        else if ( deltaPos > 0 )
                         {
                             return - ( clipA.position - clipB.position );
                         }
-                        else if ( clipA.position < clipA.lastPosition )
+                        else if ( deltaPos < 0 )
                         {
                             return clipA.position - clipB.position;
                         };
@@ -406,9 +406,9 @@ Rectangle {
         selectedClips = sorted;
     }
 
-    function dragFinished() {
+    function dragFinished( deltaTrackId, deltaPos ) {
         dragging = false;
-        sortSelectedClips();
+        sortSelectedClips( deltaTrackId, deltaPos );
 
         // We don't want to rely on selectedClips while moving since it "will" be changed
         // I'm aware that it's not the best solution but it's the safest solution for sure

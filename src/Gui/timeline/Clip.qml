@@ -361,7 +361,7 @@ Rectangle {
             if ( resizing === true && isCutMode === false )
                 resize();
             else if ( dragArea.drag.active )
-                dragFinished();
+                dragFinished( newTrackId - trackId, position - lastPosition );
         }
 
         states: [
