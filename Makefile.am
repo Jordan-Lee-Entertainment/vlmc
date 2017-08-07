@@ -393,6 +393,7 @@ vlmc_QML = \
 	src/Gui/timeline/Ruler.qml \
 	src/Gui/timeline/Track.qml \
 	src/Gui/timeline/Clip.qml \
+	src/Gui/timeline/TransitionItem.qml \
 	src/Gui/timeline/TrackContainer.qml \
 	src/Gui/timeline/Marker.qml \
 	src/Gui/timeline/main.qml \
