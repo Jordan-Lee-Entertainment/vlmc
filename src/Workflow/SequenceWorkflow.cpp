@@ -29,6 +29,7 @@
 #include "Backend/MLT/MLTTrack.h"
 #include "Backend/MLT/MLTMultiTrack.h"
 #include "EffectsEngine/EffectHelper.h"
+#include "Track.h"
 #include "Workflow/MainWorkflow.h"
 #include "Main/Core.h"
 #include "Library/Library.h"
@@ -41,17 +42,16 @@ SequenceWorkflow::SequenceWorkflow( size_t trackCount )
 {
     for ( int i = 0; i < trackCount; ++i )
     {
-        auto audioTrack = std::shared_ptr<Backend::ITrack>( new Backend::MLT::MLTTrack );
-        audioTrack->hide( Backend::HideType::Video );
-        m_tracks[Workflow::AudioTrack] << audioTrack;
-
-        auto videoTrack = std::shared_ptr<Backend::ITrack>( new Backend::MLT::MLTTrack );
-        videoTrack->hide( Backend::HideType::Audio );
+        auto audioTrack = QSharedPointer<Track>( new Track( Workflow::AudioTrack ) );
+        m_tracks[Workflow::AudioTrack] <<  audioTrack;
+        auto videoTrack = QSharedPointer<Track>( new Track( Workflow::VideoTrack ) );
         m_tracks[Workflow::VideoTrack] << videoTrack;
 
         auto multitrack = std::shared_ptr<Backend::IMultiTrack>( new Backend::MLT::MLTMultiTrack );
-        multitrack->setTrack( *videoTrack, 0 );
-        multitrack->setTrack( *audioTrack, 1 );
+        multitrack->setTrack( audioTrack->input(), 0 );
+        multitrack->hide( Backend::HideType::Video, 0 );
+        multitrack->setTrack( videoTrack->input(), 1 );
+        multitrack->hide( Backend::HideType::Audio, 1 );
         m_multiTracks << multitrack;
 
         m_multitrack->setTrack( *multitrack, i );
@@ -68,12 +68,12 @@ QUuid
 SequenceWorkflow::addClip( QSharedPointer<::Clip> clip, quint32 trackId, qint64 pos, const QUuid& uuid, bool isAudioClip )
 {
     auto t = track( trackId, isAudioClip );
-    auto ret = t->insertAt( *clip->input(), pos );
-    if ( ret == false )
-        return {};
     auto c = QSharedPointer<ClipInstance>::create( clip,
                                            uuid.isNull() == true ? QUuid::createUuid() : uuid,
                                            trackId, pos, isAudioClip );
+    auto ret = t->addClip( c, pos );
+    if ( ret == false )
+        return {};
     vlmcDebug() << "adding" << (isAudioClip ? "audio" : "video") <<  "clip instance:" << c->uuid;
     m_clips.insert( c->uuid, c ) ;
     clip->setOnTimeline( true );
@@ -91,7 +91,6 @@ SequenceWorkflow::moveClip( const QUuid& uuid, quint32 trackId, qint64 pos )
         return false;
     }
     auto& c = it.value();
-    auto clip = c->clip;
     auto oldTrackId = c->trackId;
     auto oldPosition = c->pos;
     if ( oldPosition == pos && oldTrackId == trackId )
@@ -101,19 +100,19 @@ SequenceWorkflow::moveClip( const QUuid& uuid, quint32 trackId, qint64 pos )
     {
         // Don't call removeClip/addClip as they would destroy & recreate clip instances for nothing.
         // Simply fiddle with the track to move the clip around
-        t->remove( t->clipIndexAt( oldPosition ) );
+        t->removeClip( uuid );
         auto newTrack = track( trackId, c->isAudio );
-        if ( newTrack->insertAt( *clip->input(), pos ) == false )
+        if ( newTrack->addClip( c, pos ) == false )
             return false;
-        c->pos = pos;
         c->trackId = trackId;
     }
     else
     {
-        if ( t->move( oldPosition, pos ) == false )
+        bool ret = t->moveClip( c->uuid, pos );
+        if ( ret == false )
             return false;
-        c->pos = pos;
     }
+    c->pos = pos;
     emit clipMoved( uuid.toString() );
     // CAUTION: You must not move a clip to a place where it would overlap another clip!
     return true;
@@ -132,18 +131,19 @@ SequenceWorkflow::resizeClip( const QUuid& uuid, qint64 newBegin, qint64 newEnd,
     auto trackId = c->trackId;
     auto position = c->pos;
     auto t = track( trackId, c->isAudio );
-    auto clipIndex = t->clipIndexAt( position );
+    bool ret;
     // This will only duplicate the clip once; no need to panic about endless duplications
     if ( c->duplicateClipForResize( newBegin, newEnd ) == true )
     {
         vlmcDebug() << "Duplicating clip for resize" << c->uuid << "is now using" << c->clip->uuid();
-        t->remove( clipIndex );
-        t->insertAt( *c->clip->input(), position );
+        t->removeClip( uuid );
+        ret = t->addClip( c, position );
     }
-    auto ret = t->resizeClip( clipIndex, newBegin, newEnd );
+    else
+        ret = t->resizeClip( uuid, newBegin, newEnd, newPos );
     if ( ret == false )
         return false;
-    ret = moveClip( uuid, trackId, newPos );
+    c->pos = newPos;
     emit clipResized( uuid.toString() );
     return ret;
 }
@@ -161,9 +161,8 @@ SequenceWorkflow::removeClip( const QUuid& uuid )
     auto c = it.value();
     auto clip = c->clip;
     auto trackId = c->trackId;
-    auto position = c->pos;
     auto t = track( trackId, c->isAudio );
-    t->remove( t->clipIndexAt( position ) );
+    t->removeClip( uuid );
     m_clips.erase( it );
     clip->disconnect( this );
     bool onTimeline = false;
@@ -328,14 +327,14 @@ SequenceWorkflow::trackInput( quint32 trackId )
     return m_multiTracks[trackId].get();
 }
 
-std::shared_ptr<Backend::ITrack>
+QSharedPointer<Track>
 SequenceWorkflow::track( quint32 trackId, bool isAudio )
 {
-    if ( trackId >= (quint32)m_trackCount )
-        return nullptr;
+    if ( trackId >= m_trackCount )
+        return {};
     if ( isAudio == true )
-        return m_tracks[Workflow::AudioTrack][trackId];
-    return m_tracks[Workflow::VideoTrack][trackId];
+        return m_tracks[Workflow::AudioTrack][static_cast<int>( trackId )];
+    return m_tracks[Workflow::VideoTrack][static_cast<int>( trackId )];
 }
 
 SequenceWorkflow::ClipInstance::ClipInstance(QSharedPointer<::Clip> c, const QUuid& uuid, quint32 tId, qint64 p, bool isAudio )

@@ -32,6 +32,8 @@
 #include "Media/Clip.h"
 #include "Types.h"
 
+class Track;
+
 namespace Backend
 {
 class IMultiTrack;
@@ -113,12 +115,12 @@ class SequenceWorkflow : public QObject
 
     private:
 
-        inline std::shared_ptr<Backend::ITrack>         track( quint32 trackId, bool audio );
+        inline QSharedPointer<Track>   track( quint32 trackId, bool audio );
 
         QMap<QUuid, QSharedPointer<ClipInstance>>       m_clips;
 
         Backend::IMultiTrack*           m_multitrack;
-        QList<std::shared_ptr<Backend::ITrack>>         m_tracks[Workflow::NbTrackType];
+        QList<QSharedPointer<Track>>    m_tracks[Workflow::NbTrackType];
         QList<std::shared_ptr<Backend::IMultiTrack>>    m_multiTracks;
         const size_t                    m_trackCount;
 
