@@ -678,7 +678,7 @@ Rectangle {
             Rectangle {
                 id: containerMarginItem
                 anchors.top: videoTrackContainer.bottom
-                height: 20
+                height: 5
                 width: parent.width
                 gradient: Gradient {
                     GradientStop {
