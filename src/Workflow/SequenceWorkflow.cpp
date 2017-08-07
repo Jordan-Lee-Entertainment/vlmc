@@ -60,7 +60,6 @@ SequenceWorkflow::SequenceWorkflow( size_t trackCount )
 
 SequenceWorkflow::~SequenceWorkflow()
 {
-    clear();
 }
 
 QUuid
