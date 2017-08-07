@@ -139,3 +139,11 @@ MLTMultiTrack::connect( Backend::IInput& input )
     assert( mltInput );
     return !tractor()->connect( *mltInput->producer() );
 }
+
+void
+MLTMultiTrack::hide( Backend::HideType hydeType, int index )
+{
+    auto prod = tractor()->track( index );
+    if ( prod )
+        prod->set( "hide", static_cast<int>( hydeType ) );
+}

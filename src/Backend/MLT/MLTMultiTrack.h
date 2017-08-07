@@ -58,6 +58,7 @@ namespace MLT
         virtual void        addTransition( ITransition& transition, int aTrack, int bTrack ) override;
         virtual void        addFilter( IFilter& filter, int track ) override;
         virtual bool        connect( IInput& input ) override;
+        virtual void        hide( HideType hideType, int index ) override;
 
     private:
         Mlt::Tractor*      m_tractor;

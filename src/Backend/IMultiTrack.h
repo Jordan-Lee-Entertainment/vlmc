@@ -24,6 +24,7 @@
 #define IMULTITRACK_H
 
 #include "IInput.h"
+#include "ITrack.h"
 
 namespace Backend
 {
@@ -44,6 +45,7 @@ namespace Backend
         virtual void        addTransition( ITransition& transition, int aTrack = 0, int bTrack = 1 ) = 0;
         virtual void        addFilter( IFilter& filter, int track = 0 ) = 0;
         virtual bool        connect( IInput& input ) = 0;
+        virtual void        hide( HideType hideType, int index ) = 0;
     };
 }
 
