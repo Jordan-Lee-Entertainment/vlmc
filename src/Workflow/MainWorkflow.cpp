@@ -210,7 +210,7 @@ MainWorkflow::clipInfo( const QString& uuid )
         auto clip = c->clip;
         auto h = clip->toVariant().toHash();
         h["uuid"] = uuid;
-        h["length"] = (qint64)( clip->input()->length() );
+        h["length"] = clip->length();
         h["name"] = clip->media()->title();
         h["audio"] = c->isAudio;
 
