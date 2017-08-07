@@ -739,6 +739,7 @@ Rectangle {
             clip.lastPosition = clipInfo["position"];
             clip.end = clipInfo["end"];
             clip.begin = clipInfo["begin"];
+            clip.length = clipInfo["length"];
             clip.updateEffects( clipInfo );
         }
 

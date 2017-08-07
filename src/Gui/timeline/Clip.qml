@@ -158,6 +158,7 @@ Rectangle {
         position = clipInfo["position"];
         begin = clipInfo["begin"];
         end = clipInfo["end"];
+        length = clipInfo["length"];
     }
 
     onPositionChanged: {
@@ -170,6 +171,10 @@ Rectangle {
 
     onEndChanged: {
         clipInfo["end"] = end;
+    }
+
+    onLengthChanged: {
+        clipInfo["length"] = length;
     }
 
     onSelectedChanged: {
