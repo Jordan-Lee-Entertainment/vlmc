@@ -35,14 +35,6 @@
 
 using namespace Backend::MLT;
 
-enum HideType
-{
-    None,
-    Video,
-    Audio,
-    VideoAndAudio
-};
-
 MLTTrack::MLTTrack()
     : MLTTrack( Backend::instance()->profile() )
 {
@@ -161,31 +153,7 @@ MLTTrack::clear()
 }
 
 void
-MLTTrack::setMute( bool muted )
+MLTTrack::hide( Backend::HideType hydeType )
 {
-    if ( muted == false )
-        if ( playlist()->get_int( "hide" ) == HideType::VideoAndAudio )
-            playlist()->set( "hide", HideType::Video );
-        else
-            playlist()->set( "hide", HideType::None );
-    else
-        if ( playlist()->get_int( "hide" ) == HideType::Video )
-            playlist()->set( "hide", HideType::VideoAndAudio );
-        else
-            playlist()->set( "hide", HideType::Audio );
-}
-
-void
-MLTTrack::setVideoEnabled( bool enabled )
-{
-    if ( enabled == true )
-        if ( playlist()->get_int( "hide" ) == HideType::VideoAndAudio )
-            playlist()->set( "hide", HideType::Audio );
-        else
-            playlist()->set( "hide", HideType::None );
-    else
-        if ( playlist()->get_int( "hide" ) == HideType::Audio )
-            playlist()->set( "hide", HideType::VideoAndAudio );
-        else
-            playlist()->set( "hide", HideType::Video );
+    playlist()->set( "hide", static_cast<int>( hydeType ) );
 }

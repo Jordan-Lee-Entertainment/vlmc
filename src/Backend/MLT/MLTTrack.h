@@ -61,9 +61,7 @@ class MLTTrack : public ITrack, public MLTInput
         virtual int         clipIndexAt( int64_t position ) override;
         virtual int         count() const override;
         virtual void        clear() override;
-
-        virtual void        setMute( bool muted ) override;
-        virtual void        setVideoEnabled( bool enabled ) override;
+        virtual void        hide( HideType hideType ) override;
 
     private:
         Mlt::Playlist*                  m_playlist;

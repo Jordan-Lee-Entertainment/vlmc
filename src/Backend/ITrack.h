@@ -28,6 +28,14 @@
 
 namespace Backend
 {
+    enum class HideType
+    {
+        None,
+        Video,
+        Audio,
+        VideoAndAudio
+    };
+
     class ITrack : virtual public IInput
     {
     public:
@@ -45,8 +53,7 @@ namespace Backend
         virtual int         count() const = 0;
         virtual void        clear() = 0;
 
-        virtual void        setMute( bool muted ) = 0;
-        virtual void        setVideoEnabled( bool enabled ) = 0;
+        virtual void        hide( HideType hideType ) = 0;
     };
 }
 

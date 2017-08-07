@@ -42,11 +42,11 @@ SequenceWorkflow::SequenceWorkflow( size_t trackCount )
     for ( int i = 0; i < trackCount; ++i )
     {
         auto audioTrack = std::shared_ptr<Backend::ITrack>( new Backend::MLT::MLTTrack );
-        audioTrack->setVideoEnabled( false );
+        audioTrack->hide( Backend::HideType::Video );
         m_tracks[Workflow::AudioTrack] << audioTrack;
 
         auto videoTrack = std::shared_ptr<Backend::ITrack>( new Backend::MLT::MLTTrack );
-        videoTrack->setMute( true );
+        videoTrack->hide( Backend::HideType::Audio );
         m_tracks[Workflow::VideoTrack] << videoTrack;
 
         auto multitrack = std::shared_ptr<Backend::IMultiTrack>( new Backend::MLT::MLTMultiTrack );
