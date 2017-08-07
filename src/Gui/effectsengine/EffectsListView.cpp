@@ -79,7 +79,7 @@ EffectsListView::startDrag( const QString& effectId )
     QDrag* drag = new QDrag( this );
     QMimeData* mimeData = new QMimeData;
 
-    mimeData->setData( QStringLiteral( "vlmc/effect_name" ), effectId.toUtf8() );
+    mimeData->setData( QStringLiteral( "vlmc/effect_id" ), effectId.toUtf8() );
 
     drag->setMimeData( mimeData );
     drag->exec();

@@ -385,10 +385,10 @@ Rectangle {
     DropArea {
         id: effectDropArea
         anchors.fill: parent
-        keys: ["vlmc/effect_name"]
+        keys: ["vlmc/effect_id"]
 
         onDropped: {
-            workflow.addEffect( uuid, drop.getDataAsString( "vlmc/effect_name" ) );
+            workflow.addEffect( uuid, drop.getDataAsString( "vlmc/effect_id" ) );
         }
     }
 
