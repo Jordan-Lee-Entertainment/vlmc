@@ -269,7 +269,6 @@ Item {
                 uuid: model.uuid
                 libraryUuid: model.libraryUuid
                 position: model.position
-                lastPosition: model.position
                 begin: model.begin
                 end: model.end
                 length: model.length

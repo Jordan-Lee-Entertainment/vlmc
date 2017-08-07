@@ -208,6 +208,7 @@ Rectangle {
         else
             selected = true;
         newTrackId = trackId;
+        lastPosition = position;
         allClips.push( clip );
         allClipsDict[uuid] = clip;
 
