@@ -31,7 +31,6 @@
 #include "MLTBackend.h"
 #include "MLTTransition.h"
 #include "MLTFilter.h"
-#include "Tools/VlmcDebug.h"
 
 #include <cassert>
 
