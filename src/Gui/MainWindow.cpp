@@ -504,7 +504,7 @@ MainWindow::setupUndoRedoWidget()
 void
 MainWindow::setupEffectsList()
 {
-    m_effectsList = new EffectsListView;
+    m_effectsList = new EffectsListView( this );
     m_dockedEffectsList = dockWidget( m_effectsList->container(), Qt::TopDockWidgetArea );
 }
 
