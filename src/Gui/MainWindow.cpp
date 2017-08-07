@@ -56,6 +56,7 @@
 
 /* Widgets */
 #include "effectsengine/EffectsListView.h"
+#include "transition/TransitionsListView.h"
 #include "library/MediaLibraryView.h"
 #include "library/ClipLibraryView.h"
 #include "preview/PreviewWidget.h"
@@ -178,6 +179,7 @@ MainWindow::retranslateUi()
 {
     m_dockedUndoView->setWindowTitle( tr( "History" ) );
     m_dockedEffectsList->setWindowTitle( tr( "Effects List" ) );
+    m_dockedTransitionsList->setWindowTitle( tr( "Transitions List" ) );
     m_dockedMediaLibrary->setWindowTitle( tr( "Media Library" ) );
     m_dockedClipLibrary->setWindowTitle( tr( "Clip Library" ) );
     m_dockedClipPreview->setWindowTitle( tr( "Clip Preview" ) );
@@ -482,6 +484,7 @@ MainWindow::initializeDockWidgets()
 
     setupLibrary();
     setupEffectsList();
+    setupTransitionsList();
     setupClipPreview();
     setupProjectPreview();
     setupUndoRedoWidget();
@@ -506,6 +509,13 @@ MainWindow::setupEffectsList()
 {
     m_effectsList = new EffectsListView( this );
     m_dockedEffectsList = dockWidget( m_effectsList->container(), Qt::TopDockWidgetArea );
+}
+
+void
+MainWindow::setupTransitionsList()
+{
+    m_transitionsList = new TransitionsListView( this );
+    m_dockedTransitionsList = dockWidget( m_transitionsList->container(), Qt::TopDockWidgetArea );
 }
 
 void

@@ -37,6 +37,7 @@ class QProgressBar;
 #include "ui/MainWindow.h"
 
 class   EffectsListView;
+class   TransitionsListView;
 class   ClipLibraryView;
 class   MediaLibraryView;
 class   PreviewWidget;
@@ -88,6 +89,7 @@ private:
     void        setupClipPreview();
     void        setupProjectPreview();
     void        setupEffectsList();
+    void        setupTransitionsList();
     void        setupUndoRedoWidget();
     void        retranslateUi();
 #ifdef WITH_CRASHBUTTON
@@ -132,9 +134,11 @@ private:
     MediaLibraryView*       m_mediaLibrary;
     ClipLibraryView*        m_clipLibrary;
     EffectsListView*        m_effectsList;
+    TransitionsListView*    m_transitionsList;
     QUndoView*              m_undoView;
     QDockWidget*            m_dockedUndoView;
     QDockWidget*            m_dockedEffectsList;
+    QDockWidget*            m_dockedTransitionsList;
     QDockWidget*            m_dockedClipLibrary;
     QDockWidget*            m_dockedMediaLibrary;
     QDockWidget*            m_dockedClipPreview;

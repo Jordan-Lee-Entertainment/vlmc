@@ -173,6 +173,7 @@ vlmc_SOURCES += \
 	src/Gui/effectsengine/EffectsListView.cpp \
 	src/Gui/effectsengine/EffectStack.cpp \
 	src/Gui/effectsengine/EffectWidget.cpp \
+	src/Gui/transition/TransitionsListView.cpp \
 	src/Gui/export/RendererSettings.cpp \
 	src/Gui/export/ShareOnInternet.cpp \
 	src/Gui/import/TagWidget.cpp \
@@ -319,6 +320,7 @@ nodist_vlmc_SOURCES += \
 	src/Gui/media/ClipMetadataDisplayer.moc.cpp \
 	src/Gui/effectsengine/EffectWidget.moc.cpp \
 	src/Gui/effectsengine/EffectInstanceWidget.moc.cpp \
+	src/Gui/transition/TransitionsListView.moc.cpp \
 	src/Gui/preview/LCDTimecode.moc.cpp \
 	src/Gui/effectsengine/EffectStack.moc.cpp \
 	src/Gui/wizard/firstlaunch/WorkspaceLocation.moc.cpp \
@@ -402,6 +404,7 @@ vlmc_QML = \
 	src/Gui/library/ui/ClipItem.qml \
 	src/Gui/effectsengine/Effect.qml \
 	src/Gui/effectsengine/EffectsListView.qml \
+	src/Gui/transition/TransitionsListView.qml \
 	$(NULL)
 
 EXTRA_DIST += $(vlmc_QML)
