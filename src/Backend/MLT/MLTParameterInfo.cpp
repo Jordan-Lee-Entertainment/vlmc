@@ -85,7 +85,7 @@ MLTParameterInfo::setProperties( Mlt::Properties* properties )
     if ( properties == nullptr )
         return;
     m_identifier    = makeString( properties->get( "identifier" ) );
-    m_name          = makeString( properties->get( "title" ) );
+    m_name          = makeString( properties->get( "title" ) ? properties->get( "title" ) : properties->get( "identifier" ) );
     m_type          = makeString( properties->get( "type" ) );
     m_description   = makeString( properties->get( "description" ) );
     m_defaultValue  = makeString( properties->get( "default" ) );
