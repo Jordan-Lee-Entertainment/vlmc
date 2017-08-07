@@ -24,8 +24,7 @@
 # include "config.h"
 #endif
 
-#include "Backend/IFilter.h"
-#include "Backend/IInfo.h"
+#include "EffectsEngine/EffectHelper.h"
 #include "EffectWidget.h"
 #include "ui/EffectWidget.h"
 
@@ -42,12 +41,12 @@ EffectWidget::~EffectWidget()
 }
 
 void
-EffectWidget::setFilterInfo( Backend::IInfo* info )
+EffectWidget::setEffectHelper( std::shared_ptr<EffectHelper> const& effect )
 {
     clear();
-    m_ui->nameValueLabel->setText( QString::fromStdString( info->name() ) );
-    m_ui->descValueLabel->setText( QString::fromStdString( info->description() ) );
-    m_ui->authorValueLabel->setText( QString::fromStdString( info->author() ) );
+    m_ui->nameValueLabel->setText( effect->name() );
+    m_ui->descValueLabel->setText( effect->description() );
+    m_ui->authorValueLabel->setText( effect->author());
 
 }
 

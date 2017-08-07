@@ -25,15 +25,14 @@
 
 #include <QWidget>
 
+#include <memory>
+
 namespace Ui
 {
     class EffectWidget;
 }
 
-namespace Backend
-{
-class IInfo;
-}
+class EffectHelper;
 
 class EffectWidget : public QWidget
 {
@@ -42,7 +41,7 @@ class EffectWidget : public QWidget
     public:
         explicit EffectWidget( QWidget *parent = 0 );
         ~EffectWidget();
-        void                setFilterInfo( Backend::IInfo* info );
+        void                setEffectHelper( std::shared_ptr<EffectHelper> const& effect );
         void                clear();
 
     private:

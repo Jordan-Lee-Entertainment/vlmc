@@ -121,6 +121,7 @@ EffectHelper::initParams()
         auto val = m_settings.createVar( type, QString::fromStdString( paramInfo->identifier() ),
                                          defaultValue( paramInfo->identifier().c_str(), type ), paramInfo->name().c_str(),
                                          paramInfo->description().c_str(), flags );
+        m_parameters << val;
 
         connect( val, &SettingValue::changed, this, [this, val]( const QVariant& variant ) { set( val, variant ); } );
     }
@@ -180,6 +181,12 @@ SettingValue*
 EffectHelper::value( const QString& key )
 {
     return m_settings.value( key );
+}
+
+const QList<SettingValue*>&
+EffectHelper::parameters() const
+{
+    return m_parameters;
 }
 
 void
@@ -288,7 +295,25 @@ EffectHelper::filterInfo()
 }
 
 QString
-EffectHelper::identifier()
+EffectHelper::identifier() const
 {
     return QString::fromStdString( m_filter->identifier() );
+}
+
+QString
+EffectHelper::name() const
+{
+    return QString::fromStdString( m_filterInfo->name() );
+}
+
+QString
+EffectHelper::description() const
+{
+    return QString::fromStdString( m_filterInfo->description() );
+}
+
+QString
+EffectHelper::author() const
+{
+    return QString::fromStdString( m_filterInfo->author() );
 }

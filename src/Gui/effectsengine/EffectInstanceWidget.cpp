@@ -58,16 +58,13 @@ EffectInstanceWidget::setEffectHelper( std::shared_ptr<EffectHelper> const& help
 {
     clear();
     m_helper = helper;
-    m_ui->effectWidget->setFilterInfo( helper->filterInfo() );
+    m_ui->effectWidget->setEffectHelper( helper );
 
-    for ( auto param : helper->filterInfo()->paramInfos() )
+    for ( auto param : helper->parameters() )
     {
-        SettingValue*               s = helper->value( QString::fromStdString( param->identifier() ) );
-        ISettingsCategoryWidget*    widget = widgetFactory( s );
-        QLabel*                     label = new QLabel( tr( s->name() ), this );
-        m_widgets.push_back( label );
-        m_widgets.push_back( widget );
-        widget->setToolTip( s->description() );
+        ISettingsCategoryWidget*    widget = widgetFactory( param );
+        QLabel*                     label = new QLabel( param->name(), this );
+        widget->setToolTip( param->description() );
         m_ui->settingsLayout->addRow( label , widget );
         m_settings.push_back( widget );
     }

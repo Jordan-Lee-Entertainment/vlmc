@@ -456,7 +456,7 @@ Commands::Effect::Add::Add( std::shared_ptr<EffectHelper> const& helper, Backend
 void
 Commands::Effect::Add::retranslate()
 {
-    setText( tr( "Adding effect %1" ).arg( QString::fromStdString( m_helper->filterInfo()->name() ) ) );
+    setText( tr( "Adding effect %1" ).arg( m_helper->name() ) );
 }
 
 void
@@ -487,7 +487,7 @@ Commands::Effect::Move::Move( std::shared_ptr<EffectHelper> const& helper, std::
 void
 Commands::Effect::Move::retranslate()
 {
-    setText( tr( "Moving effect %1" ).arg( QString::fromStdString( m_helper->filterInfo()->name() ) ) );
+    setText( tr( "Moving effect %1" ).arg( m_helper->name() ) );
 }
 
 void
@@ -530,7 +530,7 @@ Commands::Effect::Resize::Resize( std::shared_ptr<EffectHelper> const& helper, q
 void
 Commands::Effect::Resize::retranslate()
 {
-    setText( tr( "Resizing effect %1" ).arg( QString::fromStdString( m_helper->filterInfo()->name() ) ) );
+    setText( tr( "Resizing effect %1" ).arg( m_helper->name() ) );
 }
 
 void
@@ -555,7 +555,7 @@ Commands::Effect::Remove::Remove( std::shared_ptr<EffectHelper> const& helper )
 void
 Commands::Effect::Remove::retranslate()
 {
-    setText( tr( "Deleting effect %1" ).arg( QString::fromStdString( m_helper->filterInfo()->name() ) ) );
+    setText( tr( "Deleting effect %1" ).arg( m_helper->name() ) );
 }
 
 void

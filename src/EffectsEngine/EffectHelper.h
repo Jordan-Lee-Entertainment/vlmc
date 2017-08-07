@@ -69,14 +69,16 @@ class   EffectHelper : public Workflow::Helper
 
         void                setTarget( Backend::IInput* input );
 
-        Backend::IInfo*                 filterInfo();
-
-        QString                         identifier();
+        QString                         identifier() const;
+        QString                         name() const;
+        QString                         description() const;
+        QString                         author() const;
 
         std::shared_ptr<Backend::IFilter>               filter();
         const std::shared_ptr<Backend::IFilter>         filter() const;
 
         SettingValue*                   value( const QString& key );
+        const QList<SettingValue*>&     parameters() const;
 
         // Handle one filter.
         void                            loadFromVariant( const QVariant& variant );
@@ -91,7 +93,10 @@ class   EffectHelper : public Workflow::Helper
         Backend::IInfo*             m_filterInfo;
 
         Settings                    m_settings;
+        QList<SettingValue*>        m_parameters;
 
+
+        Backend::IInfo*             filterInfo();
         void                        set( SettingValue* value, const QVariant& variant );
         QVariant                    defaultValue( const char* id, SettingValue::Type type );
         void                        initParams();
