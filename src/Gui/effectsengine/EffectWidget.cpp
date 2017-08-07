@@ -53,9 +53,9 @@ EffectWidget::setEffectHelper( std::shared_ptr<EffectHelper> const& effect )
 void
 EffectWidget::clear()
 {
-    m_ui->nameValueLabel->setText( QStringLiteral( "" ) );
-    m_ui->descValueLabel->setText( QStringLiteral( "" ) );
-    m_ui->typeValueLabel->setText( QStringLiteral( "" ) );
-    m_ui->authorValueLabel->setText( QStringLiteral( "" ) );
-    m_ui->versionValueLabel->setText( QStringLiteral( "" ) );
+    m_ui->nameValueLabel->clear();
+    m_ui->descValueLabel->clear();
+    m_ui->typeValueLabel->clear();
+    m_ui->authorValueLabel->clear();
+    m_ui->versionValueLabel->clear();
 }
