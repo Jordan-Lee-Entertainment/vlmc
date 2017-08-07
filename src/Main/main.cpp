@@ -163,6 +163,7 @@ VLMCGuimain( const QString& projectFile )
     d.exec();
 #endif
 
+    qApp->setAttribute( Qt::AA_DontCreateNativeWidgetSiblings, true );
     MainWindow w( backend );
 
     if ( FirstLaunchWizard::shouldRun() == true )
