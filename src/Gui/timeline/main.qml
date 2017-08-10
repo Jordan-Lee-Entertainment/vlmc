@@ -91,35 +91,6 @@ Rectangle {
                         leastDistance = Math.abs( newPos + target.length - 1 - cEndPos );
                         newPos = cEndPos - target.length + 1;
                     }
-
-                    // If they overlap, create a cross-dissolve transition
-                    if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos )
-                    {
-                        var toCreate = true;
-                        for ( var i = 0; i < allTransitions.length; ++i ) {
-                            var transitionItem = allTransitions[i];
-                            if ( transitionItem.trackId === clip.trackId &&
-                                 transitionItem.type === clip.type &&
-                                 transitionItem.isCrossDissolve === true &&
-                                 transitionItem.clips.indexOf( clip.uuid ) !== -1 &&
-                                 transitionItem.clips.indexOf( target.uuid ) !== -1
-                                ) {
-                                transitionItem.begin = Math.max( newPos, clip["position"] );
-                                transitionItem.end = Math.min( newPos + target.length - 1, clip["position"] + clip["length"] - 1 );
-                                toCreate = false;
-                            }
-                        }
-                        if ( toCreate === true ) {
-                            addTransition( target.type, target.newTrackId,
-                                            { "begin": Math.max( newPos, cPos ),
-                                              "end": Math.min( newPos + target.length - 1, cEndPos ),
-                                              "identifier": "dissolve",
-                                              "uuid": "transitionUuid" } );
-                            transitionItem = allTransitions[allTransitions.length - 1];
-                            transitionItem.clips.push( clip.uuid );
-                            transitionItem.clips.push( target.uuid );
-                        }
-                    }
                 }
                 else {
                     // In theory, they share the same deltaPos, therefore unable to collide each other.

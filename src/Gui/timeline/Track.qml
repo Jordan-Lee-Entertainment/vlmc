@@ -290,6 +290,49 @@ Item {
                         target = findClipItem( selectedClips[i] );
                         newPos = target.position + deltaPos;
 
+                        var currentTrack = trackContainer( target.type )["tracks"].get( target.newTrackId );
+                        if ( currentTrack )
+                        {
+                            var clips = currentTrack["clips"];
+                            for ( var j = 0; j < clips.count; ++j )  {
+                                var clip = clips.get( j );
+                                if ( clip.uuid === target.uuid ||
+                                     ( clip.uuid === drag.source.uuid && target.newTrackId !== drag.source.newTrackId )
+                                   )
+                                    continue;
+                                var cPos = clip.uuid === drag.source.uuid ? ptof( drag.source.x ) : clip["position"];
+                                var cEndPos = clip["position"] + clip["length"] - 1;
+                                // If they overlap, create a cross-dissolve transition
+                                if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos )
+                                {
+                                    var toCreate = true;
+                                    for ( var k = 0; k < allTransitions.length; ++k ) {
+                                        var transitionItem = allTransitions[k];
+                                        if ( transitionItem.trackId === clip.trackId &&
+                                             transitionItem.type === clip.type &&
+                                             transitionItem.isCrossDissolve === true &&
+                                             transitionItem.clips.indexOf( clip.uuid ) !== -1 &&
+                                             transitionItem.clips.indexOf( target.uuid ) !== -1
+                                            ) {
+                                            transitionItem.begin = Math.max( newPos, cPos );
+                                            transitionItem.end = Math.min( newPos + target.length - 1, cEndPos );
+                                            toCreate = false;
+                                        }
+                                    }
+                                    if ( toCreate === true ) {
+                                        addTransition( target.type, target.newTrackId,
+                                                        { "begin": Math.max( newPos, cPos ),
+                                                          "end": Math.min( newPos + target.length - 1, cEndPos ),
+                                                          "identifier": "dissolve",
+                                                          "uuid": "transitionUuid" } );
+                                        transitionItem = allTransitions[allTransitions.length - 1];
+                                        transitionItem.clips.push( clip.uuid );
+                                        transitionItem.clips.push( target.uuid );
+                                    }
+                                }
+                            }
+                        }
+
                         // We only want to update the length when the right edge of the timeline
                         // is exposed.
                         if ( sView.flickableItem.contentX + page.width > sView.width &&
