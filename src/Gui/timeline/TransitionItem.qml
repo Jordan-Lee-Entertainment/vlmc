@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import QtQuick.Controls 1.4
+import QtQuick.Dialogs 1.2
 
 Rectangle {
     id: transition
@@ -153,6 +155,12 @@ Rectangle {
                 workflow.moveTransitionBetweenTracks( uuid, trackId - 1, trackId );
         }
 
+        onClicked: {
+            if ( mouse.button & Qt.RightButton ) {
+                transitionContextMenu.popup();
+            }
+        }
+
         states: [
             State {
                 name: "Move"
@@ -170,5 +178,29 @@ Rectangle {
                 PropertyChanges { target: mouseArea; cursorShape: Qt.ClosedHandCursor }
             }
         ]
+    }
+
+    Menu {
+        id: transitionContextMenu
+        title: "Edit"
+
+        MenuItem {
+            text: "Delete"
+
+            onTriggered: {
+                removeTransitionDialog.visible = true;
+            }
+        }
+
+        MessageDialog {
+            id: removeTransitionDialog
+            title: "VLMC"
+            text: qsTr( "Do you really want to remove the transition?" )
+            icon: StandardIcon.Question
+            standardButtons: StandardButton.Yes | StandardButton.No
+            onYes: {
+                workflow.removeTransition( uuid );
+            }
+        }
     }
 }
