@@ -106,7 +106,7 @@ Rectangle {
                     cEndPos += clipMargin;
                     if ( cEndPos >= newPos && newPos + target.length - 1 >= cPos ) {
                         if ( cPos >= newPos ) {
-                            if ( cPos - target.length + 1 > 0 )
+                            if ( cPos - target.length + clipMargin >= 0 )
                                 newPos = cPos - target.length + clipMargin;
                             else
                                 newPos = target.position;
