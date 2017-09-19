@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="cs_CZ" sourcelanguage="en">
+<TS version="2.0" language="cs" sourcelanguage="en">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutVLMC</name>
@@ -233,7 +233,7 @@ Verze vašeho běhového prostředí Qt: %4
     </message>
     <message>
         <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
-        <translation>Nastala chyba. Omlouváme se za způsobené obtíže, nicméně jsme uložili Váš projekt. Ten bude znovu otevřen při dalším spuštění VLMC.</translation>
+        <translation>Nastala chyba. Omlouváme se za způsobené obtíže, nicméně jsme uložili váš projekt. Ten bude znovu otevřen při dalším spuštění VLMC.</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -411,7 +411,7 @@ Verze vašeho běhového prostředí Qt: %4
     </message>
     <message>
         <source>Please choose a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte, prosím, soubor projektu</translation>
     </message>
 </context>
 <context>
@@ -422,7 +422,7 @@ Verze vašeho běhového prostředí Qt: %4
     </message>
     <message>
         <source>This guide will step you through the process of setting up a new project.</source>
-        <translation>Tento průvodce Vás provede procesem nastavení nového projektu.</translation>
+        <translation>Průvodce vás provede procesem nastavení nového projektu.</translation>
     </message>
     <message>
         <source>Project name</source>
@@ -635,7 +635,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Render your project as a file</source>
-        <translation>Vykreslit Váš projekt jako soubor</translation>
+        <translation>Vykreslit váš projekt jako soubor</translation>
     </message>
     <message>
         <source>&amp;Load Project</source>
@@ -679,7 +679,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Share your project on youtube</source>
-        <translation>Sdílet Váš projekt na youtube</translation>
+        <translation>Sdílet váš projekt na youtube</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
@@ -731,7 +731,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
-        <translation>VLMC se nezdařilo obnovení Vašeho projektu. Omlouváme se za obtíže</translation>
+        <translation>VLMC se nezdařilo obnovení vašeho projektu. Omlouváme se za obtíže</translation>
     </message>
     <message>
         <source>Publish on &amp;Internet</source>
@@ -1194,7 +1194,7 @@ p, li { white-space: pre-wrap; }
         <source>An error occurred while rendering.
 Please check your VLC installation before reporting the issue.</source>
         <translation>Při vykreslení se vyskytla chyba.
-Prosím zkontrolujte Vaši instalaci VLC než ji nahlásíte.</translation>
+Prosím zkontrolujte vaši instalaci VLC než ji nahlásíte.</translation>
     </message>
     <message>
         <source>Adjust Volume</source>
@@ -1704,7 +1704,7 @@ Prosím kontaktujte poskytovatele video-služeb.</translation>
     </message>
     <message>
         <source>In this page you can fine tune some of the settings of your new project.</source>
-        <translation>Zde můžete vyladit některá nastavení Vašeho nového projektu.</translation>
+        <translation>Zde můžete vyladit některá nastavení vašeho nového projektu.</translation>
     </message>
     <message>
         <source>Video</source>
@@ -1833,7 +1833,7 @@ p, li { white-space: pre-wrap; }
 &lt;tr&gt;
 &lt;td style=&quot;border: none;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vítejte v průvodci novým projektem.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tento průvodce Vám pomůže při vytváření nového, nebo otevírání již existujícího projektu.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tento průvodce vám pomůže při vytváření nového, nebo otevírání již existujícího projektu.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Vyberte si, prosím, preferovanou akci dole a stiskněte tlačítko další.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
