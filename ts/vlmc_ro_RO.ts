@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ro_MD">
+<TS version="2.0" language="ro" sourcelanguage="en">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutVLMC</name>
@@ -18,7 +18,7 @@
     </message>
     <message>
         <source>License</source>
-        <translation>Licenţă</translation>
+        <translation>Licență</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -37,35 +37,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>VLMC (VideoLAN Movie Creator) is a cross-platform, non-linear video editing software based on the VLC Media Player.
 </source>
-        <translation>Unele din fişierele media încărcate nu pot fi folosite pentru editarea video. Vrei VLMC să le transforme astfel încât puteţi să le folosească în proiectul dumneavoastră?.</translation>
+        <translation>VLMC (VideoLAN Movie Creator) etse un program, cross-platform non-liniar, de editare video, bayat pe VLC Media Player.
+</translation>
     </message>
     <message>
         <source>This version of VLMC was compiled on:
 %1 running  %2 compiled against Qt %3
 Your Qt runtime version: %4
 </source>
-        <translation>Aceasta versiune de VLMC a fost compilata pe:
-%1 rulare  %2 compilare  Qt %3
-Versiune Qt: %4</translation>
+        <translation>Această versiune VLMC a fost compilată pe:
+%1 rulând  %2 compiled cu Qt %3
+Versiunea Qt de execuție : %4
+</translation>
     </message>
     <message>
         <source>Thanks</source>
-        <translation>Mulţumesc</translation>
+        <translation>Mulțumiri</translation>
     </message>
 </context>
 <context>
     <name>AbstractGraphicsMediaItem</name>
     <message>
         <source>Remove</source>
-        <translation>Elimină</translation>
+        <translation>Eliminați</translation>
     </message>
     <message>
         <source>Mute</source>
-        <translation>Mut</translation>
+        <translation>Fără sunet</translation>
     </message>
     <message>
         <source>Unlink</source>
-        <translation>Deconectat</translation>
+        <translation>Deconectare</translation>
     </message>
     <message>
         <source>Link</source>
@@ -73,18 +75,18 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Set color</source>
-        <translation>Setează culoarea</translation>
+        <translation>Setați culoarea</translation>
     </message>
 </context>
 <context>
     <name>ClipMetadataDisplayer</name>
     <message>
         <source>Form</source>
-        <translation>Formular</translation>
+        <translation>De la</translation>
     </message>
     <message>
         <source>Media Properties</source>
-        <translation>Proprietatile fisierului media</translation>
+        <translation>Proprietăți media</translation>
     </message>
     <message>
         <source>Name</source>
@@ -92,7 +94,7 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Duration</source>
-        <translation>Durata</translation>
+        <translation>Durată</translation>
     </message>
     <message>
         <source>---</source>
@@ -100,7 +102,7 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Resolution</source>
-        <translation>Rezolutie</translation>
+        <translation>Rezoluție</translation>
     </message>
     <message>
         <source>FPS</source>
@@ -108,11 +110,11 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Number of video tracks</source>
-        <translation>Numarul pistelor video</translation>
+        <translation>Numărul pistelor video</translation>
     </message>
     <message>
         <source>Number of audio tracks</source>
-        <translation>Numarul pistelor audio</translation>
+        <translation>Numărul pistelor audio</translation>
     </message>
     <message>
         <source>0</source>
@@ -120,22 +122,22 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Path</source>
-        <translation>Calea</translation>
+        <translation>Cale</translation>
     </message>
     <message>
         <source>In project workspace</source>
-        <translation>In spatiul de lucru</translation>
+        <translation>În culisele proiectului</translation>
     </message>
 </context>
 <context>
     <name>ClipProperty</name>
     <message>
         <source>Metatags :</source>
-        <translation></translation>
+        <translation>Metataguri:</translation>
     </message>
     <message>
         <source>...</source>
-        <translation></translation>
+        <translation>...</translation>
     </message>
     <message>
         <source>Annotations :</source>
@@ -143,57 +145,57 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>properties</source>
-        <translation>proprietăţile</translation>
+        <translation>proprietăți</translation>
     </message>
     <message>
         <source>New tags edition</source>
-        <translation>Editie noua de taguri</translation>
+        <translation>Ediţie noua de etichete</translation>
     </message>
     <message>
         <source>Enter tags (you can enter multiple tags, separated by a comma)</source>
-        <translation>Introduceti tagurile (Puteti introduce mai multe taguri separate prin virgula)</translation>
+        <translation>Introduceţi etichete (puteţi introduce etichete multiple, separate prin virgulă)</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Add</name>
     <message>
         <source>Adding clip to track %1</source>
-        <translation>Adauga clipul pe pista %1</translation>
+        <translation>Adăugare clip la piesa %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Move</name>
     <message>
         <source>Moving clip from track %1 to %2</source>
-        <translation>Mutare clip de pe pista %1 pe %2</translation>
+        <translation>Mutare clip de la piesa %1 la %2</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Remove</name>
     <message>
         <source>Removing clip </source>
-        <translation>Şterge clip</translation>
+        <translation>Eliminare piesă</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Resize</name>
     <message>
         <source>Resizing clip</source>
-        <translation>Redimensionare clip</translation>
+        <translation>Redimensionare piesă</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Split</name>
     <message>
         <source>Splitting clip</source>
-        <translation>Scindare clip</translation>
+        <translation>Divizare piesă</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Add</name>
     <message>
         <source>Adding effect %1</source>
-        <translation>Adaugare efect%1</translation>
+        <translation>Adăugare efect %1</translation>
     </message>
 </context>
 <context>
@@ -207,7 +209,7 @@ Versiune Qt: %4</translation>
     <name>Commands::Effect::Remove</name>
     <message>
         <source>Deleting effect %1</source>
-        <translation>Sterge efect %1</translation>
+        <translation>Ştergere efect %1</translation>
     </message>
 </context>
 <context>
@@ -221,26 +223,30 @@ Versiune Qt: %4</translation>
     <name>Commands::Generic</name>
     <message>
         <source>Invalid action</source>
-        <translation>Acţiune invalidă</translation>
+        <translation>Acțiune invalidă</translation>
     </message>
 </context>
 <context>
     <name>CrashHandler</name>
     <message>
         <source>VLMC Crash handler</source>
-        <translation></translation>
+        <translation>Diagnoză Erori fatale VLMC</translation>
+    </message>
+    <message>
+        <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
+        <translation>A apărut o eroare. Ne pare rău pentru inconvenienţe, deşi proiectul a fost salvat. Va fi redeschis la următoarea rulare a VLMC.</translation>
     </message>
     <message>
         <source>Ok</source>
-        <translation></translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <source>Restart</source>
-        <translation></translation>
+        <translation>Restartați</translation>
     </message>
     <message>
         <source>Crash_Description</source>
-        <translation>Descriere eroare</translation>
+        <translation>Descriere_Eroare</translation>
     </message>
     <message>
         <source>Unknown signal</source>
@@ -248,26 +254,22 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>A crash occurred. Signal received: </source>
-        <translation>A aparut o eroare. Semnal receptionat: </translation>
-    </message>
-    <message>
-        <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
-        <translation>A apărut o eroare. Ne pare rău pentru inconvenient, deşi am salvat proiectul dumneavoastra. Acest va fi redeschis data viitoare când deschideţi VLMC.</translation>
+        <translation>S-a produs o eroare: Semnal primit:</translation>
     </message>
 </context>
 <context>
     <name>DockWidgetManager</name>
     <message>
         <source>Media Library</source>
-        <translation>Biblioteca media</translation>
+        <translation>Mediatecă</translation>
     </message>
     <message>
         <source>Clip Preview</source>
-        <translation>Previzualizare clip</translation>
+        <translation>Previzualizare Clip</translation>
     </message>
     <message>
         <source>Project Preview</source>
-        <translation>Previzualizare proiect</translation>
+        <translation>Previzualizare Proiect</translation>
     </message>
     <message>
         <source>History</source>
@@ -281,23 +283,23 @@ Versiune Qt: %4</translation>
 <context>
     <name>EffectSettingWidget</name>
     <message>
-        <source>Apply</source>
-        <translation>Aplică</translation>
+        <source>Effect Properties</source>
+        <translation>Proprietăţi efecte</translation>
     </message>
     <message>
-        <source>Effect Properties</source>
-        <translation>Proprietăţile efectului</translation>
+        <source>Apply</source>
+        <translation>Aplică</translation>
     </message>
 </context>
 <context>
     <name>EffectStack</name>
     <message>
         <source>Effect stack</source>
-        <translation>Stivă efect</translation>
+        <translation>Pachet efecte</translation>
     </message>
     <message>
         <source>Move the effect up in the stack</source>
-        <translation>Mută efectul sus in stivă</translation>
+        <translation>Mutaţi efectul mai Sus în stivă</translation>
     </message>
     <message>
         <source>...</source>
@@ -305,7 +307,7 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Move the effect down in the stack</source>
-        <translation>Mută efectul jos in stivă</translation>
+        <translation>Mutaţi efectul mai Jos în stivă</translation>
     </message>
 </context>
 <context>
@@ -316,7 +318,7 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Overview</source>
-        <translation>Prezentare generală</translation>
+        <translation>Vedere de ansamblu</translation>
     </message>
     <message>
         <source>Name</source>
@@ -374,58 +376,58 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Do you want to save it?</source>
-        <translation>Vrei sa salvezi?</translation>
-    </message>
-    <message>
-        <source>Failed to load project file</source>
-        <translation>Esuare la incarcarea proiectului</translation>
+        <translation>Doriţi să îl salvaţi?</translation>
     </message>
     <message>
         <source>You are about to relocate the project. Every video will be copied to your new workspace.</source>
-        <translation>Sunteţi pe cale să  mutati proiectul. Fiecare videoclip va fi copiat pe spaţiul de lucru nou.</translation>
+        <translation>Sunteţi pe cale să vă mutaţi proiectul. Fiecare clip video va fi copiat în noul dvs. spaţiu de lucru.</translation>
     </message>
     <message>
         <source>Do you want to proceed?</source>
-        <translation>Vreţi să continuaţi?</translation>
+        <translation>Doriţi să continuaţi?</translation>
+    </message>
+    <message>
+        <source>Failed to load project file</source>
+        <translation>Încărcarea fişierului de proiect a eşuat</translation>
     </message>
     <message>
         <source>Backup file</source>
-        <translation>Fisierul backup</translation>
+        <translation>Fișier de rezervă</translation>
     </message>
     <message>
         <source>A backup file exists for this project. Do you want to load it?</source>
-        <translation>Un fişier de backup există pentru acest proiect. Vrei să-l încarc?</translation>
+        <translation>Există un fișier de rezervă pentru acest proiect. Doriţi să-l încărcaţi?</translation>
     </message>
     <message>
         <source>An outdated backup file was found. Do you want to erase it?</source>
-        <translation>Un fişier de backup depăşit a fost găsit. Vrei să-l şterg?</translation>
+        <translation>A fost găsit un fişer de rezervă vechi. Doriţi să-l ştergeţi?</translation>
     </message>
     <message>
         <source>Enter the output file name</source>
-        <translation>Alegeţi calea fişierului rezultat</translation>
+        <translation>Întroduceţi numele fișierului de ieșire</translation>
     </message>
     <message>
         <source>VLMC project file(*.vlmc)</source>
-        <translation>Fişier proiect VLMC(*.vlmc)</translation>
+        <translation>Fişier proiect VLMC (*.vlmc)</translation>
     </message>
     <message>
         <source>Please choose a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Vă rugăm să alegeţi un fişier de proiect</translation>
     </message>
 </context>
 <context>
     <name>GeneralPage</name>
     <message>
         <source>WizardPage</source>
-        <translation>Indrumator</translation>
+        <translation>ExpertConfigurare</translation>
     </message>
     <message>
         <source>This guide will step you through the process of setting up a new project.</source>
-        <translation>Acest ghid va indruma pe parcursul procesului de realizare a unui nou proiect.</translation>
+        <translation>Acest ghid vă va ghida prin procesul de configurare a unui proiect nou.</translation>
     </message>
     <message>
         <source>Project name</source>
-        <translation>Numele proiectului</translation>
+        <translation>Nume proiect</translation>
     </message>
     <message>
         <source>Description</source>
@@ -433,23 +435,23 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Workspace directory</source>
-        <translation>Directorul spaţiului de lucru</translation>
+        <translation>Dosar spaţiu de lucru</translation>
     </message>
     <message>
         <source>Browse...</source>
-        <translation>Alege...</translation>
+        <translation>Răsfoiește...</translation>
     </message>
     <message>
         <source>Project location</source>
-        <translation>Locatia proiectului</translation>
+        <translation>Locaţie proiect</translation>
     </message>
     <message>
         <source>New project wizard</source>
-        <translation>Indrumator proiect nou</translation>
+        <translation>Expert configurare proiect nou</translation>
     </message>
     <message>
         <source>Set General options</source>
-        <translation>Alege optiunile generale</translation>
+        <translation>Stabilire Opțiuni Generale</translation>
     </message>
     <message>
         <source>Form is incomplete</source>
@@ -457,11 +459,11 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>The project name must be filled.</source>
-        <translation>Numele de proiect trebuie să fie completat.</translation>
+        <translation>Trebuie introdus numele proiectului.</translation>
     </message>
     <message>
         <source>The workspace location must be set.</source>
-        <translation>Locaţia spaţiului de lucru trebuie să fie stabilita.</translation>
+        <translation>Trebuie stabilită locaţia spaţiului de lucru.</translation>
     </message>
     <message>
         <source>Missing workspace location</source>
@@ -469,14 +471,14 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Invalid workspace location</source>
-        <translation>Invalida locaţia spaţiului de lucru</translation>
+        <translation>Locaţia spaţiului de lucru este invalidă</translation>
     </message>
 </context>
 <context>
     <name>GraphicsAudioItem</name>
     <message>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Name:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Length:&lt;/b&gt; %2</source>
-        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nume:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Durata:&lt;/b&gt; %2</translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nume:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Durată:&lt;/b&gt; %2</translation>
     </message>
 </context>
 <context>
@@ -487,41 +489,41 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>Set color</source>
-        <translation>Setează culoarea</translation>
+        <translation>Stabilire culoare</translation>
     </message>
     <message>
         <source>Effect Properties</source>
-        <translation>Proprietăţile efectului</translation>
+        <translation>Proprietăți Efecte</translation>
     </message>
 </context>
 <context>
     <name>GraphicsMovieItem</name>
     <message>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Name:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Length:&lt;/b&gt; %2</source>
-        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nume:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Durata:&lt;/b&gt; %2</translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nume:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Durată:&lt;/b&gt; %2</translation>
     </message>
 </context>
 <context>
     <name>ImportController</name>
     <message>
         <source>Import</source>
-        <translation>Importa</translation>
+        <translation>Importă</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>Eticheta</translation>
-    </message>
-    <message>
-        <source>Failed to load %1</source>
-        <translation>Nu am putut încărca %1</translation>
+        <translation>EtichetăText</translation>
     </message>
     <message>
         <source>Invalid medias</source>
-        <translation>Clip media invalid</translation>
+        <translation>Fişiere media invalide</translation>
     </message>
     <message>
         <source>Some of the medias you loaded can&apos;t be used for video editing. Do you want VLMC to convert them so you can use them in your project?</source>
-        <translation>Unele din fisierele media încărcate nu pot fi folosite pentru editarea video. Vrei VLMC să le transforme astfel încât puteţi să le folosească în proiectul dumneavoastră?</translation>
+        <translation>Anumite fişiere media încărcate, nu pot fi folosite pentru editarea video. Doriţi ca VLMC să le convertească pentru a le putea utiliza în proiect?</translation>
+    </message>
+    <message>
+        <source>Failed to load %1</source>
+        <translation>Încărcare eşuată %1</translation>
     </message>
 </context>
 <context>
@@ -532,7 +534,7 @@ Versiune Qt: %4</translation>
     </message>
     <message>
         <source>I understand</source>
-        <translation>Am înţeles</translation>
+        <translation>Înţeleg</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -548,73 +550,29 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:16pt; font-weight:600;&quot;&gt;Please note&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:16pt; font-weight:600;&quot;&gt;Vă rugăm să reţineţi&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;VideoLAN Movie Creator este &lt;/span&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_release_life_cycle#Pre-alpha&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;pre-alpha&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;încă în faza de construcţie.Multe opţiuni &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;lipsesc&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;, sau chiar&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;au diverse probleme&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;.Echipa noastră este compusă din voluntari şi muncim mult la dezvoltarea acestui proiect.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;VideoLAN Movie Creator este o versiune &lt;/span&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_release_life_cycle#Pre-alpha&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;pre-alpha&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt; de program, şi nu este pregătit pentru o maximă audienţă. Multe caracteristici cheie &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;pur şi simplu lipsesc&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;, sau chiar &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;cu erori&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;. Echipa noastră este compusă din voluntari ce se străduiesc mult pentru a vă oferi cea mai bună experienţă cu editarea video.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;
-&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;citeşte mai mult&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;citiţi mai mult&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>ListViewController</name>
     <message>
         <source>Media List</source>
-        <translation>Lista media</translation>
+        <translation>Lista Media</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>VideoLAN Movie Creator</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Help</source>
-        <translation>Ajutor</translation>
-    </message>
-    <message>
-        <source>Preview</source>
-        <translation>Previzualizare</translation>
-    </message>
-    <message>
-        <source>Crash</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Crash recovery</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Can&apos;t restore project</source>
-        <translation>Nu se poate restaura  proiectul</translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation>Anulare operaţiune</translation>
-    </message>
-    <message>
-        <source>Redo</source>
-        <translation>Reia operaţiunea</translation>
-    </message>
-    <message>
-        <source>VLMC Renderer</source>
-        <translation>Randare VLMC</translation>
-    </message>
-    <message>
-        <source>There is nothing to render.</source>
-        <translation>Nu este nimic de randat.</translation>
+        <translation>VideoLAN Movie Creator</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation>&amp;Editeaza</translation>
-    </message>
-    <message>
-        <source>&amp;View</source>
-        <translation>&amp;Vizualizare</translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation>&amp;Fereastra</translation>
+        <translation>&amp;Editare</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -622,83 +580,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;File</source>
-        <translation>&amp;Fisier</translation>
-    </message>
-    <message>
-        <source>&amp;Quit</source>
-        <translation>&amp;Inchide</translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation>&amp;Despre</translation>
-    </message>
-    <message>
-        <source>&amp;Preferences</source>
-        <translation>&amp;Preferinte</translation>
-    </message>
-    <message>
-        <source>&amp;New Project</source>
-        <translation>&amp;Proiect nou</translation>
-    </message>
-    <message>
-        <source>Open the wizard to create a new project</source>
-        <translation>Deschide indrumatorul sa creezi un proiect nou</translation>
-    </message>
-    <message>
-        <source>&amp;Fullscreen</source>
-        <translation>&amp;Tot ecranul</translation>
-    </message>
-    <message>
-        <source>&amp;Load Project</source>
-        <translation>&amp;Incarca proiectul</translation>
-    </message>
-    <message>
-        <source>&amp;Save</source>
-        <translation>&amp;Salveaza</translation>
-    </message>
-    <message>
-        <source>&amp;Import</source>
-        <translation>&amp;Importa</translation>
-    </message>
-    <message>
-        <source>Import new medias into the current project</source>
-        <translation>Importa noi fisiere media in proiectul curent</translation>
-    </message>
-    <message>
-        <source>Proj&amp;ect Preferences</source>
-        <translation>Proj&amp;ect Preferinte</translation>
-    </message>
-    <message>
-        <source>Save &amp;As</source>
-        <translation>Salveaza &amp;ca</translation>
-    </message>
-    <message>
-        <source>&amp;Close Project</source>
-        <translation>&amp;Inchide proiectul</translation>
-    </message>
-    <message>
-        <source>Use the mouse tool to manipulate regions in the timeline</source>
-        <translation>Utilizeaza uneltele mouse-ului sa manipulezi regiunile in timeline</translation>
-    </message>
-    <message>
-        <source>Use the scissors to cut regions in the timeline</source>
-        <translation>Utilizeaza foarfeca pentru taierea regiunilor in timeline</translation>
-    </message>
-    <message>
-        <source>Zoom out</source>
-        <translation>Micsorare zoom</translation>
-    </message>
-    <message>
-        <source>Zoom in</source>
-        <translation>Marire  zoom</translation>
-    </message>
-    <message>
-        <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
-        <translation>VLMC nu a reusit restaurarea proiectului tau.Ne cerem scuze pentru acest incovenient</translation>
+        <translation>&amp;Fişier</translation>
     </message>
     <message>
         <source>&amp;Export</source>
-        <translation>&amp;Exporta</translation>
+        <translation>&amp;Export</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Fereastră</translation>
+    </message>
+    <message>
+        <source>&amp;View</source>
+        <translation>&amp;Vizualizare</translation>
     </message>
     <message>
         <source>Tools</source>
@@ -706,66 +600,174 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>VLMC Toolbar</source>
-        <translation>Bara de instrumente</translation>
+        <translation>Bară Instrumente VLMC</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;Despre</translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation>Ajutor</translation>
+    </message>
+    <message>
+        <source>&amp;Preferences</source>
+        <translation>&amp;Preferinţe</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation>Previzualizare</translation>
+    </message>
+    <message>
+        <source>&amp;New Project</source>
+        <translation>&amp;Proiect Nou</translation>
+    </message>
+    <message>
+        <source>Open the wizard to create a new project</source>
+        <translation>Deschideţi expertul pentru a crea un proiect nou</translation>
+    </message>
+    <message>
+        <source>&amp;Fullscreen</source>
+        <translation>&amp;EcranComplet</translation>
     </message>
     <message>
         <source>&amp;To a file</source>
-        <translation>&amp;Catre fisierul</translation>
+        <translation>&amp;Spre un fişier</translation>
     </message>
     <message>
         <source>Render your project as a file</source>
-        <translation>Randeaza proiectul in fisierul</translation>
+        <translation>Salvaţi proiectul ca şi fişier.</translation>
+    </message>
+    <message>
+        <source>&amp;Load Project</source>
+        <translation>&amp;Încărcare Proiect</translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation>&amp;Salvare</translation>
+    </message>
+    <message>
+        <source>&amp;Import</source>
+        <translation>&amp;Importare</translation>
+    </message>
+    <message>
+        <source>Import new medias into the current project</source>
+        <translation>Importaţi în proiectul curent fişiere media noi</translation>
+    </message>
+    <message>
+        <source>Proj&amp;ect Preferences</source>
+        <translation>Preferinţe Proi&amp;ect</translation>
+    </message>
+    <message>
+        <source>Save &amp;As</source>
+        <translation>Salvare C&amp;a</translation>
+    </message>
+    <message>
+        <source>&amp;Close Project</source>
+        <translation>În&amp;chidere Proiect</translation>
+    </message>
+    <message>
+        <source>Crash</source>
+        <translation>Eroare fatală</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation>Anulare</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation>Refacere</translation>
     </message>
     <message>
         <source>Share your project on youtube</source>
-        <translation>Partajeaza proiectul tau pe youtube</translation>
+        <translation>Distribuiţi proiectul pe youtube</translation>
+    </message>
+    <message>
+        <source>&amp;Quit</source>
+        <translation>&amp;Părăsire</translation>
     </message>
     <message>
         <source>Selection mode</source>
-        <translation>Mod de selectare</translation>
+        <translation>Mod Selecţie</translation>
+    </message>
+    <message>
+        <source>Use the mouse tool to manipulate regions in the timeline</source>
+        <translation>Folosiţi mousul pentru manipularea regiunilor din cronologie</translation>
     </message>
     <message>
         <source>Cut mode</source>
-        <translation>Mod de taiere</translation>
+        <translation>Mod decupare</translation>
+    </message>
+    <message>
+        <source>Use the scissors to cut regions in the timeline</source>
+        <translation>Folosiţi foarfeca pentru a decupa regiuni din cronologie</translation>
+    </message>
+    <message>
+        <source>Zoom out</source>
+        <translation>Micşorare</translation>
+    </message>
+    <message>
+        <source>Zoom in</source>
+        <translation>Magnificare</translation>
+    </message>
+    <message>
+        <source>VLMC Renderer</source>
+        <translation>Program redare VLMC</translation>
+    </message>
+    <message>
+        <source>There is nothing to render.</source>
+        <translation>Nu este nimic de redat</translation>
+    </message>
+    <message>
+        <source>Crash recovery</source>
+        <translation>Recuperare după avarie</translation>
     </message>
     <message>
         <source>VLMC didn&apos;t closed nicely. Do you want to recover your project?</source>
-        <translation>VLMC nu s-a închis bine. Vreti să recupez proiectul dumneavoastră?</translation>
+        <translation>VLMC nu s-a închis normal. Doriţi recuperarea proiectului? </translation>
+    </message>
+    <message>
+        <source>Can&apos;t restore project</source>
+        <translation>Proiectul nu poate restaurat</translation>
+    </message>
+    <message>
+        <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
+        <translation>VLMC nu a reuşit restaurarea proiectului dvs. Ne cerem scuze pentru inconvenienţe.</translation>
     </message>
     <message>
         <source>Publish on &amp;Internet</source>
-        <translation>Publică pe &amp;internet</translation>
+        <translation>Publicare pe &amp;Internet</translation>
     </message>
 </context>
 <context>
     <name>MediaCellView</name>
     <message>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <source>clip count</source>
-        <translation>numar clipuri</translation>
+        <translation>număr de clipuri</translation>
     </message>
     <message>
         <source>length</source>
-        <translation>durata</translation>
+        <translation>durată</translation>
     </message>
     <message>
         <source>This clip or some of its children are contained in the timeline.</source>
-        <translation>Acest clip sau anumite sectiuni ale sale sunt continute de timeline.</translation>
+        <translation>Acest clip sau anumite părţi ale sale, sunt cuprinse în cronologie.</translation>
     </message>
     <message>
         <source>Removing it will delete it from the timeline. Do you want to proceed?</source>
-        <translation>Stergi sectiunea?</translation>
+        <translation>Eliminându-l, îl veţi şterge din cronologie. Continuaţi?</translation>
     </message>
     <message>
         <source>Can&apos;t copy to workspace</source>
-        <translation>Nu se poate copia pe spaţiul de lucru</translation>
+        <translation>Nu se poate copia în spaţiul de lucru</translation>
     </message>
     <message>
         <source>Can&apos;t copy this media to workspace: %1</source>
-        <translation>Nu se poate copia acest fisier media pe spaţiul de lucru:%1</translation>
+        <translation>Acest fişier media, nu poate fi copiat în spaţiul de lucru: %1</translation>
     </message>
 </context>
 <context>
@@ -784,7 +786,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import</source>
-        <translation>Importa</translation>
+        <translation>Importare</translation>
     </message>
 </context>
 <context>
@@ -798,7 +800,7 @@ p, li { white-space: pre-wrap; }
     <name>OpenPage</name>
     <message>
         <source>WizardPage</source>
-        <translation>Indrumator</translation>
+        <translation>ExpertConfigurare</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -817,38 +819,42 @@ p, li { white-space: pre-wrap; }
 &lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
 &lt;tr&gt;
 &lt;td style=&quot;border: none;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Avem acum Informatii suficiente pentru a încărca acest proiect.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Apasa &lt;span style=&quot; font-weight:600;&quot;&gt;finish&lt;/span&gt;pentru a închide acest expert de ghidare şi  începeti sa editati  videoclipurile dvs.!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Nu există informaţii suficiente pentru a încărca acest proiect.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Apăsaţi &lt;span style=&quot; font-weight:600;&quot;&gt;finalizare&lt;/span&gt;pentru a închide acest expert de configurare, şi pentru începe editarea video!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Project wizard</source>
-        <translation>Indrumator proiect</translation>
+        <translation>Asistent de proiect</translation>
     </message>
     <message>
         <source>Ready to load this project</source>
-        <translation>Pregatit pentru a încărca acest proiect</translation>
+        <translation>Încărcarea proiectului este pregătită</translation>
     </message>
 </context>
 <context>
     <name>PathWidget</name>
     <message>
         <source>Select a path</source>
-        <translation>Selecteaza o cale</translation>
+        <translation>Selectare cale</translation>
     </message>
 </context>
 <context>
     <name>PreferenceWidget</name>
     <message>
-        <source>Select the selection tool in the timeline</source>
-        <translation>Selectaţi instrumentul de selecţie</translation>
+        <source>Automatic save</source>
+        <translation>Salvare automată</translation>
     </message>
     <message>
-        <source>Cut mode</source>
-        <translation>Mod de tăiat</translation>
+        <source>When this option is activated,VLMC will automatically save your project at a specified interval</source>
+        <translation>La activarea acestei opţiuni, VLMC vă va salva automat proiectul, la un interval specificat</translation>
     </message>
     <message>
-        <source>Select the cut/razor tool in the timeline</source>
-        <translation>Selectaţi instrumentul taiere/radere</translation>
+        <source>Automatic save interval</source>
+        <translation>Interval de auto-salvare</translation>
+    </message>
+    <message>
+        <source>This is the interval that VLMC will wait between two automatic save</source>
+        <translation>Acesta este intervalul dintre două salvări automate ale VLMC</translation>
     </message>
     <message>
         <source>Media preview</source>
@@ -856,31 +862,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Preview the selected media, or pause the current preview</source>
-        <translation>Previzualizează fişierul media selectat sau &quot;pauza&quot; pentru previzualizarea curentă</translation>
+        <translation>Previzualizaţi clipurile media selectate, sau puneţi în pauză previzualizarea curentă</translation>
     </message>
     <message>
         <source>Render preview</source>
-        <translation>Previzualizarea randarii</translation>
+        <translation>Previzualizare redare</translation>
     </message>
     <message>
         <source>Preview the project, or pause the current preview</source>
-        <translation>Previzualizează proiectul sau &quot;pauza&quot; pentru previzualizarea curentă</translation>
+        <translation>Previzualizaţi proiectul, sau puneţi în pauză previzualizarea curentă</translation>
     </message>
     <message>
         <source>Undo</source>
-        <translation>Anulare operaţiune</translation>
+        <translation>Anulare</translation>
     </message>
     <message>
         <source>Undo the last action</source>
-        <translation>Anulează ultima operaţiune</translation>
+        <translation>Anularea ultimei acţiuni</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation>Reia operaţiunea</translation>
+        <translation>Revenire</translation>
     </message>
     <message>
         <source>Redo the last action</source>
-        <translation>Reia ultima operaţiune</translation>
+        <translation>Revenire la ultima acţiune</translation>
     </message>
     <message>
         <source>Help</source>
@@ -888,175 +894,131 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Toggle the help page</source>
-        <translation>Comutare catre pagina de ajutor</translation>
+        <translation>Comutare la pagina de ajutor</translation>
     </message>
     <message>
         <source>Quit</source>
-        <translation>Ieşire</translation>
+        <translation>Ieșire</translation>
     </message>
     <message>
         <source>Quit VLMC</source>
-        <translation>Ieşire VLMC</translation>
+        <translation>Ieșire din VLMC</translation>
     </message>
     <message>
         <source>Preferences</source>
-        <translation>Preferinţe</translation>
+        <translation>Preferințe</translation>
     </message>
     <message>
         <source>Open VLMC preferences</source>
-        <translation>Deschide preferinţele VLMC</translation>
+        <translation>Deschidere preferinţe VLMC</translation>
+    </message>
+    <message>
+        <source>Project preferences</source>
+        <translation>Preferinţe proiect</translation>
+    </message>
+    <message>
+        <source>Open the project preferences</source>
+        <translation>Deschidere preferinţe proiect</translation>
     </message>
     <message>
         <source>Fullscreen</source>
-        <translation>Tot ecranul</translation>
+        <translation>Ecran complet</translation>
     </message>
     <message>
         <source>Switch to fullscreen mode</source>
-        <translation>Schimbă în modul &quot;Tot ecranul&quot;</translation>
+        <translation>Comutare în mod pe tot ecranul</translation>
     </message>
     <message>
         <source>New project</source>
         <translation>Proiect nou</translation>
     </message>
     <message>
+        <source>Open the new project wizard</source>
+        <translation>Deschidere expert configurare proiect nou</translation>
+    </message>
+    <message>
         <source>Open a project</source>
-        <translation>Deschide un proiect</translation>
+        <translation>Deschideţi un proiect</translation>
     </message>
     <message>
         <source>Open an existing project</source>
-        <translation>Deschide un proiect existent</translation>
+        <translation>Deschideţi un proiect existent</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>Salvează</translation>
+        <translation>Salvare</translation>
     </message>
     <message>
         <source>Save the current project</source>
-        <translation>Salvează proiectul curent</translation>
+        <translation>Salvaţi proiectul curent</translation>
     </message>
     <message>
         <source>Save as</source>
-        <translation>Salvează ca</translation>
+        <translation>Salvare ca</translation>
     </message>
     <message>
         <source>Save the current project to a new file</source>
-        <translation>Salvează proiectul curent în fişierul nou</translation>
+        <translation>Salvaţi proiectul curent într-un nou fişier</translation>
     </message>
     <message>
         <source>Close the project</source>
-        <translation>Închide proiectul</translation>
+        <translation>Închidere Proiect</translation>
     </message>
     <message>
         <source>Close the current project</source>
-        <translation>Închide proiectul curent</translation>
+        <translation>Închideţi proiectul curent</translation>
     </message>
     <message>
         <source>Import media</source>
-        <translation>Importă fişiere media</translation>
+        <translation>Importare media</translation>
     </message>
     <message>
         <source>Open the import window</source>
-        <translation>Deschide fereastra de import</translation>
+        <translation>Deschideţi fereastra de importare</translation>
     </message>
     <message>
         <source>Render the project</source>
-        <translation>Randează proiectul</translation>
+        <translation>Generare proiect</translation>
     </message>
     <message>
         <source>Render the project to a file</source>
-        <translation>Randează proiectul catre fişierul</translation>
+        <translation>Generaţi proiectul într-un fişier</translation>
     </message>
     <message>
-        <source>The VLMC&apos;s UI language</source>
-        <translation>Limba interfeţei programului VLMC</translation>
+        <source>Selection mode</source>
+        <translation>Mod Selecţie</translation>
     </message>
     <message>
-        <source>Automatic save</source>
-        <translation>Salvare automată</translation>
+        <source>Select the selection tool in the timeline</source>
+        <translation>Selectaţi intrumentul de selecţie din cronologie</translation>
     </message>
     <message>
-        <source>When this option is activated,VLMC will automatically save your project at a specified interval</source>
-        <translation>Când această opţine este activată ,VLMC va salva automat proiectul tău la un interval de timp specificat</translation>
+        <source>Cut mode</source>
+        <translation>Mod decupare</translation>
     </message>
     <message>
-        <source>Automatic save interval</source>
-        <translation>Salvare automată la un interval de</translation>
-    </message>
-    <message>
-        <source>This is the interval that VLMC will wait between two automatic save</source>
-        <translation>Acesta este intervalul de timp în care VLMC va aştepta între două salvări automate</translation>
-    </message>
-    <message>
-        <source>Output video FPS</source>
-        <translation>FPS-ul fişierului rezultat</translation>
-    </message>
-    <message>
-        <source>Frame Per Second used when previewing and rendering the project</source>
-        <translation>Cadru pe secunda utilizat când previzualizezi şi randezi proiectul</translation>
-    </message>
-    <message>
-        <source>Video width</source>
-        <translation>Lăţime video</translation>
-    </message>
-    <message>
-        <source>Width resolution of the output video</source>
-        <translation>Cu rezoluţia fişierului video rezultat</translation>
-    </message>
-    <message>
-        <source>Video height</source>
-        <translation>Înălţime video</translation>
-    </message>
-    <message>
-        <source>Height resolution of the output video</source>
-        <translation>Rezoluţia  înaltă a fişierului rezultat</translation>
-    </message>
-    <message>
-        <source>Audio samplerate</source>
-        <translation>Audio samplerate</translation>
-    </message>
-    <message>
-        <source>Output project audio samplerate</source>
-        <translation>Ieşire proiect audio samplerate</translation>
-    </message>
-    <message>
-        <source>Project name</source>
-        <translation>Numele proiectului</translation>
-    </message>
-    <message>
-        <source>The project name</source>
-        <translation>Numele proiectului</translation>
-    </message>
-    <message>
-        <source>Open the new project wizard</source>
-        <translation>Deschide indrumatorul de proiect nou</translation>
+        <source>Select the cut/razor tool in the timeline</source>
+        <translation>Selectaţi intrumentul pentru decupare/tăiere în cronologie</translation>
     </message>
     <message>
         <source>Language</source>
         <translation>Limba</translation>
     </message>
     <message>
+        <source>The VLMC&apos;s UI language</source>
+        <translation>Limba UI a VLMC</translation>
+    </message>
+    <message>
         <source>Confirm clip deletion</source>
-        <translation>Confima stergerea clipului</translation>
+        <translation>Confirmare ştergere clip</translation>
     </message>
     <message>
         <source>Ask for confirmation before deleting a clip from the timeline</source>
-        <translation>Intreaba pentru confirmare inainte de stergerea clipului din timeline</translation>
-    </message>
-    <message>
-        <source>Project preferences</source>
-        <translation>Preferintele proiectului</translation>
-    </message>
-    <message>
-        <source>Open the project preferences</source>
-        <translation>Deschide preferintele proiectului</translation>
-    </message>
-    <message>
-        <source>Selection mode</source>
-        <translation>Mod de selectare</translation>
+        <translation>Se va cere confirmare, înaintea ştergerii unui clip din cronologie</translation>
     </message>
     <message>
         <source>Youtube Developer Key</source>
-        <translation>Parola Youtube</translation>
+        <translation>Cheie Dezvoltator Youtube</translation>
     </message>
     <message>
         <source>Youtube Username</source>
@@ -1064,7 +1026,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Proxy Port</source>
-        <translation>Proxy Port</translation>
+        <translation>Port Proxy</translation>
     </message>
     <message>
         <source>Proxy Username</source>
@@ -1072,83 +1034,123 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Proxy Password</source>
-        <translation>Parola proxy</translation>
+        <translation>Parolă Proxy</translation>
     </message>
     <message>
         <source>The default location where to store projects folders</source>
-        <translation>Locaţia implicită în care se păstrează dosarele de proiecte</translation>
+        <translation>Locaţia implicită de stocare a dosarelor de proiecte</translation>
     </message>
     <message>
-        <source>The temporary folder used by VLMC to process videos.</source>
-        <translation>Folderul temporar utilizat de către VLMC pentru procesarea  videoclipurilor.</translation>
+        <source>Output video FPS</source>
+        <translation>FPS video generate</translation>
     </message>
     <message>
-        <source>VLMC&apos;s Youtube Developer Key</source>
-        <translation>VLMC Youtube Developer</translation>
+        <source>Frame Per Second used when previewing and rendering the project</source>
+        <translation>Cadre Per Secundă, folosite la previzualizarea şi generarea proiectului</translation>
     </message>
     <message>
-        <source>Valid YouTube username</source>
-        <translation>Utilizator valid YouTube</translation>
+        <source>Video width</source>
+        <translation>Lățime video</translation>
     </message>
     <message>
-        <source>Youtube Password</source>
-        <translation>Parola YouTube</translation>
+        <source>Width resolution of the output video</source>
+        <translation>Rezoluţia pe Lăţime a vidoclipului generat</translation>
     </message>
     <message>
-        <source>Enable Proxy for VLMC</source>
-        <translation>Activează Proxy pentru VLMC</translation>
+        <source>Video height</source>
+        <translation>Înălţime video</translation>
     </message>
     <message>
-        <source>Enables Global Network Proxy for VLMC.</source>
-        <translation>Permite Proxy Reţeaua Globală pentru VLMC.</translation>
+        <source>Height resolution of the output video</source>
+        <translation>Rezoluţia pe Înălţime a vidoclipului generat</translation>
     </message>
     <message>
-        <source>Proxy Hostname</source>
-        <translation>Proxy Hostname</translation>
+        <source>Audio samplerate</source>
+        <translation>Frecvenţă eșantionare audio</translation>
     </message>
     <message>
-        <source>Set Proxy Hostname.</source>
-        <translation>Setează Proxy Hostname.</translation>
+        <source>Output project audio samplerate</source>
+        <translation>Frecvenţa de eșantionare audio a proiectului generat</translation>
     </message>
     <message>
-        <source>Set Proxy Port.</source>
-        <translation>Setează Proxy Port.</translation>
+        <source>Project name</source>
+        <translation>Nume proiect</translation>
     </message>
     <message>
-        <source>Set Proxy Username, if any.</source>
-        <translation>Setează Proxy Utilizator, dacă e necesar.</translation>
-    </message>
-    <message>
-        <source>Set Proxy Password, if any.</source>
-        <translation>Setează Proxy Parolă, dacă e necesar.</translation>
+        <source>The project name</source>
+        <translation>Numele proiectului</translation>
     </message>
     <message>
         <source>Project default location</source>
-        <translation>Locatia implicita a proiectului</translation>
+        <translation>Locaţie implicită proiect</translation>
     </message>
     <message>
         <source>Temporary folder</source>
-        <translation>Folder temporar</translation>
+        <translation>Dosar temporar</translation>
+    </message>
+    <message>
+        <source>The temporary folder used by VLMC to process videos.</source>
+        <translation>Dosar temporar folosit de către VLMC pentru procesarea video</translation>
+    </message>
+    <message>
+        <source>VLMC&apos;s Youtube Developer Key</source>
+        <translation>Cheie Dezvoltator Youtube a VLMC</translation>
+    </message>
+    <message>
+        <source>Valid YouTube username</source>
+        <translation>Nume utilizator Youtube valid</translation>
+    </message>
+    <message>
+        <source>Youtube Password</source>
+        <translation>Parola Youtube</translation>
     </message>
     <message>
         <source>Leave this field empty, password will be stored in unencrypted form.</source>
-        <translation>Lasă acest câmp gol,parola va fi păstrată necriptată în formular.</translation>
+        <translation>Lăsaţi acest câmp necompletat, parola va fi stocată în formă necriptată.</translation>
+    </message>
+    <message>
+        <source>Enable Proxy for VLMC</source>
+        <translation>Activare Proxy pentru VLMC</translation>
+    </message>
+    <message>
+        <source>Enables Global Network Proxy for VLMC.</source>
+        <translation>Activează Proxy Reţea Globală pentru VLMC</translation>
+    </message>
+    <message>
+        <source>Proxy Hostname</source>
+        <translation>Nume gazdă Proxy</translation>
+    </message>
+    <message>
+        <source>Set Proxy Hostname.</source>
+        <translation>Stabilire Nume gazdă Proxy.</translation>
+    </message>
+    <message>
+        <source>Set Proxy Port.</source>
+        <translation>Stabilire Port Proxy.</translation>
+    </message>
+    <message>
+        <source>Set Proxy Username, if any.</source>
+        <translation>Stabilire Utilizator Proxy, dacă există.</translation>
+    </message>
+    <message>
+        <source>Set Proxy Password, if any.</source>
+        <translation>Stabilire Parolă Proxy, dacă există.</translation>
     </message>
     <message>
         <source>Video aspect ratio</source>
-        <translation>Raportul de aspect</translation>
+        <translation>Raport aspect video</translation>
     </message>
     <message>
         <source>The rendered video aspect ratio</source>
-        <translation>Raportul de aspect al fişierului randat</translation>
+        <translation>Raportul, de aspect video, generat</translation>
     </message>
     <message>
         <source>Audio channels</source>
-        <translation>Canale audio</translation>
+        <translation>Canale Audio</translation>
     </message>
     <message>
         <source>Number of audio channels</source>
-        <translation>Numărul canalelor audio</translation>
+        <translation>Numărul de canale audio</translation>
     </message>
 </context>
 <context>
@@ -1159,83 +1161,83 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Go to the previous frame</source>
-        <translation>Mergi la cadrul anterior</translation>
+        <translation>Salt la cadrul precedent</translation>
     </message>
     <message>
         <source>Play / Pause</source>
-        <translation>Ruleaza/Pauza</translation>
+        <translation>Redare / Pauză</translation>
     </message>
     <message>
         <source>Go to the next frame</source>
-        <translation>Mergi la cadrul urmator</translation>
+        <translation>Salt la cadrul următor</translation>
     </message>
     <message>
         <source>Set marker A</source>
-        <translation>Seteaza marker A</translation>
+        <translation>Stabilire marcaj A</translation>
     </message>
     <message>
         <source>Set marker B</source>
-        <translation>Seteaza marker B</translation>
+        <translation>Stabilire marcaj B</translation>
     </message>
     <message>
         <source>Cut at markers position</source>
-        <translation>Taie corespunzator poztitiilor markerelor</translation>
+        <translation>Decupare la poziţia marcajelor</translation>
     </message>
     <message>
         <source>Stop the playback</source>
-        <translation>Stop</translation>
+        <translation>Oprire redare</translation>
     </message>
     <message>
         <source>Rendering error</source>
-        <translation>Eroare de randare</translation>
+        <translation>Eroare redare</translation>
     </message>
     <message>
         <source>An error occurred while rendering.
 Please check your VLC installation before reporting the issue.</source>
-        <translation>A apărut o eroare de randare.
-Vă rugăm să verificaţi instalarea VLC înainte de a raporta problema.</translation>
+        <translation>A intervenit o eraore la redare.
+Vă rugăm să vă verificaţi instalarea VLC, înainte de a raporta această problemă.</translation>
     </message>
     <message>
         <source>Adjust Volume</source>
-        <translation>Ajustează volumul</translation>
+        <translation>Ajustare Volum</translation>
     </message>
 </context>
 <context>
     <name>ProjectManager</name>
     <message>
         <source>Can&apos;t open project file. (%1)</source>
-        <translation>Nu pot deschide proiectul. (%1)</translation>
+        <translation>Nu se poate deschide fişierul proiectului. (%1)</translation>
     </message>
     <message>
         <source>Failed to load the project file: %1. Aborting.</source>
-        <translation>Esuare la incarcarea proiectului: %1. Întrerupere.</translation>
+        <translation>Eşuare la încărcarea fişierului de proiect: %1. </translation>
     </message>
     <message>
         <source>Untitled Project</source>
-        <translation>Proiect fără nume</translation>
+        <translation>Proiect Neintitulat</translation>
     </message>
     <message>
         <source>Unsaved Project</source>
-        <translation>Proiect nesalvat</translation>
+        <translation>Proiect NeSalvat</translation>
     </message>
 </context>
 <context>
     <name>ProjectWizard</name>
     <message>
         <source>Project wizard</source>
-        <translation>Indrumator proiect</translation>
+        <translation>Asistent de proiect</translation>
     </message>
     <message>
         <source>Choose the appropriate action then click Next to continue.</source>
-        <translation>Alege actiunea corespunzătoare, apoi faceţi clic pe Next pentru a continua.</translation>
+        <translation>Alegeţi acţiunea corespunzătoare, apoi apăsaţi pe Următor, pentru a continua.</translation>
     </message>
     <message>
         <source>This help is likely not to be of any help.</source>
-        <translation></translation>
+        <translation>Acest ajutor, este improbabil să nu fie deloc de ajutor.</translation>
     </message>
     <message>
         <source>Project wizard help</source>
-        <translation>Ajutor indrumator proiect</translation>
+        <translation>Ajutor asistent de proiect</translation>
     </message>
 </context>
 <context>
@@ -1246,26 +1248,26 @@ Vă rugăm să verificaţi instalarea VLC înainte de a raporta problema.</trans
     </message>
     <message>
         <source>Unable to get backtrace</source>
-        <translation>Incapabil de luat backtrace</translation>
+        <translation>Imposibil de preluat urma</translation>
     </message>
     <message>
         <source>The XMLStream is not a valid YouTube Feed</source>
-        <translation>XMLStream nu este YouTube Feed</translation>
+        <translation>FluxulXML nu este un Flux YouTube valid</translation>
     </message>
 </context>
 <context>
     <name>RendererSettings</name>
     <message>
         <source>Select...</source>
-        <translation>Selectează...</translation>
+        <translation>Selectare...</translation>
     </message>
     <message>
         <source>Width</source>
-        <translation>Orizontal</translation>
+        <translation>Lățime</translation>
     </message>
     <message>
         <source>Height</source>
-        <translation>Vertical</translation>
+        <translation>Înalțime</translation>
     </message>
     <message>
         <source>H264</source>
@@ -1277,7 +1279,11 @@ Vă rugăm să verificaţi instalarea VLC înainte de a raporta problema.</trans
     </message>
     <message>
         <source>Enter the output file name</source>
-        <translation>Alegeţi calea fişierului rezultat</translation>
+        <translation>Întroduceţi numele fişierului de generat</translation>
+    </message>
+    <message>
+        <source>Videos(%1)</source>
+        <translation>Fişiere Video(%1)</translation>
     </message>
     <message>
         <source>Invalid parameters</source>
@@ -1285,11 +1291,11 @@ Vă rugăm să verificaţi instalarea VLC înainte de a raporta problema.</trans
     </message>
     <message>
         <source>Please enter valid rendering parameters</source>
-        <translation>Vă rog să introduceţi parametrii de randare</translation>
+        <translation>Vă rugăm să introduceţi parametrii de generare valizi.</translation>
     </message>
     <message>
         <source>Please provide a valid output file!</source>
-        <translation>Vă rog indicaţi un fişier rezultat valid!</translation>
+        <translation>Vă rugăm să specificaţi un nume valid pentru generare!</translation>
     </message>
     <message>
         <source>File already exists!</source>
@@ -1297,31 +1303,27 @@ Vă rugăm să verificaţi instalarea VLC înainte de a raporta problema.</trans
     </message>
     <message>
         <source>Output file already exists, do you want to overwrite it?</source>
-        <translation>Fisierul rezultat deja exista,vrei sa-l suprascri?</translation>
-    </message>
-    <message>
-        <source>Videos(%1)</source>
-        <translation>Video(%1)</translation>
+        <translation>Fişierul de generat există, doriţi sa-l înlocuiţi?</translation>
     </message>
     <message>
         <source>Export Settings</source>
-        <translation>Setări export</translation>
+        <translation>Configurări Exportare</translation>
     </message>
     <message>
         <source>Output File</source>
-        <translation>Fişier rezultat</translation>
+        <translation>Fişier Generat</translation>
     </message>
     <message>
         <source>Frame Rate</source>
-        <translation>Frame Rate</translation>
+        <translation>Frecvenţă Cadre</translation>
     </message>
     <message>
         <source>Video Quality</source>
-        <translation>Calitate video</translation>
+        <translation>Calitate Video</translation>
     </message>
     <message>
         <source>Audio Quality</source>
-        <translation>Calitate audio</translation>
+        <translation>Calitate Audio</translation>
     </message>
     <message>
         <source>Video Codec</source>
@@ -1329,11 +1331,11 @@ Vă rugăm să verificaţi instalarea VLC înainte de a raporta problema.</trans
     </message>
     <message>
         <source>Audio Codec</source>
-        <translation>Codec audio</translation>
+        <translation>Codec Audio</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation>Particularizare</translation>
+        <translation>Personalizat</translation>
     </message>
     <message>
         <source>QVGA (320x240) - 30 fps</source>
@@ -1369,51 +1371,51 @@ Vă rugăm să verificaţi instalarea VLC înainte de a raporta problema.</trans
     </message>
     <message>
         <source>Preset</source>
-        <translation>Presetate</translation>
+        <translation>Prestabilire</translation>
     </message>
     <message>
         <source>Export Settings: Publish on Internet</source>
-        <translation>Setări export:publică pe Internet</translation>
+        <translation>Exportare Configurări; Publicare pe Internet</translation>
     </message>
 </context>
 <context>
     <name>SearchLineEdit</name>
     <message>
         <source>Clear</source>
-        <translation>Curata</translation>
+        <translation>Eliminare</translation>
     </message>
     <message>
         <source>Filter</source>
-        <translation>Filtru</translation>
+        <translation>Filtrare</translation>
     </message>
 </context>
 <context>
     <name>Settings</name>
     <message>
         <source>Project preferences</source>
-        <translation>Preferintele proiectului</translation>
+        <translation>Preferinţe proiect</translation>
     </message>
     <message>
         <source>VLMC Settings</source>
-        <translation>Setari VLMC</translation>
+        <translation>Configurări VLMC</translation>
     </message>
     <message>
         <source>Restore default?</source>
-        <translation>Restaurare la setările implicite?</translation>
+        <translation>Restauraţi la implicit?</translation>
     </message>
     <message>
         <source>This will restore all settings default value.
 Are you sure you want to continue?</source>
-        <translation>Se va face restaurarea la valorile implicite.
-Vrei să continui?</translation>
+        <translation>Aceasta va restaura toate configurările implicite.
+Confirmaţi acţiunea?</translation>
     </message>
     <message>
         <source>Invalid value</source>
-        <translation>Valuare invalidă</translation>
+        <translation>Valoare invalidă</translation>
     </message>
     <message>
         <source>Can&apos;t save settings due to an invalid value</source>
-        <translation>Nu pot salva setările din cauza unei valoari invalide</translation>
+        <translation>Nu se pot salva configurările datorită unei valori invalide</translation>
     </message>
     <message>
         <source>General</source>
@@ -1429,7 +1431,7 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Network</source>
-        <translation>Reţea</translation>
+        <translation>Rețea</translation>
     </message>
     <message>
         <source>Video</source>
@@ -1444,7 +1446,7 @@ Vrei să continui?</translation>
     <name>ShareOnInternet</name>
     <message>
         <source>Share Video On Internet</source>
-        <translation>Partajeză Video pe Internet</translation>
+        <translation>Distribuiţi Video Pe Internet</translation>
     </message>
     <message>
         <source>Service</source>
@@ -1456,7 +1458,7 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Username</source>
-        <translation>Utilizator</translation>
+        <translation>Nume utilizator</translation>
     </message>
     <message>
         <source>Password</source>
@@ -1468,7 +1470,7 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Autos &amp; Vehicles</source>
-        <translation>Automobile &amp; Vehicule</translation>
+        <translation>Autoturisme &amp; Vehicule</translation>
     </message>
     <message>
         <source>Comedy</source>
@@ -1476,7 +1478,7 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Education</source>
-        <translation>Educatie</translation>
+        <translation>Educaţie</translation>
     </message>
     <message>
         <source>Entertainment</source>
@@ -1484,7 +1486,7 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Film &amp; Animation</source>
-        <translation>Film&amp;Animatie</translation>
+        <translation>Film &amp; Animaţie</translation>
     </message>
     <message>
         <source>Games</source>
@@ -1492,15 +1494,15 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Howto &amp; Style</source>
-        <translation>Cum sa&amp;Stil</translation>
+        <translation>CumSă &amp; Stil</translation>
     </message>
     <message>
         <source>Music</source>
-        <translation>Muzica</translation>
+        <translation>Muzică</translation>
     </message>
     <message>
         <source>News &amp; Politics</source>
-        <translation>Stiri&amp;Politici</translation>
+        <translation>Ştiri &amp; Politică</translation>
     </message>
     <message>
         <source>Nonprofit &amp; Activism</source>
@@ -1508,7 +1510,7 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>People &amp; Blogs</source>
-        <translation>Oameni&amp;bloguri</translation>
+        <translation>Oameni &amp; Bloguri</translation>
     </message>
     <message>
         <source>Animals &amp; Pets</source>
@@ -1516,15 +1518,15 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Tech &amp; Science</source>
-        <translation>Tehnologie &amp; Stiinţă</translation>
+        <translation>Ştiinţă &amp; Tehnică</translation>
     </message>
     <message>
         <source>Sports</source>
-        <translation>Sporturi</translation>
+        <translation>Sport</translation>
     </message>
     <message>
         <source>Travel &amp; Events</source>
-        <translation>Calatorie&amp;Evenimente</translation>
+        <translation>Călătorii &amp; Evenimente</translation>
     </message>
     <message>
         <source>Title</source>
@@ -1536,43 +1538,11 @@ Vrei să continui?</translation>
     </message>
     <message>
         <source>Keywords</source>
-        <translation>Cuvinte cheie</translation>
+        <translation>Chei de căutare</translation>
     </message>
     <message>
         <source>Make this video private</source>
-        <translation>Fă acest clip privat</translation>
-    </message>
-    <message>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Ignoră</translation>
-    </message>
-    <message>
-        <source>&amp;Publish</source>
-        <translation>&amp;Publică</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation>Eroare</translation>
-    </message>
-    <message>
-        <source>&apos;Username&apos; or &apos;Password&apos; or &apos;Title&apos; cannot be empty. Please check these fields.</source>
-        <translation>&apos;Utilizator&apos; sau &apos;Parola sau &apos;Titlu&apos; nu pot fi lăsate necompletate. Te rog verifică aceste campuri.</translation>
-    </message>
-    <message>
-        <source>Authenticating...</source>
-        <translation>Se autentifică...</translation>
-    </message>
-    <message>
-        <source>Authenticated!</source>
-        <translation>Autentificat!</translation>
-    </message>
-    <message>
-        <source>Video Uploaded</source>
-        <translation>Fişier video încărcat</translation>
-    </message>
-    <message>
-        <source>%1 kB Uploaded</source>
-        <translation>%1 kB încărcat</translation>
+        <translation>Marcaţi acest video ca privat</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1584,7 +1554,31 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;Publicând,tu eşti de acord cu termenii de licenţă  &lt;/span&gt;&lt;a href=&quot;http://code.google.com/apis/youtube/terms.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;YouTube&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;Publicând, sunteţi de acord cu Termenii De Utilizare &lt;/span&gt;&lt;a href=&quot;http://code.google.com/apis/youtube/terms.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;YouTube&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation>Re&amp;nunţare</translation>
+    </message>
+    <message>
+        <source>&amp;Publish</source>
+        <translation>&amp;Publicare</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Eroare</translation>
+    </message>
+    <message>
+        <source>&apos;Username&apos; or &apos;Password&apos; or &apos;Title&apos; cannot be empty. Please check these fields.</source>
+        <translation>&apos;Numele de Utiliozator&apos; ori &apos;Parola&apos; ori &apos;Titlul&apos;, mu pot fi lăsate necompletate. Vă rugăm să verificaţi aceste câmpuri.</translation>
+    </message>
+    <message>
+        <source>Authenticating...</source>
+        <translation>Autentificare...</translation>
+    </message>
+    <message>
+        <source>Authenticated!</source>
+        <translation>Autentificat!</translation>
     </message>
     <message>
         <source>Your video has been uploaded.
@@ -1592,61 +1586,69 @@ URL (copied to your clipboard):
 %1
 
 Open this in your default web browser?</source>
-        <translation>Fişierul video a fost încărcat.
-URL (copiază în clipboard):
+        <translation>Fişierul dvs. video, a fost încărcat.
+Adresa URL (copiată în clipboard):
 %1
 
-Deschizi în browser-ul implicit?</translation>
+O deschideţi în navigatorul implicit?</translation>
     </message>
     <message>
         <source>Some error has occured while processing your video.
 Please check with your video service provider.</source>
-        <translation>Au apărut probleme în timpul procesării fişierului video.
-Verifică conexiunea la internet.</translation>
+        <translation>Au apărut erori la procesare fişierului video
+Vă rugăm să vă verificaţi furnizorul de servicii video. </translation>
+    </message>
+    <message>
+        <source>Video Uploaded</source>
+        <translation>Videoclip Încărcat</translation>
+    </message>
+    <message>
+        <source>%1 kB Uploaded</source>
+        <translation>%1 kB Încărcati</translation>
     </message>
 </context>
 <context>
     <name>StackViewNavController</name>
     <message>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <source>Previous</source>
-        <translation>Precedent</translation>
+        <translation>Anterior</translation>
     </message>
     <message>
         <source>Media List</source>
-        <translation>Listă media</translation>
+        <translation>Lista Media</translation>
     </message>
 </context>
 <context>
     <name>TagWidget</name>
     <message>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <source>Keyword Tags</source>
-        <translation>Tag-uri pentru cuvinte cheie</translation>
+        <translation>Etichete Cheie-căutare</translation>
     </message>
 </context>
 <context>
     <name>Timeline</name>
     <message>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formular</translation>
     </message>
 </context>
 <context>
     <name>TrackControls</name>
     <message>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>Eticheta</translation>
+        <translation>EtichetăText</translation>
     </message>
     <message>
         <source>Video #%1</source>
@@ -1658,22 +1660,22 @@ Verifică conexiunea la internet.</translation>
     </message>
     <message>
         <source>Rename track</source>
-        <translation>Redenumeşte track</translation>
+        <translation>Redenumire piesă</translation>
     </message>
     <message>
         <source>Enter the track new name</source>
-        <translation>Introdu numele noului track</translation>
+        <translation>Introduceţi un nou pentru piesă</translation>
     </message>
 </context>
 <context>
     <name>TracksScene</name>
     <message>
         <source>Confirm the deletion of the region?</source>
-        <translation>Confirmi stergerea regiunii?</translation>
+        <translation>Confirmaţi ştergerea regiunii?</translation>
     </message>
     <message>
         <source>Confirm the deletion of those regions?</source>
-        <translation>Confirmi stergerea acestor regiuni?</translation>
+        <translation>Confirmaţi ştergerea acelor regiuni?</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -1681,7 +1683,7 @@ Verifică conexiunea la internet.</translation>
     </message>
     <message>
         <source>Yes, don&apos;t ask me again</source>
-        <translation>Da,nu mai intreba</translation>
+        <translation>Da, nu mă mai întreba iar</translation>
     </message>
     <message>
         <source>No</source>
@@ -1692,62 +1694,62 @@ Verifică conexiunea la internet.</translation>
     <name>UndoStack</name>
     <message>
         <source>Nothing to undo</source>
-        <translation>Nimic de restaurat</translation>
+        <translation>Nimic de anulat</translation>
     </message>
 </context>
 <context>
     <name>VideoPage</name>
     <message>
         <source>WizardPage</source>
-        <translation>Indrumator</translation>
+        <translation>ExpertConfigurare</translation>
     </message>
     <message>
         <source>In this page you can fine tune some of the settings of your new project.</source>
-        <translation>În această pagină puteţi seta unele dintre setările proiectului nou.</translation>
+        <translation>În această pagină, puteţi regla fin anumite configurări ale proiectului dvs.</translation>
     </message>
     <message>
         <source>Video</source>
-        <translation></translation>
+        <translation>Video</translation>
     </message>
     <message>
         <source>Width</source>
-        <translation>Orizontal</translation>
+        <translation>Lățime</translation>
     </message>
     <message>
         <source>Height</source>
-        <translation>Vertical</translation>
+        <translation>Înalțime</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation>Particularizare</translation>
+        <translation>Personalizat</translation>
     </message>
     <message>
         <source>SDTV/NTSC (480i)</source>
-        <translation></translation>
+        <translation>SDTV/NTSC (480i)</translation>
     </message>
     <message>
         <source>SDTV/PAL (576i)</source>
-        <translation></translation>
+        <translation>SDTV/PAL (576i)</translation>
     </message>
     <message>
         <source>EDTV (480p)</source>
-        <translation></translation>
+        <translation>EDTV (480p)</translation>
     </message>
     <message>
         <source>EDTV (576p)</source>
-        <translation></translation>
+        <translation>EDTV (576p)</translation>
     </message>
     <message>
         <source>HDTV (720p)</source>
-        <translation></translation>
+        <translation>HDTV (720p)</translation>
     </message>
     <message>
         <source>HDTV (1080i)</source>
-        <translation></translation>
+        <translation>HDTV (1080i)</translation>
     </message>
     <message>
         <source>HDTV (1080p)</source>
-        <translation></translation>
+        <translation>HDTV (1080p)</translation>
     </message>
     <message>
         <source>Frames / sec</source>
@@ -1759,31 +1761,23 @@ Verifică conexiunea la internet.</translation>
     </message>
     <message>
         <source>Number of channels</source>
-        <translation>Numar canale</translation>
+        <translation>Numărul de canale</translation>
     </message>
     <message>
         <source>Stereo</source>
-        <translation></translation>
+        <translation>Stereo</translation>
     </message>
     <message>
         <source>Mono</source>
-        <translation></translation>
+        <translation>Mono</translation>
     </message>
     <message>
         <source>Sample rate</source>
-        <translation></translation>
+        <translation>Frecvență de eșantionare</translation>
     </message>
     <message>
         <source>48000 Hz</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>New project wizard</source>
-        <translation>Indrumator proiect nou</translation>
-    </message>
-    <message>
-        <source>Configure Video settings</source>
-        <translation>Configurare setari video</translation>
+        <translation>48000 Hz</translation>
     </message>
     <message>
         <source>44100 Hz</source>
@@ -1798,19 +1792,27 @@ Verifică conexiunea la internet.</translation>
         <translation>11025 Hz</translation>
     </message>
     <message>
+        <source>New project wizard</source>
+        <translation>Expert configurare proiect nou</translation>
+    </message>
+    <message>
+        <source>Configure Video settings</source>
+        <translation>Configurarea setărilor video</translation>
+    </message>
+    <message>
         <source>16/9</source>
         <translation>16/9</translation>
     </message>
     <message>
         <source>Video aspect ratio</source>
-        <translation>Raportul de aspect</translation>
+        <translation>Raport aspect video</translation>
     </message>
 </context>
 <context>
     <name>WelcomePage</name>
     <message>
         <source>Form</source>
-        <translation></translation>
+        <translation>Formular</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1831,56 +1833,56 @@ p, li { white-space: pre-wrap; }
 &lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
 &lt;tr&gt;
 &lt;td style=&quot;border: none;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bine aţi venit la Expertul de proiect.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Acest indrumator vă va ajuta să creaţi un nou proiect, sau sa deschideti un proiect deja existent.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bun venit la Expertul de Configurare proiect.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Acest asistent de configurare, vă va ajuta să creaţi un nou proiect, sau să deschideţi unul deja existent.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Vă rugăm să selectaţi acţiunea dvs. preferata de mai jos, apoi apăsaţi Next.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Vă rugăm să vă selectaţi, de mai jos, acţiunea preferată iar apoi să apăsaţi unrmător.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Create a new project</source>
-        <translation>Creaţi un nou proiect</translation>
+        <translation>Creaţi un proiect nou</translation>
     </message>
     <message>
         <source>Open an existing project</source>
-        <translation>Deschide un proiect existent</translation>
+        <translation>Deschideţi un proiect existent</translation>
     </message>
     <message>
         <source>Open...</source>
-        <translation>Deschide...</translation>
+        <translation>Deschidere...</translation>
+    </message>
+    <message>
+        <source>Do not show at startup.</source>
+        <translation>Nu se afişează la pornire.</translation>
     </message>
     <message>
         <source>Project wizard</source>
-        <translation>Indrumator</translation>
+        <translation>Asistent de proiect</translation>
     </message>
     <message>
         <source>Open or create a project</source>
-        <translation>Deschide sau creati un proiect</translation>
+        <translation>Deschideţi sau creaţi un proiect</translation>
     </message>
     <message>
         <source>Sorry</source>
-        <translation>Regret</translation>
+        <translation>Ne pare rău</translation>
     </message>
     <message>
         <source>You first need to select a project from the list.
 Then click next to continue...</source>
-        <translation>Trebuie, mai întâi sa selectati un proiect din listă.
-Apoi faceţi clic pe Next pentru a continua ......</translation>
-    </message>
-    <message>
-        <source>Do not show at startup.</source>
-        <translation>Nu arăta la startup.</translation>
+        <translation>Trebuie întâi să selectaţi un proiect din listă.
+Apoi apăsaţi pe următor pentru a continua...</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation>Elimină</translation>
+        <translation>Eliminați</translation>
     </message>
     <message>
         <source>Select a project file</source>
-        <translation>Alege un fişier proiect</translation>
+        <translation>Selectați un fișier proiect</translation>
     </message>
     <message>
         <source>VLMC project file(*.vlmc)</source>
-        <translation>Fişier proiect VLMC(*.vlmc)</translation>
+        <translation>Fişier proiect VLMC (*.vlmc)</translation>
     </message>
 </context>
 <context>
@@ -1891,7 +1893,7 @@ Apoi faceţi clic pe Next pentru a continua ......</translation>
     </message>
     <message>
         <source>Render in progress...</source>
-        <translation>Randare în curs ...</translation>
+        <translation>Prelucrare în curs...</translation>
     </message>
     <message>
         <source>Frame</source>
@@ -1899,15 +1901,15 @@ Apoi faceţi clic pe Next pentru a continua ......</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>Eticheta</translation>
+        <translation>EtichetăText</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Ignora</translation>
+        <translation>Renunță</translation>
     </message>
     <message>
         <source>Rendering frame %1 / %2</source>
-        <translation>Randare cadru %1 / %2</translation>
+        <translation>Procesare cadru %1 / %2</translation>
     </message>
 </context>
 <context>
@@ -1918,15 +1920,15 @@ Apoi faceţi clic pe Next pentru a continua ......</translation>
     </message>
     <message>
         <source>A file with the same name already exists, do you want to overwrite it?</source>
-        <translation>Un fişier cu acelaşi nume există deja, vrei să-l suprascrieţi?</translation>
+        <translation>Există deja un fişier cu acelaşi nume, doriţi să-l înlocuiţi?</translation>
     </message>
     <message>
         <source>Workspace: </source>
-        <translation>Spaţiul de lucru:</translation>
+        <translation>Spaţiu de lucru:</translation>
     </message>
     <message>
         <source> copied to </source>
-        <translation>copiat in</translation>
+        <translation>copiat în</translation>
     </message>
 </context>
 <context>
@@ -1937,7 +1939,7 @@ Apoi faceţi clic pe Next pentru a continua ......</translation>
     </message>
     <message>
         <source>Connection may be insecure, do you want to continue? One or more SSL errors has occurred: %1</source>
-        <translation>Conexiunea poate fi nesigură,vrei să continui?A apărut una sau mai multe erori SSL: %1</translation>
+        <translation>Conexiunea poate fi nesigură, continuaţi? A apărut una sau mai multe erori SSL: %1</translation>
     </message>
 </context>
 </TS>
