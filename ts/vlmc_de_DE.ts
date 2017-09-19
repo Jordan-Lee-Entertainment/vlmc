@@ -411,7 +411,7 @@ Ihre QT Runtime Version: %4
     </message>
     <message>
         <source>Please choose a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitte eine Projekt-Datei auswählen</translation>
     </message>
 </context>
 <context>
@@ -438,7 +438,7 @@ Ihre QT Runtime Version: %4
     </message>
     <message>
         <source>Browse...</source>
-        <translation>Suchen...</translation>
+        <translation>Suchen …</translation>
     </message>
     <message>
         <source>Project location</source>
@@ -1258,7 +1258,7 @@ Bitte überprüfen Sie Ihre VLMC Installation bevor Sie den Fehler melden.</tran
     <name>RendererSettings</name>
     <message>
         <source>Select...</source>
-        <translation>Auswählen...</translation>
+        <translation>Auswählen …</translation>
     </message>
     <message>
         <source>Width</source>
@@ -1573,11 +1573,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Authenticating...</source>
-        <translation>Authentifizieren ...</translation>
+        <translation>Legitimierung läuft …</translation>
     </message>
     <message>
         <source>Authenticated!</source>
-        <translation>Authentifiziert!</translation>
+        <translation>Legitimiert!</translation>
     </message>
     <message>
         <source>Your video has been uploaded.
@@ -1847,7 +1847,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open...</source>
-        <translation>Öffnen...</translation>
+        <translation>Öffnen …</translation>
     </message>
     <message>
         <source>Do not show at startup.</source>
@@ -1868,8 +1868,8 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>You first need to select a project from the list.
 Then click next to continue...</source>
-        <translation>Sie müssen zuerst ein Projekt aus der Liste auswählen
-Klicken Sie dann auf Weiter um fortzufahren...</translation>
+        <translation>Sie müssen zuerst ein Projekt aus der Liste auswählen.
+Dann auf »Weiter« klicken, um fortzufahren …</translation>
     </message>
     <message>
         <source>Remove</source>
@@ -1892,7 +1892,7 @@ Klicken Sie dann auf Weiter um fortzufahren...</translation>
     </message>
     <message>
         <source>Render in progress...</source>
-        <translation>Render-Vorgang wird ausgeführt...</translation>
+        <translation>Render-Vorgang wird ausgeführt …</translation>
     </message>
     <message>
         <source>Frame</source>
@@ -1934,7 +1934,7 @@ Klicken Sie dann auf Weiter um fortzufahren...</translation>
     <name>YouTubeService</name>
     <message>
         <source>YouTube Authentication</source>
-        <translation>YouTube-Authentifizierung</translation>
+        <translation>YouTube-Legitimierung</translation>
     </message>
     <message>
         <source>Connection may be insecure, do you want to continue? One or more SSL errors has occurred: %1</source>
