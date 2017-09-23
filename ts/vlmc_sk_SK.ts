@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sk_SK">
+<TS version="2.0" language="sk" sourcelanguage="en">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutVLMC</name>
@@ -231,6 +231,10 @@ Verzia Vášho prostredia Qt: %4</translation>
         <translation>Pády programu VLMC</translation>
     </message>
     <message>
+        <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
+        <translation>Nastala chyba. Ospravedlňujeme sa Vám za nepríjemnosti, Váš projekt bol uložený. Môžete ho znovu otvoriť po ďalšom spustení programu VLMC.</translation>
+    </message>
+    <message>
         <source>Ok</source>
         <translation>OK</translation>
     </message>
@@ -249,10 +253,6 @@ Verzia Vášho prostredia Qt: %4</translation>
     <message>
         <source>A crash occurred. Signal received: </source>
         <translation>Nastala chyba. Bol prijatý signál: </translation>
-    </message>
-    <message>
-        <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
-        <translation>Nastala chyba. Ospravedlňujeme sa Vám za nepríjemnosti, Váš projekt bol uložený. Môžete ho znovu otvoriť po ďalšom spustení programu VLMC.</translation>
     </message>
 </context>
 <context>
@@ -281,12 +281,12 @@ Verzia Vášho prostredia Qt: %4</translation>
 <context>
     <name>EffectSettingWidget</name>
     <message>
-        <source>Apply</source>
-        <translation>Použiť</translation>
-    </message>
-    <message>
         <source>Effect Properties</source>
         <translation>Vlastnosti efektov</translation>
+    </message>
+    <message>
+        <source>Apply</source>
+        <translation>Použiť</translation>
     </message>
 </context>
 <context>
@@ -310,26 +310,6 @@ Verzia Vášho prostredia Qt: %4</translation>
 </context>
 <context>
     <name>EffectWidget</name>
-    <message>
-        <source>Filter</source>
-        <translation>Filter</translation>
-    </message>
-    <message>
-        <source>Source</source>
-        <translation>Zdroj</translation>
-    </message>
-    <message>
-        <source>Mixer 2</source>
-        <translation>Mixér 2</translation>
-    </message>
-    <message>
-        <source>Mixer 3</source>
-        <translation>Mixér 3</translation>
-    </message>
-    <message>
-        <source>Unknown type</source>
-        <translation>Neznámy typ</translation>
-    </message>
     <message>
         <source>Form</source>
         <translation>Formulár</translation>
@@ -358,6 +338,26 @@ Verzia Vášho prostredia Qt: %4</translation>
         <source>Description</source>
         <translation>Opis</translation>
     </message>
+    <message>
+        <source>Filter</source>
+        <translation>Filter</translation>
+    </message>
+    <message>
+        <source>Source</source>
+        <translation>Zdroj</translation>
+    </message>
+    <message>
+        <source>Mixer 2</source>
+        <translation>Mixér 2</translation>
+    </message>
+    <message>
+        <source>Mixer 3</source>
+        <translation>Mixér 3</translation>
+    </message>
+    <message>
+        <source>Unknown type</source>
+        <translation>Neznámy typ</translation>
+    </message>
 </context>
 <context>
     <name>EffectsListView</name>
@@ -377,16 +377,16 @@ Verzia Vášho prostredia Qt: %4</translation>
         <translation>Chcete ho uložiť?</translation>
     </message>
     <message>
-        <source>Failed to load project file</source>
-        <translation>Nepodarilo sa načítať projekt</translation>
-    </message>
-    <message>
         <source>You are about to relocate the project. Every video will be copied to your new workspace.</source>
         <translation>Chystáte sa zmeniť umiestnenie projektu. Každé video bude skopírované do nového pracovného priestoru.</translation>
     </message>
     <message>
         <source>Do you want to proceed?</source>
         <translation>Chcete pokračovať?</translation>
+    </message>
+    <message>
+        <source>Failed to load project file</source>
+        <translation>Nepodarilo sa načítať projekt</translation>
     </message>
     <message>
         <source>Backup file</source>
@@ -410,7 +410,7 @@ Verzia Vášho prostredia Qt: %4</translation>
     </message>
     <message>
         <source>Please choose a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Prosím vyberte súbor s projektom</translation>
     </message>
 </context>
 <context>
@@ -508,10 +508,6 @@ Verzia Vášho prostredia Qt: %4</translation>
         <translation>Import</translation>
     </message>
     <message>
-        <source>Failed to load %1</source>
-        <translation>Nepodarilo sa načítať %1</translation>
-    </message>
-    <message>
         <source>TextLabel</source>
         <translation>TextovaMenovka</translation>
     </message>
@@ -522,6 +518,10 @@ Verzia Vášho prostredia Qt: %4</translation>
     <message>
         <source>Some of the medias you loaded can&apos;t be used for video editing. Do you want VLMC to convert them so you can use them in your project?</source>
         <translation>Niektoré z načítaných médií sa nedajú použiť na úpravu videa. Chcete, aby ich program VLMC konvertoval tak, aby sa dali použiť vo vašom projekte?</translation>
+    </message>
+    <message>
+        <source>Failed to load %1</source>
+        <translation>Nepodarilo sa načítať %1</translation>
     </message>
 </context>
 <context>
@@ -569,72 +569,8 @@ p, li { white-space: pre-wrap; }
         <translation>VideoLAN Movie Creator</translation>
     </message>
     <message>
-        <source>Help</source>
-        <translation>Pomocník</translation>
-    </message>
-    <message>
-        <source>Preview</source>
-        <translation>Náhľad</translation>
-    </message>
-    <message>
-        <source>Crash</source>
-        <translation>Pád</translation>
-    </message>
-    <message>
-        <source>Crash recovery</source>
-        <translation>Obnova po páde</translation>
-    </message>
-    <message>
-        <source>Can&apos;t restore project</source>
-        <translation>Projekt nemožno obnoviť</translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation>Späť</translation>
-    </message>
-    <message>
-        <source>Redo</source>
-        <translation>Dopredu</translation>
-    </message>
-    <message>
-        <source>VLMC Renderer</source>
-        <translation>Vykresľovač VLMC</translation>
-    </message>
-    <message>
-        <source>There is nothing to render.</source>
-        <translation>Nie je čo vykresľovať.</translation>
-    </message>
-    <message>
-        <source>Use the mouse tool to manipulate regions in the timeline</source>
-        <translation>Použiť nástroj myši na manipuláciu s regiónmi na časovej osi</translation>
-    </message>
-    <message>
-        <source>Use the scissors to cut regions in the timeline</source>
-        <translation>Použiť nožnice na vystrihnutie regiónov na časovej osi</translation>
-    </message>
-    <message>
-        <source>Zoom out</source>
-        <translation>Oddialiť</translation>
-    </message>
-    <message>
-        <source>Zoom in</source>
-        <translation>Priblížiť</translation>
-    </message>
-    <message>
-        <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
-        <translation>Program VLMC nedokázal obnoviť váš projekt. Ospravedlňujeme sa za spôsobené neprítomnosti</translation>
-    </message>
-    <message>
         <source>&amp;Edit</source>
         <translation>Ú&amp;pravy</translation>
-    </message>
-    <message>
-        <source>&amp;View</source>
-        <translation>Zo&amp;braziť</translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation>&amp;Okno</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -645,16 +581,40 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Súbor</translation>
     </message>
     <message>
-        <source>&amp;Quit</source>
-        <translation>Kon&amp;iec</translation>
+        <source>&amp;Export</source>
+        <translation>&amp;Export</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Okno</translation>
+    </message>
+    <message>
+        <source>&amp;View</source>
+        <translation>Zo&amp;braziť</translation>
+    </message>
+    <message>
+        <source>Tools</source>
+        <translation>Nástroje</translation>
+    </message>
+    <message>
+        <source>VLMC Toolbar</source>
+        <translation>Panel nástrojov VLMC</translation>
     </message>
     <message>
         <source>&amp;About</source>
         <translation>O p&amp;rograme</translation>
     </message>
     <message>
+        <source>Help</source>
+        <translation>Pomocník</translation>
+    </message>
+    <message>
         <source>&amp;Preferences</source>
         <translation>N&amp;astavenia</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation>Náhľad</translation>
     </message>
     <message>
         <source>&amp;New Project</source>
@@ -667,6 +627,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&amp;Fullscreen</source>
         <translation>&amp;Celoobrazovkový režim</translation>
+    </message>
+    <message>
+        <source>&amp;To a file</source>
+        <translation>&amp;Do súboru</translation>
+    </message>
+    <message>
+        <source>Render your project as a file</source>
+        <translation>Renderovať projekt ako súbor</translation>
     </message>
     <message>
         <source>&amp;Load Project</source>
@@ -697,40 +665,72 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Zatvoriť projekt</translation>
     </message>
     <message>
-        <source>VLMC didn&apos;t closed nicely. Do you want to recover your project?</source>
-        <translation>Program VLMC sa neukončil korektne. Chcete obnoviť svoj posledný projekt?</translation>
+        <source>Crash</source>
+        <translation>Pád</translation>
     </message>
     <message>
-        <source>&amp;Export</source>
-        <translation>&amp;Export</translation>
+        <source>Undo</source>
+        <translation>Späť</translation>
     </message>
     <message>
-        <source>&amp;To a file</source>
-        <translation>&amp;Do súboru</translation>
-    </message>
-    <message>
-        <source>Render your project as a file</source>
-        <translation>Renderovať projekt ako súbor</translation>
+        <source>Redo</source>
+        <translation>Dopredu</translation>
     </message>
     <message>
         <source>Share your project on youtube</source>
         <translation>Zdieľajte svoj projekt na portáli Youtube</translation>
     </message>
     <message>
-        <source>Tools</source>
-        <translation>Nástroje</translation>
-    </message>
-    <message>
-        <source>VLMC Toolbar</source>
-        <translation>Panel nástrojov VLMC</translation>
+        <source>&amp;Quit</source>
+        <translation>Kon&amp;iec</translation>
     </message>
     <message>
         <source>Selection mode</source>
         <translation>Režim výberu</translation>
     </message>
     <message>
+        <source>Use the mouse tool to manipulate regions in the timeline</source>
+        <translation>Použiť nástroj myši na manipuláciu s regiónmi na časovej osi</translation>
+    </message>
+    <message>
         <source>Cut mode</source>
         <translation>Režim vystrihovania</translation>
+    </message>
+    <message>
+        <source>Use the scissors to cut regions in the timeline</source>
+        <translation>Použiť nožnice na vystrihnutie regiónov na časovej osi</translation>
+    </message>
+    <message>
+        <source>Zoom out</source>
+        <translation>Oddialiť</translation>
+    </message>
+    <message>
+        <source>Zoom in</source>
+        <translation>Priblížiť</translation>
+    </message>
+    <message>
+        <source>VLMC Renderer</source>
+        <translation>Vykresľovač VLMC</translation>
+    </message>
+    <message>
+        <source>There is nothing to render.</source>
+        <translation>Nie je čo vykresľovať.</translation>
+    </message>
+    <message>
+        <source>Crash recovery</source>
+        <translation>Obnova po páde</translation>
+    </message>
+    <message>
+        <source>VLMC didn&apos;t closed nicely. Do you want to recover your project?</source>
+        <translation>Program VLMC sa neukončil korektne. Chcete obnoviť svoj posledný projekt?</translation>
+    </message>
+    <message>
+        <source>Can&apos;t restore project</source>
+        <translation>Projekt nemožno obnoviť</translation>
+    </message>
+    <message>
+        <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
+        <translation>Program VLMC nedokázal obnoviť váš projekt. Ospravedlňujeme sa za spôsobené neprítomnosti</translation>
     </message>
     <message>
         <source>Publish on &amp;Internet</source>
@@ -839,16 +839,20 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>PreferenceWidget</name>
     <message>
-        <source>Select the selection tool in the timeline</source>
-        <translation>Vyberte nástroj na výber na časovej osi</translation>
+        <source>Automatic save</source>
+        <translation>Automaticky uložiť</translation>
     </message>
     <message>
-        <source>Cut mode</source>
-        <translation>Režim vystrihovania</translation>
+        <source>When this option is activated,VLMC will automatically save your project at a specified interval</source>
+        <translation>Ak je táto voľba aktivovaná, program VLMC automaticky uloží váš projekt v zadaných časových intervaloch</translation>
     </message>
     <message>
-        <source>Select the cut/razor tool in the timeline</source>
-        <translation>Vyberte si nástroj na vystrihnutie na časovej osi</translation>
+        <source>Automatic save interval</source>
+        <translation>Interval automatického ukladania</translation>
+    </message>
+    <message>
+        <source>This is the interval that VLMC will wait between two automatic save</source>
+        <translation>Toto je časový interval, ktorý uplynie medzi dvomi automatickými uloženiami programom VLMC</translation>
     </message>
     <message>
         <source>Media preview</source>
@@ -907,6 +911,14 @@ p, li { white-space: pre-wrap; }
         <translation>Otvoriť nastavenia programu VLMC</translation>
     </message>
     <message>
+        <source>Project preferences</source>
+        <translation>Nastavenia projektu</translation>
+    </message>
+    <message>
+        <source>Open the project preferences</source>
+        <translation>Otvoriť nastavenia projektu</translation>
+    </message>
+    <message>
         <source>Fullscreen</source>
         <translation>Celoobrazovkový režim</translation>
     </message>
@@ -917,6 +929,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New project</source>
         <translation>Nový projekt</translation>
+    </message>
+    <message>
+        <source>Open the new project wizard</source>
+        <translation>Otvoriť sprievodcu projektom</translation>
     </message>
     <message>
         <source>Open a project</source>
@@ -967,24 +983,60 @@ p, li { white-space: pre-wrap; }
         <translation>Vykresliť projekt do súboru</translation>
     </message>
     <message>
+        <source>Selection mode</source>
+        <translation>Režim výberu</translation>
+    </message>
+    <message>
+        <source>Select the selection tool in the timeline</source>
+        <translation>Vyberte nástroj na výber na časovej osi</translation>
+    </message>
+    <message>
+        <source>Cut mode</source>
+        <translation>Režim vystrihovania</translation>
+    </message>
+    <message>
+        <source>Select the cut/razor tool in the timeline</source>
+        <translation>Vyberte si nástroj na vystrihnutie na časovej osi</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>Jazyk</translation>
+    </message>
+    <message>
         <source>The VLMC&apos;s UI language</source>
         <translation>Jazyk programu VLMC</translation>
     </message>
     <message>
-        <source>Automatic save</source>
-        <translation>Automaticky uložiť</translation>
+        <source>Confirm clip deletion</source>
+        <translation>Potvrdenie vymazania klipu</translation>
     </message>
     <message>
-        <source>When this option is activated,VLMC will automatically save your project at a specified interval</source>
-        <translation>Ak je táto voľba aktivovaná, program VLMC automaticky uloží váš projekt v zadaných časových intervaloch</translation>
+        <source>Ask for confirmation before deleting a clip from the timeline</source>
+        <translation>Pred vymazaním klipu z časovej osi vyžadovať potvrdenie tejto akcie</translation>
     </message>
     <message>
-        <source>Automatic save interval</source>
-        <translation>Interval automatického ukladania</translation>
+        <source>Youtube Developer Key</source>
+        <translation>Vývojársky kľúč pre portál Youtube</translation>
     </message>
     <message>
-        <source>This is the interval that VLMC will wait between two automatic save</source>
-        <translation>Toto je časový interval, ktorý uplynie medzi dvomi automatickými uloženiami programom VLMC</translation>
+        <source>Youtube Username</source>
+        <translation>Meno používateľa na serveri Youtube</translation>
+    </message>
+    <message>
+        <source>Proxy Port</source>
+        <translation>Port Proxy</translation>
+    </message>
+    <message>
+        <source>Proxy Username</source>
+        <translation>Meno používateľa na proxy serveri</translation>
+    </message>
+    <message>
+        <source>Proxy Password</source>
+        <translation>Heslo na prosxy server</translation>
+    </message>
+    <message>
+        <source>The default location where to store projects folders</source>
+        <translation>Predvolené umiestnenie kam chcete uložiť priečinky s projektami</translation>
     </message>
     <message>
         <source>Output video FPS</source>
@@ -1027,56 +1079,12 @@ p, li { white-space: pre-wrap; }
         <translation>Názov projektu</translation>
     </message>
     <message>
-        <source>Open the new project wizard</source>
-        <translation>Otvoriť sprievodcu projektom</translation>
+        <source>Project default location</source>
+        <translation>Predvolené umiestnenie projektu</translation>
     </message>
     <message>
-        <source>Language</source>
-        <translation>Jazyk</translation>
-    </message>
-    <message>
-        <source>Confirm clip deletion</source>
-        <translation>Potvrdenie vymazania klipu</translation>
-    </message>
-    <message>
-        <source>Ask for confirmation before deleting a clip from the timeline</source>
-        <translation>Pred vymazaním klipu z časovej osi vyžadovať potvrdenie tejto akcie</translation>
-    </message>
-    <message>
-        <source>Youtube Developer Key</source>
-        <translation>Vývojársky kľúč pre portál Youtube</translation>
-    </message>
-    <message>
-        <source>Youtube Username</source>
-        <translation>Meno používateľa na serveri Youtube</translation>
-    </message>
-    <message>
-        <source>Proxy Port</source>
-        <translation>Port Proxy</translation>
-    </message>
-    <message>
-        <source>Proxy Username</source>
-        <translation>Meno používateľa na proxy serveri</translation>
-    </message>
-    <message>
-        <source>Proxy Password</source>
-        <translation>Heslo na prosxy server</translation>
-    </message>
-    <message>
-        <source>The default location where to store projects folders</source>
-        <translation>Predvolené umiestnenie kam chcete uložiť priečinky s projektami</translation>
-    </message>
-    <message>
-        <source>Project preferences</source>
-        <translation>Nastavenia projektu</translation>
-    </message>
-    <message>
-        <source>Open the project preferences</source>
-        <translation>Otvoriť nastavenia projektu</translation>
-    </message>
-    <message>
-        <source>Selection mode</source>
-        <translation>Režim výberu</translation>
+        <source>Temporary folder</source>
+        <translation>Dočasný priečinok</translation>
     </message>
     <message>
         <source>The temporary folder used by VLMC to process videos.</source>
@@ -1093,6 +1101,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Youtube Password</source>
         <translation>Heslo pre server Youtube</translation>
+    </message>
+    <message>
+        <source>Leave this field empty, password will be stored in unencrypted form.</source>
+        <translation>Ak ponecháte toto políčko prázdne, heslo sa uloží v nekódovanej podobe.</translation>
     </message>
     <message>
         <source>Enable Proxy for VLMC</source>
@@ -1121,18 +1133,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Set Proxy Password, if any.</source>
         <translation>Nastavte heslo pre proxy, ak je k dispozícii.</translation>
-    </message>
-    <message>
-        <source>Project default location</source>
-        <translation>Predvolené umiestnenie projektu</translation>
-    </message>
-    <message>
-        <source>Temporary folder</source>
-        <translation>Dočasný priečinok</translation>
-    </message>
-    <message>
-        <source>Leave this field empty, password will be stored in unencrypted form.</source>
-        <translation>Ak ponecháte toto políčko prázdne, heslo sa uloží v nekódovanej podobe.</translation>
     </message>
     <message>
         <source>Video aspect ratio</source>
@@ -1256,10 +1256,6 @@ Pred odoslaním záznamu o chybe prosím skontrolujte inštaláciu programu VLC.
 <context>
     <name>RendererSettings</name>
     <message>
-        <source>Enter the output file name</source>
-        <translation>Zadajte názov výstupného súboru</translation>
-    </message>
-    <message>
         <source>Select...</source>
         <translation>Vybrať...</translation>
     </message>
@@ -1280,6 +1276,14 @@ Pred odoslaním záznamu o chybe prosím skontrolujte inštaláciu programu VLC.
         <translation>AAC</translation>
     </message>
     <message>
+        <source>Enter the output file name</source>
+        <translation>Zadajte názov výstupného súboru</translation>
+    </message>
+    <message>
+        <source>Videos(%1)</source>
+        <translation>Videá(%1)</translation>
+    </message>
+    <message>
         <source>Invalid parameters</source>
         <translation>Neplatné parametre</translation>
     </message>
@@ -1298,14 +1302,6 @@ Pred odoslaním záznamu o chybe prosím skontrolujte inštaláciu programu VLC.
     <message>
         <source>Output file already exists, do you want to overwrite it?</source>
         <translation>Výstupný súbor už existuje, chcete ho prepísať?</translation>
-    </message>
-    <message>
-        <source>Videos(%1)</source>
-        <translation>Videá(%1)</translation>
-    </message>
-    <message>
-        <source>Export Settings: Publish on Internet</source>
-        <translation>Export nastavení: Zverejniť na internete</translation>
     </message>
     <message>
         <source>Export Settings</source>
@@ -1375,6 +1371,10 @@ Pred odoslaním záznamu o chybe prosím skontrolujte inštaláciu programu VLC.
         <source>Preset</source>
         <translation>Predvolené</translation>
     </message>
+    <message>
+        <source>Export Settings: Publish on Internet</source>
+        <translation>Export nastavení: Zverejniť na internete</translation>
+    </message>
 </context>
 <context>
     <name>SearchLineEdit</name>
@@ -1442,30 +1442,6 @@ Naozaj chcete pokračovať?</translation>
 </context>
 <context>
     <name>ShareOnInternet</name>
-    <message>
-        <source>Error</source>
-        <translation>Chyba</translation>
-    </message>
-    <message>
-        <source>&apos;Username&apos; or &apos;Password&apos; or &apos;Title&apos; cannot be empty. Please check these fields.</source>
-        <translation>Políčka &apos;Meno používateľa&apos; alebo &apos;Heslo&apos; alebo &apos;Titul&apos; nemôžu byť prázdne. Skontrolujte prosím tieto políčka ešte raz.</translation>
-    </message>
-    <message>
-        <source>Authenticating...</source>
-        <translation>Autentifikácia...</translation>
-    </message>
-    <message>
-        <source>Authenticated!</source>
-        <translation>Autentifikované!</translation>
-    </message>
-    <message>
-        <source>Video Uploaded</source>
-        <translation>Video bolo odoslané</translation>
-    </message>
-    <message>
-        <source>%1 kB Uploaded</source>
-        <translation>Odoslaných %1 kB</translation>
-    </message>
     <message>
         <source>Share Video On Internet</source>
         <translation>Zdieľať video na internete</translation>
@@ -1567,14 +1543,6 @@ Naozaj chcete pokračovať?</translation>
         <translation>Označiť video ako súkromné</translation>
     </message>
     <message>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Storno</translation>
-    </message>
-    <message>
-        <source>&amp;Publish</source>
-        <translation>Z&amp;verejniť</translation>
-    </message>
-    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1585,6 +1553,30 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;Zverejnením súhlasíte s podmienkami služieb spoločnosti &lt;/span&gt;&lt;a href=&quot;http://code.google.com/apis/youtube/terms.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;YouTube&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Storno</translation>
+    </message>
+    <message>
+        <source>&amp;Publish</source>
+        <translation>Z&amp;verejniť</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Chyba</translation>
+    </message>
+    <message>
+        <source>&apos;Username&apos; or &apos;Password&apos; or &apos;Title&apos; cannot be empty. Please check these fields.</source>
+        <translation>Políčka &apos;Meno používateľa&apos; alebo &apos;Heslo&apos; alebo &apos;Titul&apos; nemôžu byť prázdne. Skontrolujte prosím tieto políčka ešte raz.</translation>
+    </message>
+    <message>
+        <source>Authenticating...</source>
+        <translation>Autentifikácia...</translation>
+    </message>
+    <message>
+        <source>Authenticated!</source>
+        <translation>Autentifikované!</translation>
     </message>
     <message>
         <source>Your video has been uploaded.
@@ -1603,6 +1595,14 @@ Chcete túto adresu otvoriť v predvolenom prehliadači?</translation>
 Please check with your video service provider.</source>
         <translation>Počas spracovávania videa sa vyskytlo niekoľko chýb.
 Skontrolujte ich prosím v spolupráci s vašou službou pre videá.</translation>
+    </message>
+    <message>
+        <source>Video Uploaded</source>
+        <translation>Video bolo odoslané</translation>
+    </message>
+    <message>
+        <source>%1 kB Uploaded</source>
+        <translation>Odoslaných %1 kB</translation>
     </message>
 </context>
 <context>
@@ -1778,14 +1778,6 @@ Skontrolujte ich prosím v spolupráci s vašou službou pre videá.</translatio
         <translation>48000 Hz</translation>
     </message>
     <message>
-        <source>New project wizard</source>
-        <translation>Sprievodca novým projektom</translation>
-    </message>
-    <message>
-        <source>Configure Video settings</source>
-        <translation>Konfigurácia nastavení videa</translation>
-    </message>
-    <message>
         <source>44100 Hz</source>
         <translation>44 100 Hz</translation>
     </message>
@@ -1796,6 +1788,14 @@ Skontrolujte ich prosím v spolupráci s vašou službou pre videá.</translatio
     <message>
         <source>11025 Hz</source>
         <translation>11 025 Hz</translation>
+    </message>
+    <message>
+        <source>New project wizard</source>
+        <translation>Sprievodca novým projektom</translation>
+    </message>
+    <message>
+        <source>Configure Video settings</source>
+        <translation>Konfigurácia nastavení videa</translation>
     </message>
     <message>
         <source>16/9</source>
@@ -1849,6 +1849,10 @@ p, li { white-space: pre-wrap; }
         <translation>Otvoriť...</translation>
     </message>
     <message>
+        <source>Do not show at startup.</source>
+        <translation>Nezobrazovať pri spustení.</translation>
+    </message>
+    <message>
         <source>Project wizard</source>
         <translation>Sprievodca projektom</translation>
     </message>
@@ -1865,10 +1869,6 @@ p, li { white-space: pre-wrap; }
 Then click next to continue...</source>
         <translation>Najskôr si musíte vybrať projekt zo zoznamu.
 Potom kliknite na tlačidlo Ďalej...</translation>
-    </message>
-    <message>
-        <source>Do not show at startup.</source>
-        <translation>Nezobrazovať pri spustení.</translation>
     </message>
     <message>
         <source>Remove</source>
