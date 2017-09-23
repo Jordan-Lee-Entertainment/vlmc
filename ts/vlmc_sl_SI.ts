@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI" sourcelanguage="en">
+<TS version="2.0" language="sl" sourcelanguage="en">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutVLMC</name>
@@ -18,7 +18,7 @@
     </message>
     <message>
         <source>License</source>
-        <translation>Licenca</translation>
+        <translation>Dovoljenje</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -27,46 +27,55 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-size:12pt; font-weight:600;&quot;&gt;VideoLAN Movie Creator %1 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-weight:600;&quot;&gt;%2&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; text-decoration: underline; color:#4f4f4f;&quot;&gt;http://www.vlmc.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-size:12pt; font-weight:600;&quot;&gt;Urejevalnick VLMC %1 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-weight:600;&quot;&gt;%2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; text-decoration: underline; color:#4f4f4f;&quot;&gt;http://www.vlmc.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>VLMC (VideoLAN Movie Creator) is a cross-platform, non-linear video editing software based on the VLC Media Player.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Program VLMC (VideoLAN Movie Creator) je nelinearni urejevalnik videa, zasnovan na predvajalniku VLC, ki deluje v različnih sistemskih okoljih.
+</translation>
     </message>
     <message>
         <source>This version of VLMC was compiled on:
 %1 running  %2 compiled against Qt %3
 Your Qt runtime version: %4
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Ta različica programa VLMC je bila kodno
+prevedena na: %1 v okolju %2 s podporo Qt %3
+Trenutno zagnana različica Qt je: %4
+</translation>
     </message>
     <message>
         <source>Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>Zahvala</translation>
     </message>
 </context>
 <context>
     <name>AbstractGraphicsMediaItem</name>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrani</translation>
     </message>
     <message>
         <source>Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Utišaj</translation>
     </message>
     <message>
         <source>Unlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrani povezavo</translation>
     </message>
     <message>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Poveži</translation>
     </message>
     <message>
         <source>Set color</source>
-        <translation type="unfinished"></translation>
+        <translation>Določi barvo</translation>
     </message>
 </context>
 <context>
@@ -77,7 +86,7 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Media Properties</source>
-        <translation>Lastnosti gradnika</translation>
+        <translation>Lastnosti predstavne vsebine</translation>
     </message>
     <message>
         <source>Name</source>
@@ -85,7 +94,7 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Duration</source>
-        <translation>Dolžina</translation>
+        <translation>Trajanje</translation>
     </message>
     <message>
         <source>---</source>
@@ -105,7 +114,7 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Number of audio tracks</source>
-        <translation>Stevilo zvočnih sledi</translation>
+        <translation>Število zvočnih sledi</translation>
     </message>
     <message>
         <source>0</source>
@@ -117,14 +126,14 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>In project workspace</source>
-        <translation>V delavnem področju projekta</translation>
+        <translation>V delavnem prostoru projekta</translation>
     </message>
 </context>
 <context>
     <name>ClipProperty</name>
     <message>
         <source>Metatags :</source>
-        <translation>Dodatni ključi:</translation>
+        <translation>Metaoznake:</translation>
     </message>
     <message>
         <source>...</source>
@@ -132,7 +141,7 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Annotations :</source>
-        <translation>Pripombe:</translation>
+        <translation>Zabeležke :</translation>
     </message>
     <message>
         <source>properties</source>
@@ -140,92 +149,92 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>New tags edition</source>
-        <translation>Nove ključne besede </translation>
+        <translation>Nove ključne oznake</translation>
     </message>
     <message>
         <source>Enter tags (you can enter multiple tags, separated by a comma)</source>
-        <translation>Vpiši ključne besede (več besed loči z vejicami)</translation>
+        <translation>Vpis ključnih oznak (več besed loči z vejicami)</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Add</name>
     <message>
         <source>Adding clip to track %1</source>
-        <translation type="unfinished">Dodaj gradnik v sled  %1</translation>
+        <translation>Dodajanje izrezka sledi %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Move</name>
     <message>
         <source>Moving clip from track %1 to %2</source>
-        <translation type="unfinished">Premikanje predmeta iz sledi  %1 na %2</translation>
+        <translation>Premikanje izrezka s sledi  %1 na %2</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Remove</name>
     <message>
         <source>Removing clip </source>
-        <translation type="unfinished"></translation>
+        <translation>Odstranjevanje izrezka</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Resize</name>
     <message>
         <source>Resizing clip</source>
-        <translation type="unfinished">Spremeni velikost predmeta</translation>
+        <translation>Spreminjanje velikosti izrezka</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Split</name>
     <message>
         <source>Splitting clip</source>
-        <translation type="unfinished">Razcepi predmet</translation>
+        <translation>Razdeljevanje izrezka</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Add</name>
     <message>
         <source>Adding effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodajanje učinka %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Move</name>
     <message>
         <source>Moving effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Premikanje učinka %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Remove</name>
     <message>
         <source>Deleting effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Brisanje učinka %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Resize</name>
     <message>
         <source>Resizing effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagajanje velikosti učinka %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Generic</name>
     <message>
         <source>Invalid action</source>
-        <translation type="unfinished"></translation>
+        <translation>Neveljavno dejanje</translation>
     </message>
 </context>
 <context>
     <name>CrashHandler</name>
     <message>
         <source>VLMC Crash handler</source>
-        <translation>VLMC obdelava sesutja</translation>
+        <translation>Upravljalnik sesutja VLMC</translation>
     </message>
     <message>
         <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
-        <translation>Žal se je program sesul. Vaš projekt  je uspešno shranjen in se bo odprl ob naslednjem zagonu programa VLMC.</translation>
+        <translation>Prišlo je do napake. Projekt je uspešno shranjen in se bo odprl ob naslednjem zagonu programa VLMC.</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -245,18 +254,18 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>A crash occurred. Signal received: </source>
-        <translation>Program se je sesul. Sprejeti signal:</translation>
+        <translation>Prišlo je do sesutja. Prejet je signal:</translation>
     </message>
 </context>
 <context>
     <name>DockWidgetManager</name>
     <message>
         <source>Media Library</source>
-        <translation>Knjižnica gradnikov</translation>
+        <translation>Knjižnica predstavnih vsebin</translation>
     </message>
     <message>
         <source>Clip Preview</source>
-        <translation>Predogled gradnika</translation>
+        <translation>Predogled izrezka</translation>
     </message>
     <message>
         <source>Project Preview</source>
@@ -268,142 +277,142 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Effects List</source>
-        <translation type="unfinished"></translation>
+        <translation>Seznam učinkov</translation>
     </message>
 </context>
 <context>
     <name>EffectSettingWidget</name>
     <message>
         <source>Effect Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Lastnosti učinka</translation>
     </message>
     <message>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Uveljavi</translation>
     </message>
 </context>
 <context>
     <name>EffectStack</name>
     <message>
         <source>Effect stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Sklad učinkov</translation>
     </message>
     <message>
         <source>Move the effect up in the stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Premakni učinek navzgor po skladu</translation>
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <source>Move the effect down in the stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Premakni učinek navzdol po skladu</translation>
     </message>
 </context>
 <context>
     <name>EffectWidget</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Obrazec</translation>
+        <translation>Obrazec</translation>
     </message>
     <message>
         <source>Overview</source>
-        <translation type="unfinished"></translation>
+        <translation>Pregled</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Ime</translation>
+        <translation>Ime</translation>
     </message>
     <message>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Avtor</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrsta</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Različica</translation>
     </message>
     <message>
         <source>Description</source>
-        <translation type="unfinished">Opis</translation>
+        <translation>Opis</translation>
     </message>
     <message>
         <source>Filter</source>
-        <translation type="unfinished">Filter</translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Vir</translation>
     </message>
     <message>
         <source>Mixer 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Mešalnik 2</translation>
     </message>
     <message>
         <source>Mixer 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Mešalnik 3</translation>
     </message>
     <message>
         <source>Unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznana vrsta</translation>
     </message>
 </context>
 <context>
     <name>EffectsListView</name>
     <message>
         <source>%1 informations</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 podrobnosti</translation>
     </message>
 </context>
 <context>
     <name>GUIProjectManager</name>
     <message>
         <source>The project has been modified.</source>
-        <translation>Projekt je bil spremenjen.</translation>
+        <translation>Projekt je spremenjen.</translation>
     </message>
     <message>
         <source>Do you want to save it?</source>
-        <translation>Ga želite shraniti?</translation>
+        <translation>Ali ga želite shraniti?</translation>
     </message>
     <message>
         <source>You are about to relocate the project. Every video will be copied to your new workspace.</source>
-        <translation>Lastnosti projekta se bodo spremenile. Vsi elementi videa se bodo prepisali v novo delavno področje.</translation>
+        <translation>Mesto projekta bo spremenjeno. Vsi video posnetki bodo kopirani v nov delovni prostor.</translation>
     </message>
     <message>
         <source>Do you want to proceed?</source>
-        <translation>Želite nadaljevati?</translation>
+        <translation>Ali želite nadaljevati?</translation>
     </message>
     <message>
         <source>Failed to load project file</source>
-        <translation>Nalaganje projekta iz datoteke ni uspelo</translation>
+        <translation>Nalaganje projekta iz datoteke je spodletelo</translation>
     </message>
     <message>
         <source>Backup file</source>
-        <translation>Varnostna kopija</translation>
+        <translation>Datoteka varnostne kopije</translation>
     </message>
     <message>
         <source>A backup file exists for this project. Do you want to load it?</source>
-        <translation>Narejena je bila varnostna kopija projekta. Ali jo naložim?</translation>
+        <translation>Obstaja shranjena varnostna kopija projekta. Ali jo želite naložiti?</translation>
     </message>
     <message>
         <source>An outdated backup file was found. Do you want to erase it?</source>
-        <translation>Obstaja zastarela varnostna kopija. Ali jo zbrišem? </translation>
+        <translation>Obstaja zastarela varnostna kopija. Ali jo želite izbrisati? </translation>
     </message>
     <message>
         <source>Enter the output file name</source>
-        <translation type="unfinished">Vpiši ime izhodne datoteke</translation>
+        <translation>Vnos imena odvodne datoteke</translation>
     </message>
     <message>
         <source>VLMC project file(*.vlmc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka projekta VLMC (*.vlmc)</translation>
     </message>
     <message>
         <source>Please choose a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberite datoteko projekta</translation>
     </message>
 </context>
 <context>
@@ -414,7 +423,7 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>This guide will step you through the process of setting up a new project.</source>
-        <translation>Vodnik vam bo pomagal ustvariti novi projekt. </translation>
+        <translation>Čarovnik pomaga pri ustvarjanju novega projekta.</translation>
     </message>
     <message>
         <source>Project name</source>
@@ -426,11 +435,11 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Workspace directory</source>
-        <translation>Mapa delavnega področja</translation>
+        <translation>Mapa delavnega prostora</translation>
     </message>
     <message>
         <source>Browse...</source>
-        <translation>Prebrskaj...</translation>
+        <translation>Prebrskaj ...</translation>
     </message>
     <message>
         <source>Project location</source>
@@ -442,7 +451,7 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Set General options</source>
-        <translation>Določite splošne lastnosti</translation>
+        <translation>Določevanje splošnih lastnosti</translation>
     </message>
     <message>
         <source>Form is incomplete</source>
@@ -450,19 +459,19 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>The project name must be filled.</source>
-        <translation>Ime projekta ni določeno.</translation>
+        <translation>Ime projekta mora biti določeno.</translation>
     </message>
     <message>
         <source>The workspace location must be set.</source>
-        <translation>Mesto delavnega področje mora biti določeno.</translation>
+        <translation>Mesto delavnega prostora mora biti določeno.</translation>
     </message>
     <message>
         <source>Missing workspace location</source>
-        <translation>Manjka mesto delavnega področja</translation>
+        <translation>Manjka mesto delavnega prostora</translation>
     </message>
     <message>
         <source>Invalid workspace location</source>
-        <translation>Neustrezno delavno področje</translation>
+        <translation>Neveljaven delavni prostor</translation>
     </message>
 </context>
 <context>
@@ -476,15 +485,15 @@ Your Qt runtime version: %4
     <name>GraphicsEffectItem</name>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrani</translation>
     </message>
     <message>
         <source>Set color</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavi barvo</translation>
     </message>
     <message>
         <source>Effect Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Lastnosti učinka</translation>
     </message>
 </context>
 <context>
@@ -498,7 +507,7 @@ Your Qt runtime version: %4
     <name>ImportController</name>
     <message>
         <source>Import</source>
-        <translation>Uvoz</translation>
+        <translation>Uvozi</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -506,22 +515,22 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Invalid medias</source>
-        <translation>Neustrezni  gradniki</translation>
+        <translation>Neustrezne predstavne datoteke</translation>
     </message>
     <message>
         <source>Some of the medias you loaded can&apos;t be used for video editing. Do you want VLMC to convert them so you can use them in your project?</source>
-        <translation>Zapisi nekaterih uvoženih gradnikov niso veljavni. Ali naj jih VLMC preoblikuje tako, da jih bo moč uporabiti v projektu?</translation>
+        <translation>Zapisi nekaterih naloženih predstavnih datotek niso podprti za urejanje. Ali naj se te datoteke prevedejo v zapis, ki je podprt in ga je mogoče uporabiti v projektu VLMC?</translation>
     </message>
     <message>
         <source>Failed to load %1</source>
-        <translation>Neuspelo nalaganje %1</translation>
+        <translation>Nalaganje %1 je spodletelo</translation>
     </message>
 </context>
 <context>
     <name>IntroDialog</name>
     <message>
         <source>VideoLAN Movie Creator</source>
-        <translation>VideoLAN Movie Creator</translation>
+        <translation>Program VideoLAN Movie Creator</translation>
     </message>
     <message>
         <source>I understand</source>
@@ -537,14 +546,22 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;VideoLAN Movie Creator is a &lt;/span&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_release_life_cycle#Pre-alpha&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;pre-alpha&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt; software and is not ready for prime-time. Many key features are &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;simply missing&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;, or even &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;buggy&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;. Our team is composed of volunteers who are working hard to give you the best experience with video editing.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;read more&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:16pt; font-weight:600;&quot;&gt;Upoštevate, da je&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;program VLMC (VideoLAN Movie Creator) &lt;/span&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_release_life_cycle#Pre-alpha&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;preizkusna različica alfa&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt; in še ni primeren za resno rabo. Številne ključne zmožnosti &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;enostavno manjkajo&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt; ali pa &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;ne delujejo brez napak&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;. Razvojno skupino sestavljajo prostovoljci, ki se močno trudijo ustvariti najboljše možno programsko opremo za montažo videa.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;Več o tem ...&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>ListViewController</name>
     <message>
         <source>Media List</source>
-        <translation>Seznam gradnikov</translation>
+        <translation>Seznam predstavnih datotek</translation>
     </message>
 </context>
 <context>
@@ -555,11 +572,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation>&amp;Urejati</translation>
+        <translation>&amp;Uredi</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>&amp;Pomoč</translation>
+        <translation>Pomo&amp;č</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -583,7 +600,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>VLMC Toolbar</source>
-        <translation>VLMC Orodjarna</translation>
+        <translation>Orodna vrstica VLMC</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -595,7 +612,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Preferences</source>
-        <translation>&amp;Nastavitve</translation>
+        <translation>&amp;Možnosti</translation>
     </message>
     <message>
         <source>Preview</source>
@@ -603,7 +620,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;New Project</source>
-        <translation>&amp;Novi projekt</translation>
+        <translation>&amp;Nov projekt</translation>
     </message>
     <message>
         <source>Open the wizard to create a new project</source>
@@ -611,7 +628,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Fullscreen</source>
-        <translation>&amp;Celostranski način</translation>
+        <translation>&amp;Celozaslonski način</translation>
     </message>
     <message>
         <source>&amp;To a file</source>
@@ -619,7 +636,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Render your project as a file</source>
-        <translation>Preoblikuj projekt v video datoteko</translation>
+        <translation>Preveri projekt v video datoteko</translation>
     </message>
     <message>
         <source>&amp;Load Project</source>
@@ -635,11 +652,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import new medias into the current project</source>
-        <translation>Uvozi nove gradnike v projekt</translation>
+        <translation>Uvozi nove predstavne datoteke v trenutni projekt</translation>
     </message>
     <message>
         <source>Proj&amp;ect Preferences</source>
-        <translation>Nas&amp;tavitve projekta</translation>
+        <translation>&amp;Možnosti projekta</translation>
     </message>
     <message>
         <source>Save &amp;As</source>
@@ -663,11 +680,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Share your project on youtube</source>
-        <translation>Objavi video na skupnosti YouTube</translation>
+        <translation>Objavi video na YouTube</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
-        <translation>&amp;Končati</translation>
+        <translation>&amp;Končaj</translation>
     </message>
     <message>
         <source>Selection mode</source>
@@ -675,51 +692,51 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Use the mouse tool to manipulate regions in the timeline</source>
-        <translation>Za urejanje elementov v časovnici uporabi miško</translation>
+        <translation>Za upravljanje s časom v časovnici je mogoče uporabiti miško</translation>
     </message>
     <message>
         <source>Cut mode</source>
-        <translation>Rezanje</translation>
+        <translation>Način rezanja</translation>
     </message>
     <message>
         <source>Use the scissors to cut regions in the timeline</source>
-        <translation>Za rez uporabi britvico iz orodjarne </translation>
+        <translation>Za rezanje po časovnici uporabi škarje iz orodne vrstice </translation>
     </message>
     <message>
         <source>Zoom out</source>
-        <translation>Pomanjšati</translation>
+        <translation>Oddalji</translation>
     </message>
     <message>
         <source>Zoom in</source>
-        <translation>Povečati</translation>
+        <translation>Približaj</translation>
     </message>
     <message>
         <source>VLMC Renderer</source>
-        <translation>VLMC priprava videa</translation>
+        <translation>Prevajalnik VLMC</translation>
     </message>
     <message>
         <source>There is nothing to render.</source>
-        <translation>Nič ni za pripraviti.</translation>
+        <translation>Ni določene vsebine za prevajanje.</translation>
     </message>
     <message>
         <source>Crash recovery</source>
-        <translation>Ponovna vzpostavitev</translation>
+        <translation>Obnova po sesutju</translation>
     </message>
     <message>
         <source>VLMC didn&apos;t closed nicely. Do you want to recover your project?</source>
-        <translation>Program se je nepredvideno zaključil. Želite ponovno vzpostaviti projekt?</translation>
+        <translation>Program se je končal na nepričakovan način. Ali želite projekt obnoviti?</translation>
     </message>
     <message>
         <source>Can&apos;t restore project</source>
-        <translation>Projekta ni mogoče ponovno vzpostaviti</translation>
+        <translation>Projekta ni mogoče obnoviti</translation>
     </message>
     <message>
         <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
-        <translation>Program ni uspel ponovno vzpostaviti projekta. Za napako se vam opravičujemo</translation>
+        <translation>Obnavljanje projekta je spodletelo. Za napako se vam opravičujemo</translation>
     </message>
     <message>
         <source>Publish on &amp;Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>Objavi na sp&amp;letu</translation>
     </message>
 </context>
 <context>
@@ -730,7 +747,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>clip count</source>
-        <translation>Št. gradnika</translation>
+        <translation>števec izrezkov</translation>
     </message>
     <message>
         <source>length</source>
@@ -738,19 +755,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>This clip or some of its children are contained in the timeline.</source>
-        <translation>Gradnik ali njegov del je uporabljen v časovnici.</translation>
+        <translation>Ta izrezek oziroma njegov del je uporabljen v časovnici.</translation>
     </message>
     <message>
         <source>Removing it will delete it from the timeline. Do you want to proceed?</source>
-        <translation>Posledica njegove odstranitve bo tudi njegovo brisanje iz časovnice. Ali želite nadaljevati?</translation>
+        <translation>Z odstranitvijo bo izbrisana tudi iz časovnice. Ali želite nadaljevati?</translation>
     </message>
     <message>
         <source>Can&apos;t copy to workspace</source>
-        <translation>Ne uspem prepisati v delovni prostor</translation>
+        <translation>Ni mogoče kopirati v delovni prostor</translation>
     </message>
     <message>
         <source>Can&apos;t copy this media to workspace: %1</source>
-        <translation>Gradnika ne morem prepisati v delovni prostor: %1</translation>
+        <translation>Gradnika ni mogoče kopirati v delovni prostor: %1</translation>
     </message>
 </context>
 <context>
@@ -802,23 +819,23 @@ p, li { white-space: pre-wrap; }
 &lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
 &lt;tr&gt;
 &lt;td style=&quot;border: none;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Za pripravo projekta je podatkov dovolj.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Klikni &lt;span style=&quot; font-weight:600;&quot;&gt;finish&lt;/span&gt;za začetek urejanja videa&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Za nalaganje projekta je na voljo dovolj podatkov.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Potrdite &lt;span style=&quot; font-weight:600;&quot;&gt;nastavitve&lt;/span&gt;za začetek urejanja videa&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Project wizard</source>
-        <translation>Čarovnik za določitev projekta</translation>
+        <translation>Čarovnik za ustvarjanje projekta</translation>
     </message>
     <message>
         <source>Ready to load this project</source>
-        <translation>Pripravljen za naložitev projekta</translation>
+        <translation>Pripravljeno za nalaganje projekta</translation>
     </message>
 </context>
 <context>
     <name>PathWidget</name>
     <message>
         <source>Select a path</source>
-        <translation>Izberi pot</translation>
+        <translation>Izbor poti</translation>
     </message>
 </context>
 <context>
@@ -829,7 +846,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>When this option is activated,VLMC will automatically save your project at a specified interval</source>
-        <translation>Če je ta možnost vključena, bo VLMC samodejno shranjeval vaš projekt v določenih intervalih</translation>
+        <translation>Izbrana možnost omogoča samodejno shranjevanje projekta na naveden časovni razmik</translation>
     </message>
     <message>
         <source>Automatic save interval</source>
@@ -837,23 +854,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>This is the interval that VLMC will wait between two automatic save</source>
-        <translation>Časovni presledki med samostojnimi shranjevanji projekta</translation>
+        <translation>Časovni presledki med samodejnimi shranjevanji projekta</translation>
     </message>
     <message>
         <source>Media preview</source>
-        <translation>Predogled gradnika</translation>
+        <translation>Predogled posnetka</translation>
     </message>
     <message>
         <source>Preview the selected media, or pause the current preview</source>
-        <translation>Predogled izbranega gradnika ali premor njegovega predogleda </translation>
+        <translation>Predogled izbranega posnetka in premor predogleda </translation>
     </message>
     <message>
         <source>Render preview</source>
-        <translation>Pripravi predogled</translation>
+        <translation>Predogled prevajanja</translation>
     </message>
     <message>
         <source>Preview the project, or pause the current preview</source>
-        <translation>Predogled projekta ali premor njegovega predogleda </translation>
+        <translation>Predogled projekta ali premor predogleda </translation>
     </message>
     <message>
         <source>Undo</source>
@@ -861,15 +878,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Undo the last action</source>
-        <translation>Razveljavi zadnjo spremembo</translation>
+        <translation>Razveljavi zadnje dejanje</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation>Ponovi</translation>
+        <translation>Ponovno uveljavi</translation>
     </message>
     <message>
         <source>Redo the last action</source>
-        <translation>Ponovi zadnjo aktivnost</translation>
+        <translation>Ponovno uveljavi zadnje dejanje</translation>
     </message>
     <message>
         <source>Help</source>
@@ -877,15 +894,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Toggle the help page</source>
-        <translation>Zatakni stran s pomočjo</translation>
+        <translation>Preklopi stran pomoči</translation>
     </message>
     <message>
         <source>Quit</source>
-        <translation>Končati</translation>
+        <translation>Končaj</translation>
     </message>
     <message>
         <source>Quit VLMC</source>
-        <translation>Končati delo z VLMC</translation>
+        <translation>Končaj VLMC</translation>
     </message>
     <message>
         <source>Preferences</source>
@@ -893,7 +910,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open VLMC preferences</source>
-        <translation>Prikaz lastnosti programa VLMC</translation>
+        <translation>Odpri možnosti VLMC</translation>
     </message>
     <message>
         <source>Project preferences</source>
@@ -901,15 +918,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open the project preferences</source>
-        <translation>Prikaz lastnosti projekta</translation>
+        <translation>Odpri lastnosti projekta</translation>
     </message>
     <message>
         <source>Fullscreen</source>
-        <translation>Celozaslonski</translation>
+        <translation>Celozaslonski način</translation>
     </message>
     <message>
         <source>Switch to fullscreen mode</source>
-        <translation>Vključi celozaslonski način</translation>
+        <translation>Preklopi na celozaslonski način</translation>
     </message>
     <message>
         <source>New project</source>
@@ -917,15 +934,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open the new project wizard</source>
-        <translation>Odpiranje okna za novi projekt</translation>
+        <translation>Odpri čarovnika za nov projekt</translation>
     </message>
     <message>
         <source>Open a project</source>
-        <translation>Odpri projket</translation>
+        <translation>Odpri projekt</translation>
     </message>
     <message>
         <source>Open an existing project</source>
-        <translation>Odpiranje obstoječega projekta</translation>
+        <translation>Odpri obstoječi projekt</translation>
     </message>
     <message>
         <source>Save</source>
@@ -933,7 +950,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Save the current project</source>
-        <translation>Shrani ta projekt</translation>
+        <translation>Shrani trenutni projekt</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -953,19 +970,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import media</source>
-        <translation>Uvoz gradnika</translation>
+        <translation>Uvozi posnetek</translation>
     </message>
     <message>
         <source>Open the import window</source>
-        <translation>Odpiranje okna za uvoz videa</translation>
+        <translation>Odpri okno za uvoz videa</translation>
     </message>
     <message>
         <source>Render the project</source>
-        <translation>Pretvori projekt</translation>
+        <translation>Prevedi projekt</translation>
     </message>
     <message>
         <source>Render the project to a file</source>
-        <translation>Pretvori projekt v video in video shrani v datoteko</translation>
+        <translation>Prevedi projekt v video v datoteko</translation>
     </message>
     <message>
         <source>Selection mode</source>
@@ -973,15 +990,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Select the selection tool in the timeline</source>
-        <translation>Izberi orodje za izbiranje v časovnici</translation>
+        <translation>Izbor orodja za izbiranje v časovnici</translation>
     </message>
     <message>
         <source>Cut mode</source>
-        <translation>Rezni način</translation>
+        <translation>Način razrezovanja</translation>
     </message>
     <message>
         <source>Select the cut/razor tool in the timeline</source>
-        <translation>Izberi britvico za rezanje predmetov v časovnici</translation>
+        <translation>Izberi britvico za razrezovanje posnetka po v časovnici</translation>
     </message>
     <message>
         <source>Language</source>
@@ -989,47 +1006,47 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>The VLMC&apos;s UI language</source>
-        <translation>Jezik VLMC vmesnika</translation>
+        <translation>Jezik vmesnika VLMC</translation>
     </message>
     <message>
         <source>Confirm clip deletion</source>
-        <translation>Potrdi brisanje predmeta</translation>
+        <translation>Potrdi brisanje izrezka</translation>
     </message>
     <message>
         <source>Ask for confirmation before deleting a clip from the timeline</source>
-        <translation>Zahtevaj potrditev za brisanje elementa iz časovnice</translation>
+        <translation>Zahtevaj potrditev za brisanje izrezka iz časovnice</translation>
     </message>
     <message>
         <source>Youtube Developer Key</source>
-        <translation>Ključ YouTube razvijalca</translation>
+        <translation>Razvijalski ključ YouTube</translation>
     </message>
     <message>
         <source>Youtube Username</source>
-        <translation>YouTube uporabniško ime</translation>
+        <translation>Uporabniško ime YouTube</translation>
     </message>
     <message>
         <source>Proxy Port</source>
-        <translation>Vrata proksija</translation>
+        <translation>Vrata posredniškega strežnika</translation>
     </message>
     <message>
         <source>Proxy Username</source>
-        <translation>Uporabniško ime proksija</translation>
+        <translation>Uporabniško ime posredniškega strežnika</translation>
     </message>
     <message>
         <source>Proxy Password</source>
-        <translation>Geslo proksija</translation>
+        <translation>Geslo posredniškega strežnika</translation>
     </message>
     <message>
         <source>The default location where to store projects folders</source>
-        <translation>Prednastavljena mapa za zapis projekta </translation>
+        <translation>Privzeto mesto za shranjevanje map projektov</translation>
     </message>
     <message>
         <source>Output video FPS</source>
-        <translation>Število okvirom videa (FPS) na izhodu</translation>
+        <translation>Hitrost sličic odvoda videa (FPS)</translation>
     </message>
     <message>
         <source>Frame Per Second used when previewing and rendering the project</source>
-        <translation>Število okvirov na sekundo pri pregledu in pripravi videa</translation>
+        <translation>Število sličic na sekundo pri predogledu in prevajanju videa</translation>
     </message>
     <message>
         <source>Video width</source>
@@ -1037,7 +1054,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Width resolution of the output video</source>
-        <translation>Ločljivost videa na izhodu</translation>
+        <translation>Ločljivost širine slike odvoda videa</translation>
     </message>
     <message>
         <source>Video height</source>
@@ -1045,11 +1062,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Height resolution of the output video</source>
-        <translation>Velika ločljivost videa na izhodu</translation>
+        <translation>Ločljivost višine slike odvoda videa</translation>
     </message>
     <message>
         <source>Audio samplerate</source>
-        <translation>hitrost vzorčenja zvoka</translation>
+        <translation>Zvokovna vzorčna hitrost</translation>
     </message>
     <message>
         <source>Output project audio samplerate</source>
@@ -1065,75 +1082,75 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Project default location</source>
-        <translation>Predpostavljena mesto za zapis projekta</translation>
+        <translation>Privzeto mesto projekta</translation>
     </message>
     <message>
         <source>Temporary folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Začasna mapa</translation>
     </message>
     <message>
         <source>The temporary folder used by VLMC to process videos.</source>
-        <translation type="unfinished"></translation>
+        <translation>Začasna mapa za obdelavo posnetkov</translation>
     </message>
     <message>
         <source>VLMC&apos;s Youtube Developer Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Razvijalski ključ YouTube VLMC</translation>
     </message>
     <message>
         <source>Valid YouTube username</source>
-        <translation type="unfinished"></translation>
+        <translation>Veljavno uporabniško ime YouTube</translation>
     </message>
     <message>
         <source>Youtube Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Geslo za YouTube</translation>
     </message>
     <message>
         <source>Leave this field empty, password will be stored in unencrypted form.</source>
-        <translation type="unfinished"></translation>
+        <translation>Če to polje pustite prazno, bo geslo shranjeno v nešifrirani obliki.</translation>
     </message>
     <message>
         <source>Enable Proxy for VLMC</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogoči posredovalni strežnik za VLMC</translation>
     </message>
     <message>
         <source>Enables Global Network Proxy for VLMC.</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogoči globalni posredovalni strežnik za VLMC</translation>
     </message>
     <message>
         <source>Proxy Hostname</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime gostitelja posredovalnega strežnika</translation>
     </message>
     <message>
         <source>Set Proxy Hostname.</source>
-        <translation type="unfinished"></translation>
+        <translation>Določitev imena gostitelja posredovalnega strežnika</translation>
     </message>
     <message>
         <source>Set Proxy Port.</source>
-        <translation type="unfinished"></translation>
+        <translation>Določitev vrat posredovalnega strežnika</translation>
     </message>
     <message>
         <source>Set Proxy Username, if any.</source>
-        <translation type="unfinished"></translation>
+        <translation>Določitev uporabniškega imena za posredovalni strežnik, če obstaja.</translation>
     </message>
     <message>
         <source>Set Proxy Password, if any.</source>
-        <translation type="unfinished"></translation>
+        <translation>Določitev gesla za posredovalni strežnik, če obstaja.</translation>
     </message>
     <message>
         <source>Video aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmerje velikosti slike videa</translation>
     </message>
     <message>
         <source>The rendered video aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmerje stranic prevedenega videa</translation>
     </message>
     <message>
         <source>Audio channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvočni kanali</translation>
     </message>
     <message>
         <source>Number of audio channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Število zvočnih kanalov</translation>
     </message>
 </context>
 <context>
@@ -1144,19 +1161,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Go to the previous frame</source>
-        <translation>Premakni se na prejšnji okvir</translation>
+        <translation>Premakni se na predhodno sličico</translation>
     </message>
     <message>
         <source>Play / Pause</source>
-        <translation>Predvajaj/Odmor</translation>
+        <translation>Predvajaj/Premor</translation>
     </message>
     <message>
         <source>Go to the next frame</source>
-        <translation>Premakni se na naslednji okvir</translation>
+        <translation>Premakni se na naslednjo sličico</translation>
     </message>
     <message>
         <source>Set marker A</source>
-        <translation>postavi zaznamek A</translation>
+        <translation>Postavi zaznamek A</translation>
     </message>
     <message>
         <source>Set marker B</source>
@@ -1172,36 +1189,36 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Rendering error</source>
-        <translation>Napaka pri pretvarjanju projekta v video</translation>
+        <translation>Napaka pri prevajanja</translation>
     </message>
     <message>
         <source>An error occurred while rendering.
 Please check your VLC installation before reporting the issue.</source>
-        <translation>Pri pretvarjanju projekta v video je nastala napaka.
-Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation>
+        <translation>Pri prevajanju je prišlo do napake.
+Preverite nastavitve predvajalnika VLC preden pošljete poročilo o napaki.</translation>
     </message>
     <message>
         <source>Adjust Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagodi glasnost</translation>
     </message>
 </context>
 <context>
     <name>ProjectManager</name>
     <message>
         <source>Can&apos;t open project file. (%1)</source>
-        <translation>Ne morem odpreti datoteke projekta. (%1)</translation>
+        <translation>Ni mogoče odpreti datoteke projekta. (%1)</translation>
     </message>
     <message>
         <source>Failed to load the project file: %1. Aborting.</source>
-        <translation>Napaka pri nalaganju datoteke projektae: %1. Sledi prekinitev.</translation>
+        <translation>Napaka nalaganja datoteke projekta: %1. Nalaganje je prekinjeno.</translation>
     </message>
     <message>
         <source>Untitled Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Neimenovan projekt</translation>
     </message>
     <message>
         <source>Unsaved Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Neshranjen projekt</translation>
     </message>
 </context>
 <context>
@@ -1212,11 +1229,11 @@ Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation
     </message>
     <message>
         <source>Choose the appropriate action then click Next to continue.</source>
-        <translation>Izberi ustrezne možnosti nato klikni tipko &quot;Naprej&quot; za nadaljevanje.</translation>
+        <translation>Izberite ustrezne možnosti in nato izbor potrdite s tipko za nadaljevanje.</translation>
     </message>
     <message>
         <source>This help is likely not to be of any help.</source>
-        <translation>Ta pomoč je videti nekoristbna.</translation>
+        <translation>Ta pomoč je videti nekoristna.</translation>
     </message>
     <message>
         <source>Project wizard help</source>
@@ -1227,7 +1244,7 @@ Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation
     <name>QObject</name>
     <message>
         <source>Moving clip</source>
-        <translation>Premikanje predmeta</translation>
+        <translation>Premikanje izrezka</translation>
     </message>
     <message>
         <source>Unable to get backtrace</source>
@@ -1235,14 +1252,14 @@ Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation
     </message>
     <message>
         <source>The XMLStream is not a valid YouTube Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pretok XMLStream ni veljaven pretok YouTube</translation>
     </message>
 </context>
 <context>
     <name>RendererSettings</name>
     <message>
         <source>Select...</source>
-        <translation>Izberi...</translation>
+        <translation>Izbor ...</translation>
     </message>
     <message>
         <source>Width</source>
@@ -1262,23 +1279,23 @@ Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation
     </message>
     <message>
         <source>Enter the output file name</source>
-        <translation>Vpiši ime izhodne datoteke</translation>
+        <translation>Vpis izhodne datoteke</translation>
     </message>
     <message>
         <source>Videos(%1)</source>
-        <translation>Videi(%1)</translation>
+        <translation>Video posnetki (%1)</translation>
     </message>
     <message>
         <source>Invalid parameters</source>
-        <translation>Neustrezna vrednost</translation>
+        <translation>Neveljavni parametri</translation>
     </message>
     <message>
         <source>Please enter valid rendering parameters</source>
-        <translation>Prosim vpiši ustrezeno vrednost spremenljivke</translation>
+        <translation>Vpisati je treba veljavne parametre spremenljivke</translation>
     </message>
     <message>
         <source>Please provide a valid output file!</source>
-        <translation>Prosim določi ustrezno izhodno datoteko!</translation>
+        <translation>Določiti je treba veljavno datoteko odvoda!</translation>
     </message>
     <message>
         <source>File already exists!</source>
@@ -1286,86 +1303,86 @@ Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation
     </message>
     <message>
         <source>Output file already exists, do you want to overwrite it?</source>
-        <translation>Izhodna datoteka že obstaja. Ali naj jo prepišem?</translation>
+        <translation>Ciljna datoteka že obstaja. Ali jo želite prepisati?</translation>
     </message>
     <message>
         <source>Export Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve izvoza</translation>
     </message>
     <message>
         <source>Output File</source>
-        <translation type="unfinished"></translation>
+        <translation>Odvodna datoteka</translation>
     </message>
     <message>
         <source>Frame Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Hitrost sličic</translation>
     </message>
     <message>
         <source>Video Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>Kakovost videa</translation>
     </message>
     <message>
         <source>Audio Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>Kakovost zvoka</translation>
     </message>
     <message>
         <source>Video Codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Video kodek</translation>
     </message>
     <message>
         <source>Audio Codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvočni kodek</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation type="unfinished">Poljubno</translation>
+        <translation>Po meri</translation>
     </message>
     <message>
         <source>QVGA (320x240) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>QVGA (320x240) - 30 sl/s</translation>
     </message>
     <message>
         <source>VGA (640x480) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>VGA (640x480) - 30 sl/s</translation>
     </message>
     <message>
         <source>SVGA (800x600) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>SVGA (800x600) - 30 sl/s</translation>
     </message>
     <message>
         <source>XVGA (1024x768) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>XVGA (1024x768) - 30 sl/s</translation>
     </message>
     <message>
         <source>480p NTSC (720x480) - 29.97 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>480p NTSC (720x480) - 29,97 sl/s</translation>
     </message>
     <message>
         <source>576p PAL (720x576) - 25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>576p PAL (720x576) - 25 sl/s</translation>
     </message>
     <message>
         <source>720p (1280x720) - 29.97 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>720p (1280x720) - 29,97 sl/s</translation>
     </message>
     <message>
         <source>1080p (1920x1080) - 29.97 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>1080p (1920x1080) - 29,97 sl/s</translation>
     </message>
     <message>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation>Prednastavitve</translation>
     </message>
     <message>
         <source>Export Settings: Publish on Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve izvoza: objavi na spletu</translation>
     </message>
 </context>
 <context>
     <name>SearchLineEdit</name>
     <message>
         <source>Clear</source>
-        <translation>Zbriši</translation>
+        <translation>Počisti</translation>
     </message>
     <message>
         <source>Filter</source>
@@ -1376,7 +1393,7 @@ Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation
     <name>Settings</name>
     <message>
         <source>Project preferences</source>
-        <translation>Lastnosti projekta</translation>
+        <translation>Možnosti projekta</translation>
     </message>
     <message>
         <source>VLMC Settings</source>
@@ -1384,147 +1401,148 @@ Prosimo, preglejte nastavitve predvajalnika VLC preden nadaljujete.</translation
     </message>
     <message>
         <source>Restore default?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ali želite obnoviti privzeto?</translation>
     </message>
     <message>
         <source>This will restore all settings default value.
 Are you sure you want to continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>S tem dejanjem bodo vse nastavitve obnovljene na privzete vrednosti.
+Ali ste prepričani, da želite nadaljevati?</translation>
     </message>
     <message>
         <source>Invalid value</source>
-        <translation type="unfinished"></translation>
+        <translation>Neveljavna vrednost</translation>
     </message>
     <message>
         <source>Can&apos;t save settings due to an invalid value</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitev ni mogoče shraniti zaradi neveljavne vrednosti.</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished">Splošno</translation>
+        <translation>Splošno</translation>
     </message>
     <message>
         <source>Keyboard</source>
-        <translation type="unfinished">Tipkovnica</translation>
+        <translation>Tipkovnica</translation>
     </message>
     <message>
         <source>YouTube</source>
-        <translation type="unfinished"></translation>
+        <translation>YouTube</translation>
     </message>
     <message>
         <source>Network</source>
-        <translation type="unfinished">Omrežje</translation>
+        <translation>Omrežje</translation>
     </message>
     <message>
         <source>Video</source>
-        <translation type="unfinished">Video</translation>
+        <translation>Video</translation>
     </message>
     <message>
         <source>Audio</source>
-        <translation type="unfinished">Avdio</translation>
+        <translation>Zvok</translation>
     </message>
 </context>
 <context>
     <name>ShareOnInternet</name>
     <message>
         <source>Share Video On Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>Skupna raba videa na spletu</translation>
     </message>
     <message>
         <source>Service</source>
-        <translation type="unfinished"></translation>
+        <translation>Storitev</translation>
     </message>
     <message>
         <source>YouTube</source>
-        <translation type="unfinished"></translation>
+        <translation>YouTube</translation>
     </message>
     <message>
         <source>Username</source>
-        <translation type="unfinished">Uporabniško ime</translation>
+        <translation>Uporabniško ime</translation>
     </message>
     <message>
         <source>Password</source>
-        <translation type="unfinished">Geslo</translation>
+        <translation>Geslo</translation>
     </message>
     <message>
         <source>Category</source>
-        <translation type="unfinished">Kategorija</translation>
+        <translation>Kategorija</translation>
     </message>
     <message>
         <source>Autos &amp; Vehicles</source>
-        <translation type="unfinished">Prevozna sredstva</translation>
+        <translation>Avtomobilizem</translation>
     </message>
     <message>
         <source>Comedy</source>
-        <translation type="unfinished">Komedija</translation>
+        <translation>Komedija</translation>
     </message>
     <message>
         <source>Education</source>
-        <translation type="unfinished">Izobraževanje</translation>
+        <translation>Izobraževanje</translation>
     </message>
     <message>
         <source>Entertainment</source>
-        <translation type="unfinished">Zabava</translation>
+        <translation>Zabava</translation>
     </message>
     <message>
         <source>Film &amp; Animation</source>
-        <translation type="unfinished">Film in animacija</translation>
+        <translation>Film in animacija</translation>
     </message>
     <message>
         <source>Games</source>
-        <translation type="unfinished"></translation>
+        <translation>Igre</translation>
     </message>
     <message>
         <source>Howto &amp; Style</source>
-        <translation type="unfinished">Navodila za delo</translation>
+        <translation>Navodila in oblikovanje</translation>
     </message>
     <message>
         <source>Music</source>
-        <translation type="unfinished">Glasba</translation>
+        <translation>Glasba</translation>
     </message>
     <message>
         <source>News &amp; Politics</source>
-        <translation type="unfinished">Novice in politika</translation>
+        <translation>Novice in politika</translation>
     </message>
     <message>
         <source>Nonprofit &amp; Activism</source>
-        <translation type="unfinished"></translation>
+        <translation>Neprofitno in aktivizem</translation>
     </message>
     <message>
         <source>People &amp; Blogs</source>
-        <translation type="unfinished">Ljudje in njihovi dnevniki</translation>
+        <translation>Ljudje in blogi</translation>
     </message>
     <message>
         <source>Animals &amp; Pets</source>
-        <translation type="unfinished"></translation>
+        <translation>Živali in ljubljenčki</translation>
     </message>
     <message>
         <source>Tech &amp; Science</source>
-        <translation type="unfinished"></translation>
+        <translation>Tehnika in znanost</translation>
     </message>
     <message>
         <source>Sports</source>
-        <translation type="unfinished">Šport</translation>
+        <translation>Šport</translation>
     </message>
     <message>
         <source>Travel &amp; Events</source>
-        <translation type="unfinished">Potovanje</translation>
+        <translation>Potovanja in dogodki</translation>
     </message>
     <message>
         <source>Title</source>
-        <translation type="unfinished">Naslov</translation>
+        <translation>Naslov</translation>
     </message>
     <message>
         <source>Description</source>
-        <translation type="unfinished">Opis</translation>
+        <translation>Opis</translation>
     </message>
     <message>
         <source>Keywords</source>
-        <translation type="unfinished"></translation>
+        <translation>Ključne besede</translation>
     </message>
     <message>
         <source>Make this video private</source>
-        <translation type="unfinished"></translation>
+        <translation>Naj bo ta video zaseben</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1532,31 +1550,35 @@ Are you sure you want to continue?</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;By publishing, you agree with the Terms Of Services of &lt;/span&gt;&lt;a href=&quot;http://code.google.com/apis/youtube/terms.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;YouTube&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;Z objavo se strinjate s pogoji storitev &lt;/span&gt;&lt;a href=&quot;http://code.google.com/apis/youtube/terms.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;YouTube&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Pre&amp;kliči</translation>
     </message>
     <message>
         <source>&amp;Publish</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Objavi</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka</translation>
     </message>
     <message>
         <source>&apos;Username&apos; or &apos;Password&apos; or &apos;Title&apos; cannot be empty. Please check these fields.</source>
-        <translation type="unfinished"></translation>
+        <translation>Polja za &apos;Uporabniško ime&apos;, &apos;Geslo&apos; in &apos;Naslov&apos; ne smejo biti prazni. Preverite ta polja.</translation>
     </message>
     <message>
         <source>Authenticating...</source>
-        <translation type="unfinished"></translation>
+        <translation>Overjanje ...</translation>
     </message>
     <message>
         <source>Authenticated!</source>
-        <translation type="unfinished"></translation>
+        <translation>Overjeno!</translation>
     </message>
     <message>
         <source>Your video has been uploaded.
@@ -1564,20 +1586,25 @@ URL (copied to your clipboard):
 %1
 
 Open this in your default web browser?</source>
-        <translation type="unfinished"></translation>
+        <translation>Video je naložen na strežnik.
+Naslov URL (kopiran v odložišče):
+%1
+
+Ali ga želite odpreti v privzetem brskalniku?</translation>
     </message>
     <message>
         <source>Some error has occured while processing your video.
 Please check with your video service provider.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri obdelavi posnetka je prišlo do napake.
+Preverite dostopnost ponudnika storitev videa.</translation>
     </message>
     <message>
         <source>Video Uploaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Video je poslan na strežnik</translation>
     </message>
     <message>
         <source>%1 kB Uploaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Prenesenih %1 kB</translation>
     </message>
 </context>
 <context>
@@ -1588,11 +1615,11 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Previous</source>
-        <translation>Prejšnji</translation>
+        <translation>Predhodni</translation>
     </message>
     <message>
         <source>Media List</source>
-        <translation type="unfinished">Seznam gradnikov</translation>
+        <translation>Seznam predstavnih datotek</translation>
     </message>
 </context>
 <context>
@@ -1625,30 +1652,30 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Video #%1</source>
-        <translation>˘Slikovni zapis #%1</translation>
+        <translation>Slikovni zapis #%1</translation>
     </message>
     <message>
         <source>Audio #%1</source>
-        <translation>Zvočni zapis #%1</translation>
+        <translation>Zvokovni zapis #%1</translation>
     </message>
     <message>
         <source>Rename track</source>
-        <translation type="unfinished"></translation>
+        <translation>Preimenuj posnetek</translation>
     </message>
     <message>
         <source>Enter the track new name</source>
-        <translation type="unfinished"></translation>
+        <translation>Vnesite novo ime sledi</translation>
     </message>
 </context>
 <context>
     <name>TracksScene</name>
     <message>
         <source>Confirm the deletion of the region?</source>
-        <translation>Potrdi brisanje področja?</translation>
+        <translation>Ali ste prepričani, da želite izbrisati področje?</translation>
     </message>
     <message>
         <source>Confirm the deletion of those regions?</source>
-        <translation>Potrdi brisanje področja?</translation>
+        <translation>Ali ste prepričani, da želite izbrisati izbrana področja?</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -1656,7 +1683,7 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Yes, don&apos;t ask me again</source>
-        <translation>Da in ne vprašuj ponovno</translation>
+        <translation>Da in ne vprašaj ponovno</translation>
     </message>
     <message>
         <source>No</source>
@@ -1667,7 +1694,7 @@ Please check with your video service provider.</source>
     <name>UndoStack</name>
     <message>
         <source>Nothing to undo</source>
-        <translation>Ni zadnjega ukaza za razveljaviti</translation>
+        <translation>Ni zadnjega ukaza za razveljavitev</translation>
     </message>
 </context>
 <context>
@@ -1678,7 +1705,7 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>In this page you can fine tune some of the settings of your new project.</source>
-        <translation>Na tej strani lahko podrobno nastaviš lastnosti projekta.</translation>
+        <translation>Med nastavitvami je mogoče podrobno opredeliti začetne možnosti novega projekta.</translation>
     </message>
     <message>
         <source>Video</source>
@@ -1726,11 +1753,11 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Frames / sec</source>
-        <translation>Okvirov/sek</translation>
+        <translation>Sličice/sek</translation>
     </message>
     <message>
         <source>Audio</source>
-        <translation>Avdio</translation>
+        <translation>Zvok</translation>
     </message>
     <message>
         <source>Number of channels</source>
@@ -1766,19 +1793,19 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>New project wizard</source>
-        <translation>Novi čarovnik za pomoč</translation>
+        <translation>Čarovnik novega projekta</translation>
     </message>
     <message>
         <source>Configure Video settings</source>
-        <translation>Nastavi lastnosti videa</translation>
+        <translation>Nastavi možnosti videa</translation>
     </message>
     <message>
         <source>16/9</source>
-        <translation type="unfinished">16/9</translation>
+        <translation>16:9</translation>
     </message>
     <message>
         <source>Video aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmerje velikosti slike</translation>
     </message>
 </context>
 <context>
@@ -1809,11 +1836,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dobrodošli v čarovniku projekta.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Čarovnik vam bo pomagal ustvariti nov projekt ali odpreti obstoječega.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Izberite ustrezno aktivnost, nato kliknite tipko &quot;Naslednji&quot;.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Izberite ustrezno dejavnost, nato kliknite tipko za nadaljevanje.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Create a new project</source>
-        <translation>Ustvari novi projekt</translation>
+        <translation>Ustvari nov projekt</translation>
     </message>
     <message>
         <source>Open an existing project</source>
@@ -1821,7 +1848,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open...</source>
-        <translation>Odpri...</translation>
+        <translation>Odpri ...</translation>
     </message>
     <message>
         <source>Do not show at startup.</source>
@@ -1837,40 +1864,40 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Sorry</source>
-        <translation>Žal mi je</translation>
+        <translation>Na žalost</translation>
     </message>
     <message>
         <source>You first need to select a project from the list.
 Then click next to continue...</source>
-        <translation>V seznamu najprej izberi ime projekta.
-Nato klikni  &quot;Naprej&quot; za nadaljevanje...</translation>
+        <translation>Iz seznama je treba najprej izbrati projekt,
+nato klikniti na gumb za nadaljevanje ...</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstrani</translation>
     </message>
     <message>
         <source>Select a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbor datoteke projektna</translation>
     </message>
     <message>
         <source>VLMC project file(*.vlmc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka projekta VLMC (*.vlmc)</translation>
     </message>
 </context>
 <context>
     <name>WorkflowFileRendererDialog</name>
     <message>
         <source>Dialog</source>
-        <translation>Dijalog</translation>
+        <translation>Pogovorno okno</translation>
     </message>
     <message>
         <source>Render in progress...</source>
-        <translation>Poteka  izdelava videa...</translation>
+        <translation>Poteka  prevajanje videa ...</translation>
     </message>
     <message>
         <source>Frame</source>
-        <translation>Okvir</translation>
+        <translation>Sličica</translation>
     </message>
     <message>
         <source>TextLabel</source>
@@ -1878,11 +1905,11 @@ Nato klikni  &quot;Naprej&quot; za nadaljevanje...</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Prekini</translation>
+        <translation>Prekliči</translation>
     </message>
     <message>
         <source>Rendering frame %1 / %2</source>
-        <translation> Določevanje okvira %1 / %2</translation>
+        <translation> Pretvarjanje sličice %1 / %2</translation>
     </message>
 </context>
 <context>
@@ -1893,7 +1920,7 @@ Nato klikni  &quot;Naprej&quot; za nadaljevanje...</translation>
     </message>
     <message>
         <source>A file with the same name already exists, do you want to overwrite it?</source>
-        <translation>Datoteka s tem menom že obstaja. Ali jo prepišem?</translation>
+        <translation>Datoteka s tem imenom že obstaja. Ali jo želite prepisati?</translation>
     </message>
     <message>
         <source>Workspace: </source>
@@ -1901,18 +1928,18 @@ Nato klikni  &quot;Naprej&quot; za nadaljevanje...</translation>
     </message>
     <message>
         <source> copied to </source>
-        <translation>Prepisano na</translation>
+        <translation>kopirano na</translation>
     </message>
 </context>
 <context>
     <name>YouTubeService</name>
     <message>
         <source>YouTube Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>Overitev YouTube</translation>
     </message>
     <message>
         <source>Connection may be insecure, do you want to continue? One or more SSL errors has occurred: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ali želite nadaljevati, čeprav je videti, da vzpostavljena povezava ni varna? Prišlo je do ene ali več napak SSL: %1</translation>
     </message>
 </context>
 </TS>
