@@ -412,7 +412,7 @@ Twoja wersja Qt runtime: %4
     </message>
     <message>
         <source>Please choose a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz plik projektu</translation>
     </message>
 </context>
 <context>
