@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="es" sourcelanguage="en">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutVLMC</name>
     <message>
         <source>About</source>
-        <translation>A cerca de</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Authors</source>
@@ -27,116 +27,107 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-size:12pt; font-weight:600;&quot;&gt;VideoLAN Movie Creator %1 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-weight:600;&quot;&gt;%2&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; text-decoration: underline; color:#4f4f4f;&quot;&gt;http://www.vlmc.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;⏎ &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;⏎ p, li { white-space: pre-wrap; }⏎ &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-size:12pt; font-weight:600;&quot;&gt;Creador de vídeos VideoLAN %1 &lt;/span&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; font-weight:600;&quot;&gt;%2&lt;/span&gt;&lt;/p&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;DejaVu Sans&apos;; text-decoration: underline; color:#4f4f4f;&quot;&gt;http://www.vlmc.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>VLMC (VideoLAN Movie Creator) is a cross-platform, non-linear video editing software based on the VLC Media Player.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>VLMC (Creador de vídeos VideoLAN) es un software de edición de vídeo no lineal multiplataforma basado en el Reproductor multimedia VLC.</translation>
     </message>
     <message>
         <source>This version of VLMC was compiled on:
 %1 running  %2 compiled against Qt %3
 Your Qt runtime version: %4
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Este versión de VLMC fue compilada en:
+ejecutando %1 y compilada %2 contra Qt %3
+Su version de ejecución Qt: %4
+</translation>
     </message>
     <message>
         <source>Thanks</source>
-        <translation type="unfinished"></translation>
+        <translation>Agradecimientos</translation>
     </message>
 </context>
 <context>
     <name>AbstractGraphicsMediaItem</name>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <source>Mute</source>
-        <translation type="unfinished"></translation>
+        <translation>Silenciar</translation>
     </message>
     <message>
         <source>Unlink</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenlazar</translation>
     </message>
     <message>
         <source>Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlazar</translation>
     </message>
     <message>
         <source>Set color</source>
-        <translation type="unfinished"></translation>
+        <translation>Establecer color</translation>
     </message>
 </context>
 <context>
     <name>ClipMetadataDisplayer</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <source>Media Properties</source>
-        <translation type="unfinished">Propiedades Multimedia</translation>
+        <translation>Propiedades del medio</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <source>Duration</source>
-        <translation type="unfinished">Duración</translation>
+        <translation>Duración</translation>
     </message>
     <message>
         <source>---</source>
-        <translation type="unfinished"></translation>
+        <translation>---</translation>
     </message>
     <message>
         <source>Resolution</source>
-        <translation type="unfinished">Resolución</translation>
+        <translation>Resolución</translation>
     </message>
     <message>
         <source>FPS</source>
-        <translation type="unfinished">Cuadros por segundo</translation>
+        <translation>FPS</translation>
     </message>
     <message>
         <source>Number of video tracks</source>
-        <translation type="unfinished">Número de pistas de video</translation>
+        <translation>Número de pistas de vídeo</translation>
     </message>
     <message>
         <source>Number of audio tracks</source>
-        <translation type="unfinished">Número de pistas de audio</translation>
+        <translation>Número de pistas de audio</translation>
     </message>
     <message>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <source>Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta</translation>
     </message>
     <message>
         <source>In project workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>En espacio de trabajo</translation>
     </message>
 </context>
 <context>
     <name>ClipProperty</name>
     <message>
-        <source>properties</source>
-        <translation>propiedades</translation>
-    </message>
-    <message>
-        <source>New tags edition</source>
-        <translation>Nueva Etiqueta</translation>
-    </message>
-    <message>
-        <source>Enter tags (you can enter multiple tags, separated by a comma)</source>
-        <translation>Ingresar etiquetas</translation>
-    </message>
-    <message>
         <source>Metatags :</source>
-        <translation>Metatags :</translation>
+        <translation>Metaetiquetas:</translation>
     </message>
     <message>
         <source>...</source>
@@ -144,92 +135,104 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Annotations :</source>
-        <translation>Anotaciones :</translation>
+        <translation>Anotaciones:</translation>
+    </message>
+    <message>
+        <source>properties</source>
+        <translation>propiedades</translation>
+    </message>
+    <message>
+        <source>New tags edition</source>
+        <translation>Edición nueva de etiquetas</translation>
+    </message>
+    <message>
+        <source>Enter tags (you can enter multiple tags, separated by a comma)</source>
+        <translation>Introducir etiquetas (puede introducir multiples etiquetas, separadas por una coma)</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Add</name>
     <message>
         <source>Adding clip to track %1</source>
-        <translation type="unfinished">Agregando clip a a pista $1</translation>
+        <translation>Añadiendo vídeo a pista %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Move</name>
     <message>
         <source>Moving clip from track %1 to %2</source>
-        <translation type="unfinished">Moviendo clip de la pista $1 a la $2</translation>
+        <translation>Moviendo vídeo de pista %1 a %2</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Remove</name>
     <message>
         <source>Removing clip </source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminando vídeo</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Resize</name>
     <message>
         <source>Resizing clip</source>
-        <translation type="unfinished">Redimensionando clip</translation>
+        <translation>Escalando vídeo</translation>
     </message>
 </context>
 <context>
     <name>Commands::Clip::Split</name>
     <message>
         <source>Splitting clip</source>
-        <translation type="unfinished">Dividiendo clip</translation>
+        <translation>Separando vídeo</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Add</name>
     <message>
         <source>Adding effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadiendo efecto %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Move</name>
     <message>
         <source>Moving effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Moviendo efecto %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Remove</name>
     <message>
         <source>Deleting effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminando efecto %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Effect::Resize</name>
     <message>
         <source>Resizing effect %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Escalando efecto %1</translation>
     </message>
 </context>
 <context>
     <name>Commands::Generic</name>
     <message>
         <source>Invalid action</source>
-        <translation type="unfinished"></translation>
+        <translation>Acción inválida</translation>
     </message>
 </context>
 <context>
     <name>CrashHandler</name>
     <message>
-        <source>Unknown signal</source>
-        <translation>Señal desconocida</translation>
+        <source>VLMC Crash handler</source>
+        <translation>Manejador de cuelgues de VLMC</translation>
     </message>
     <message>
-        <source>VLMC Crash handler</source>
-        <translation>El control de VLMC ha fallado</translation>
+        <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
+        <translation>Ha ocurrido un error. Sentimos en inconveniente, aunque hemos salvado su proyecto. Será reabierto la siguiente vez que abra VLMC.</translation>
     </message>
     <message>
         <source>Ok</source>
-        <translation>Ok</translation>
+        <translation>Aceptar</translation>
     </message>
     <message>
         <source>Restart</source>
@@ -237,26 +240,26 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Crash_Description</source>
-        <translation>Descripción del fallo</translation>
+        <translation>Descripción de cuelgue</translation>
+    </message>
+    <message>
+        <source>Unknown signal</source>
+        <translation>Señal desconocida</translation>
     </message>
     <message>
         <source>A crash occurred. Signal received: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>An error occurred. We&apos;re sorry for the inconvenient, though we saved your project. It will be reopened next time you open VLMC.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha ocurrido un cuelgue. Señal recibida:</translation>
     </message>
 </context>
 <context>
     <name>DockWidgetManager</name>
     <message>
         <source>Media Library</source>
-        <translation>Biblioteca multimedia</translation>
+        <translation>Librería de medios</translation>
     </message>
     <message>
         <source>Clip Preview</source>
-        <translation>Previsualización de clip</translation>
+        <translation>Previsualización de vídeo</translation>
     </message>
     <message>
         <source>Project Preview</source>
@@ -268,95 +271,95 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Effects List</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de efectos</translation>
     </message>
 </context>
 <context>
     <name>EffectSettingWidget</name>
     <message>
-        <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <source>Effect Properties</source>
+        <translation>Propiedades de efecto</translation>
     </message>
     <message>
-        <source>Effect Properties</source>
-        <translation type="unfinished"></translation>
+        <source>Apply</source>
+        <translation>Aplicar</translation>
     </message>
 </context>
 <context>
     <name>EffectStack</name>
     <message>
         <source>Effect stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Pila de efectos</translation>
     </message>
     <message>
         <source>Move the effect up in the stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover el efecto arriba en la pila</translation>
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <source>Move the effect down in the stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover el efecto abajo en la pila</translation>
     </message>
 </context>
 <context>
     <name>EffectWidget</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Formulario</translation>
     </message>
     <message>
         <source>Overview</source>
-        <translation type="unfinished"></translation>
+        <translation>Resumen</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation>Autor</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión</translation>
     </message>
     <message>
         <source>Description</source>
-        <translation type="unfinished">Descripción</translation>
+        <translation>Descripción</translation>
     </message>
     <message>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro</translation>
     </message>
     <message>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuente</translation>
     </message>
     <message>
         <source>Mixer 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Mezclador 2</translation>
     </message>
     <message>
         <source>Mixer 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Mezclador 3</translation>
     </message>
     <message>
         <source>Unknown type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo desconocido</translation>
     </message>
 </context>
 <context>
     <name>EffectsListView</name>
     <message>
         <source>%1 informations</source>
-        <translation type="unfinished"></translation>
+        <translation>Informaciones %1</translation>
     </message>
 </context>
 <context>
@@ -367,86 +370,58 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Do you want to save it?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Failed to load project file</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Desea guardarlo?</translation>
     </message>
     <message>
         <source>You are about to relocate the project. Every video will be copied to your new workspace.</source>
-        <translation type="unfinished"></translation>
+        <translation>Está apunto de reubicar el proyecto. Cada vídeo será copiado al nuevo espacio de trabajo.</translation>
     </message>
     <message>
         <source>Do you want to proceed?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Desea continuar?</translation>
+    </message>
+    <message>
+        <source>Failed to load project file</source>
+        <translation>Fallo al cargar el archivo del proyecto</translation>
     </message>
     <message>
         <source>Backup file</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de copia de seguridad</translation>
     </message>
     <message>
         <source>A backup file exists for this project. Do you want to load it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Existe una copia de seguridad para este proyecto. ¿Desea cargarlo?</translation>
     </message>
     <message>
         <source>An outdated backup file was found. Do you want to erase it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha encontrado una copia de seguridad antigua. ¿Dese eliminarla?</translation>
     </message>
     <message>
         <source>Enter the output file name</source>
-        <translation type="unfinished">Ingresar el nombre del archivo</translation>
+        <translation>Introduzca el nombre de archivo de salida</translation>
     </message>
     <message>
         <source>VLMC project file(*.vlmc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de proyecto de VLMC (*.vlmc)</translation>
     </message>
     <message>
         <source>Please choose a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccione un archivo de proyecto</translation>
     </message>
 </context>
 <context>
     <name>GeneralPage</name>
     <message>
-        <source>New project wizard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set General options</source>
-        <translation>Ajustar las opciones generales</translation>
-    </message>
-    <message>
-        <source>Form is incomplete</source>
-        <translation>El formulario está incompleto</translation>
-    </message>
-    <message>
-        <source>The project name must be filled.</source>
-        <translation>Debes indicar un nombre para el proyecto</translation>
-    </message>
-    <message>
-        <source>The workspace location must be set.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Missing workspace location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Invalid workspace location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>WizardPage</source>
-        <translation type="unfinished"></translation>
+        <translation>Página de asistente</translation>
     </message>
     <message>
         <source>This guide will step you through the process of setting up a new project.</source>
-        <translation>Esta guía te indicará paso a paso el proceso para crear un nuevo Proyecto.</translation>
+        <translation>Esta guía le ayudará a crear un nuevo proyecto.</translation>
     </message>
     <message>
         <source>Project name</source>
-        <translation>Nombre del Proyecto</translation>
+        <translation>Nombre de proyecto</translation>
     </message>
     <message>
         <source>Description</source>
@@ -454,78 +429,106 @@ Your Qt runtime version: %4
     </message>
     <message>
         <source>Workspace directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio de espacio de trabajo</translation>
     </message>
     <message>
         <source>Browse...</source>
-        <translation>Buscar...</translation>
+        <translation>Explorar...</translation>
     </message>
     <message>
         <source>Project location</source>
-        <translation>Ubicación del Proyecto</translation>
+        <translation>Localización del proyecto</translation>
+    </message>
+    <message>
+        <source>New project wizard</source>
+        <translation>Asistente de nuevo pryecto</translation>
+    </message>
+    <message>
+        <source>Set General options</source>
+        <translation>Establecer opciones generales</translation>
+    </message>
+    <message>
+        <source>Form is incomplete</source>
+        <translation>El formulario está completo</translation>
+    </message>
+    <message>
+        <source>The project name must be filled.</source>
+        <translation>El nombre del proyecto debe ser rellenado.</translation>
+    </message>
+    <message>
+        <source>The workspace location must be set.</source>
+        <translation>La localización del espacio de trabajo de ser establecida.</translation>
+    </message>
+    <message>
+        <source>Missing workspace location</source>
+        <translation>Localización de espacio de trabajo no encontrada</translation>
+    </message>
+    <message>
+        <source>Invalid workspace location</source>
+        <translation>Localización de espacio de trabajo inválida</translation>
     </message>
 </context>
 <context>
     <name>GraphicsAudioItem</name>
     <message>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Name:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Length:&lt;/b&gt; %2</source>
-        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nombre:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Duración:&lt;/b&gt; %2</translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nombre:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Longitud:&lt;/b&gt; %2</translation>
     </message>
 </context>
 <context>
     <name>GraphicsEffectItem</name>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <source>Set color</source>
-        <translation type="unfinished"></translation>
+        <translation>Establecer color</translation>
     </message>
     <message>
         <source>Effect Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades de efecto</translation>
     </message>
 </context>
 <context>
     <name>GraphicsMovieItem</name>
     <message>
         <source>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Name:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Length:&lt;/b&gt; %2</source>
-        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nombre:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Duración:&lt;/b&gt; %2</translation>
+        <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Nombre:&lt;/b&gt; %1&lt;br&gt;&lt;b&gt;Longitud:&lt;/b&gt; %2</translation>
     </message>
 </context>
 <context>
     <name>ImportController</name>
-    <message>
-        <source>Failed to load %1</source>
-        <translation>Falló al abrir %1</translation>
-    </message>
     <message>
         <source>Import</source>
         <translation>Importar</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta de texto</translation>
     </message>
     <message>
         <source>Invalid medias</source>
-        <translation type="unfinished"></translation>
+        <translation>Medios inválidos</translation>
     </message>
     <message>
         <source>Some of the medias you loaded can&apos;t be used for video editing. Do you want VLMC to convert them so you can use them in your project?</source>
-        <translation type="unfinished"></translation>
+        <translation>Algunos de los medios que ha cargado no puede ser usados para la edición de vídeo. ¿Desea que VLMC los convierta para que los pueda usar en su proyecto?</translation>
+    </message>
+    <message>
+        <source>Failed to load %1</source>
+        <translation>Fallo al cargar %1</translation>
     </message>
 </context>
 <context>
     <name>IntroDialog</name>
     <message>
         <source>VideoLAN Movie Creator</source>
-        <translation>VideoLAN Movie Creator</translation>
+        <translation>Creador de vídeos VideoLAN</translation>
     </message>
     <message>
         <source>I understand</source>
-        <translation>Entiendo</translation>
+        <translation>Lo entiendo</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -537,49 +540,121 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;VideoLAN Movie Creator is a &lt;/span&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_release_life_cycle#Pre-alpha&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;pre-alpha&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt; software and is not ready for prime-time. Many key features are &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;simply missing&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;, or even &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;buggy&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;. Our team is composed of volunteers who are working hard to give you the best experience with video editing.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;read more&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;⏎ &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;⏎ p, li { white-space: pre-wrap; }⏎ &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:16pt; font-weight:600;&quot;&gt;Note que&lt;/span&gt;&lt;/p&gt;⏎ &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;⏎ &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt; el Creador de vídeos VideoLAN es un &lt;/span&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_release_life_cycle#Pre-alpha&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;pre-alpha&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt; software y no está listo para su uso habitual. Muchas caracterśiticas clave están &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;simplemente desaparecidas &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;, o incluso &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; font-weight:600;&quot;&gt;tienen errores&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;. Nuestro equipo está compuesto de voluntairios que trabajan duro para proporcionarle la mejor experiencia en la edición de vídeo.&lt;/span&gt;&lt;/p&gt;⏎ &lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14pt;&quot;&gt;&lt;/p&gt;⏎ &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.vlmc.org&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14pt; text-decoration: underline; color:#0057ae;&quot;&gt;lea más&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>ListViewController</name>
     <message>
         <source>Media List</source>
-        <translation>Lista Multimedia</translation>
+        <translation>Lista de medios</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <source>VLMC Renderer</source>
-        <translation>Renderizador VLMC</translation>
-    </message>
-    <message>
-        <source>There is nothing to render.</source>
-        <translation>No hay nada para renderizar.</translation>
-    </message>
-    <message>
-        <source>Crash recovery</source>
-        <translation>Falló la recuperación</translation>
-    </message>
-    <message>
-        <source>Can&apos;t restore project</source>
-        <translation>No se puede restaurar el Proyecto</translation>
-    </message>
-    <message>
-        <source>Preview</source>
-        <translation>Vista previa</translation>
-    </message>
-    <message>
         <source>VideoLAN Movie Creator</source>
-        <translation>VideoLAN Movie Creator</translation>
+        <translation>Creador de vídeos VideoLAN</translation>
+    </message>
+    <message>
+        <source>&amp;Edit</source>
+        <translation>&amp;Editar</translation>
+    </message>
+    <message>
+        <source>&amp;Help</source>
+        <translation>A&amp;yuda</translation>
+    </message>
+    <message>
+        <source>&amp;File</source>
+        <translation>&amp;Archivo</translation>
+    </message>
+    <message>
+        <source>&amp;Export</source>
+        <translation>&amp;Exportar</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>Ven&amp;tana</translation>
+    </message>
+    <message>
+        <source>&amp;View</source>
+        <translation>&amp;Ver</translation>
+    </message>
+    <message>
+        <source>Tools</source>
+        <translation>Herramientas</translation>
+    </message>
+    <message>
+        <source>VLMC Toolbar</source>
+        <translation>Barra de herramientas VLMC</translation>
+    </message>
+    <message>
+        <source>&amp;About</source>
+        <translation>&amp;Acerca de</translation>
     </message>
     <message>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
+        <source>&amp;Preferences</source>
+        <translation>&amp;Preferencias</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation>Previsaualizar</translation>
+    </message>
+    <message>
+        <source>&amp;New Project</source>
+        <translation>&amp;Nuevo proyecto</translation>
+    </message>
+    <message>
+        <source>Open the wizard to create a new project</source>
+        <translation>Abrir el asistente para crear un nuevo proyecto</translation>
+    </message>
+    <message>
+        <source>&amp;Fullscreen</source>
+        <translation>&amp;Pantalla completa</translation>
+    </message>
+    <message>
+        <source>&amp;To a file</source>
+        <translation>A un &amp;archivo</translation>
+    </message>
+    <message>
+        <source>Render your project as a file</source>
+        <translation>Procesar su proyecto a un archivo</translation>
+    </message>
+    <message>
+        <source>&amp;Load Project</source>
+        <translation>&amp;Cargar proyecto</translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation>&amp;Guardar</translation>
+    </message>
+    <message>
+        <source>&amp;Import</source>
+        <translation>&amp;Importar</translation>
+    </message>
+    <message>
+        <source>Import new medias into the current project</source>
+        <translation>Importar nuevos medios en el proyecto actual</translation>
+    </message>
+    <message>
+        <source>Proj&amp;ect Preferences</source>
+        <translation>Preferencias del &amp;proyecto</translation>
+    </message>
+    <message>
+        <source>Save &amp;As</source>
+        <translation>Guardar &amp;como...</translation>
+    </message>
+    <message>
+        <source>&amp;Close Project</source>
+        <translation>&amp;Cerrar proyecto</translation>
+    </message>
+    <message>
         <source>Crash</source>
-        <translation>Fallo:</translation>
+        <translation>Cuelgue</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -590,208 +665,128 @@ p, li { white-space: pre-wrap; }
         <translation>Rehacer</translation>
     </message>
     <message>
-        <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;View</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <source>Share your project on youtube</source>
+        <translation>Compartir su proyeto en YouTube</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;New Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Open the wizard to create a new project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Fullscreen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Load Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Import</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Import new medias into the current project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Proj&amp;ect Preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save &amp;As</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Close Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use the mouse tool to manipulate regions in the timeline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use the scissors to cut regions in the timeline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Zoom out</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Zoom in</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Export</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>VLMC Toolbar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;To a file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Render your project as a file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Share your project on youtube</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Salir</translation>
     </message>
     <message>
         <source>Selection mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo selección</translation>
+    </message>
+    <message>
+        <source>Use the mouse tool to manipulate regions in the timeline</source>
+        <translation>Use el ratón para manipular las regiones en la linea de tiempo</translation>
     </message>
     <message>
         <source>Cut mode</source>
-        <translation type="unfinished">Modo corte</translation>
+        <translation>Modo cortar</translation>
+    </message>
+    <message>
+        <source>Use the scissors to cut regions in the timeline</source>
+        <translation>Use las tijeras para cortar regiones en la linea de tiempo</translation>
+    </message>
+    <message>
+        <source>Zoom out</source>
+        <translation>Alejar</translation>
+    </message>
+    <message>
+        <source>Zoom in</source>
+        <translation>Acercar</translation>
+    </message>
+    <message>
+        <source>VLMC Renderer</source>
+        <translation>Procesador VLMC</translation>
+    </message>
+    <message>
+        <source>There is nothing to render.</source>
+        <translation>No hay nada que procesar.</translation>
+    </message>
+    <message>
+        <source>Crash recovery</source>
+        <translation>Recuperación de cuelgue</translation>
     </message>
     <message>
         <source>VLMC didn&apos;t closed nicely. Do you want to recover your project?</source>
-        <translation type="unfinished"></translation>
+        <translation>VLMC no se cerró bien. ¿Desea recuperar su proyecto?</translation>
+    </message>
+    <message>
+        <source>Can&apos;t restore project</source>
+        <translation>No se puede restaurar el proyecto</translation>
+    </message>
+    <message>
+        <source>VLMC didn&apos;t manage to restore your project. We apology for the inconvenience</source>
+        <translation>VLMC no pudo recuperar su proyecto. Nos disculpamos por el inconveniente</translation>
     </message>
     <message>
         <source>Publish on &amp;Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>Publicar en &amp;internet</translation>
     </message>
 </context>
 <context>
     <name>MediaCellView</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <source>clip count</source>
-        <translation type="unfinished">Contador de clip</translation>
+        <translation>numero de vídeos</translation>
     </message>
     <message>
         <source>length</source>
-        <translation type="unfinished">duración</translation>
+        <translation>longitud</translation>
     </message>
     <message>
         <source>This clip or some of its children are contained in the timeline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este vídeo o algunos de sus hijos está contenidos en la linea de tiempo.</translation>
     </message>
     <message>
         <source>Removing it will delete it from the timeline. Do you want to proceed?</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimiandolo lo eliminará de la linea de tiempo. ¿Desea continuar?</translation>
     </message>
     <message>
         <source>Can&apos;t copy to workspace</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede copiar al espacio de trabajo</translation>
     </message>
     <message>
         <source>Can&apos;t copy this media to workspace: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede copiar este medio al espacio de trabajo: %1</translation>
     </message>
 </context>
 <context>
     <name>MediaLibrary</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <source>Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetas</translation>
     </message>
     <message>
         <source>Import</source>
-        <translation type="unfinished">Importar</translation>
+        <translation>Importar</translation>
     </message>
 </context>
 <context>
     <name>NotificationZone</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
 </context>
 <context>
     <name>OpenPage</name>
     <message>
-        <source>Project wizard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ready to load this project</source>
-        <translation>Listo para abrir este proyecto</translation>
-    </message>
-    <message>
         <source>WizardPage</source>
-        <translation type="unfinished"></translation>
+        <translation>Página de asistente</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -803,45 +798,57 @@ p, li { white-space: pre-wrap; }
 &lt;td style=&quot;border: none;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We have now enough informations to load this project.&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Press &lt;span style=&quot; font-weight:600;&quot;&gt;finish&lt;/span&gt; to close this wizard and start editing your videos!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;⏎ &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;⏎ p, li { white-space: pre-wrap; }⏎ &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;⏎ &lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;⏎ &lt;tr&gt;⏎ &lt;td style=&quot;border: none;&quot;&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Tenemos suficiente información para cargar este proyecto.&lt;/p&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;¡Pulse &lt;span style=&quot; font-weight:600;&quot;&gt;terminar&lt;/span&gt; para cerrar este asistente y empezar la edición de sus vídeos!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Project wizard</source>
+        <translation>Asistente de proyecto</translation>
+    </message>
+    <message>
+        <source>Ready to load this project</source>
+        <translation>Listo para cargar este proyecto</translation>
     </message>
 </context>
 <context>
     <name>PathWidget</name>
     <message>
         <source>Select a path</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccione una ruta</translation>
     </message>
 </context>
 <context>
     <name>PreferenceWidget</name>
     <message>
-        <source>Select the selection tool in the timeline</source>
-        <translation>Seleccionar la herramienta de selección en la líne de tiempo</translation>
+        <source>Automatic save</source>
+        <translation>Guardado automático</translation>
     </message>
     <message>
-        <source>Cut mode</source>
-        <translation>Modo corte</translation>
+        <source>When this option is activated,VLMC will automatically save your project at a specified interval</source>
+        <translation>Cuando esta opción está activada, VLMC guardará automáticamente su proyecto a intervalos regulares</translation>
     </message>
     <message>
-        <source>Select the cut/razor tool in the timeline</source>
-        <translation>Seleccionar la herramienta de corte en la linea de tiempo</translation>
+        <source>Automatic save interval</source>
+        <translation>Intervalo de guardado automático</translation>
+    </message>
+    <message>
+        <source>This is the interval that VLMC will wait between two automatic save</source>
+        <translation>Este es el intervalo que VLMC esperará entre dos guardados automáticos</translation>
     </message>
     <message>
         <source>Media preview</source>
-        <translation>Previsualizar archivo</translation>
+        <translation>Previsualización de medio</translation>
     </message>
     <message>
         <source>Preview the selected media, or pause the current preview</source>
-        <translation>Previsualizar el archivo seleccionado, o pausar la previsualización actual</translation>
+        <translation>Previsualizar el medio seleccionado o pausar la previsualización actual.</translation>
     </message>
     <message>
         <source>Render preview</source>
-        <translation>Renderizar la vista previa</translation>
+        <translation>Procesar previsualización</translation>
     </message>
     <message>
         <source>Preview the project, or pause the current preview</source>
-        <translation>Previsualizar el proyecto, o pausar la previsualización actual</translation>
+        <translation>Previsualizar el proyecto o pausar la previsualización actual</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -849,7 +856,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Undo the last action</source>
-        <translation>Deshacer la última acción</translation>
+        <translation>Deshacer al última acción</translation>
     </message>
     <message>
         <source>Redo</source>
@@ -857,7 +864,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Redo the last action</source>
-        <translation>Rehacer la ultima acción</translation>
+        <translation>Rehacer la última acción</translation>
     </message>
     <message>
         <source>Help</source>
@@ -865,7 +872,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Toggle the help page</source>
-        <translation>Cambiar la pagina de ayuda</translation>
+        <translation>Alternar la página de ayuda</translation>
     </message>
     <message>
         <source>Quit</source>
@@ -884,6 +891,14 @@ p, li { white-space: pre-wrap; }
         <translation>Abrir las preferencias de VLMC</translation>
     </message>
     <message>
+        <source>Project preferences</source>
+        <translation>Preferencias del proyecto</translation>
+    </message>
+    <message>
+        <source>Open the project preferences</source>
+        <translation>Abrir las preferencias del proyecto</translation>
+    </message>
+    <message>
         <source>Fullscreen</source>
         <translation>Pantalla completa</translation>
     </message>
@@ -893,7 +908,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New project</source>
-        <translation>Nuevo Proyecto</translation>
+        <translation>Nuevo proyecto</translation>
+    </message>
+    <message>
+        <source>Open the new project wizard</source>
+        <translation>Abrir el asistente de nuevo proyecto</translation>
     </message>
     <message>
         <source>Open a project</source>
@@ -917,7 +936,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Save the current project to a new file</source>
-        <translation>Guardar el proyecto actual en un nuevo archivo</translation>
+        <translation>Guardar el proyecto actual a un nuevo archivo</translation>
     </message>
     <message>
         <source>Close the project</source>
@@ -929,7 +948,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import media</source>
-        <translation>Importar archivos</translation>
+        <translation>Importar medios</translation>
     </message>
     <message>
         <source>Open the import window</source>
@@ -937,296 +956,281 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Render the project</source>
-        <translation>Renderizar el proyecto</translation>
+        <translation>Procesar el proyecto</translation>
     </message>
     <message>
         <source>Render the project to a file</source>
-        <translation>Renderizar el proyecto a un archivo</translation>
-    </message>
-    <message>
-        <source>The VLMC&apos;s UI language</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Automatic save</source>
-        <translation>Guardado automatico</translation>
-    </message>
-    <message>
-        <source>When this option is activated,VLMC will automatically save your project at a specified interval</source>
-        <translation>Cuando esta opción este activada, VLCM guardará tus proyectos automaticamente según el intervalo de tiempo especificado:</translation>
-    </message>
-    <message>
-        <source>Automatic save interval</source>
-        <translation>Tiempo de guardado automatio</translation>
-    </message>
-    <message>
-        <source>This is the interval that VLMC will wait between two automatic save</source>
-        <translation>Esté es el tiempo que VLCM se tomará entre dos guardados automaticos</translation>
-    </message>
-    <message>
-        <source>Output video FPS</source>
-        <translation>Cuadros por segundos del video de salida</translation>
-    </message>
-    <message>
-        <source>Frame Per Second used when previewing and rendering the project</source>
-        <translation>Cuadros por segundo usados al previsulizar y renderizar el proyecto</translation>
-    </message>
-    <message>
-        <source>Video width</source>
-        <translation>Ancho de video</translation>
-    </message>
-    <message>
-        <source>Width resolution of the output video</source>
-        <translation>Ancho de la resolución del video de salida</translation>
-    </message>
-    <message>
-        <source>Video height</source>
-        <translation>Altura del video</translation>
-    </message>
-    <message>
-        <source>Height resolution of the output video</source>
-        <translation>Altura de la resolución del video de salida</translation>
-    </message>
-    <message>
-        <source>Audio samplerate</source>
-        <translation>Tasa de muestreo de audio</translation>
-    </message>
-    <message>
-        <source>Output project audio samplerate</source>
-        <translation>Tasa de muestro del audio para la salida del proyecto</translation>
-    </message>
-    <message>
-        <source>Project name</source>
-        <translation>Nombre del Proyecto</translation>
-    </message>
-    <message>
-        <source>The project name</source>
-        <translation>El nombre del Proyecto</translation>
-    </message>
-    <message>
-        <source>Open the new project wizard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Language</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Confirm clip deletion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ask for confirmation before deleting a clip from the timeline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Project preferences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Open the project preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Procesar el proyecto a un archivo</translation>
     </message>
     <message>
         <source>Selection mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo selección</translation>
+    </message>
+    <message>
+        <source>Select the selection tool in the timeline</source>
+        <translation>Seleccionar la herramienta de selección en la linea de tiempo</translation>
+    </message>
+    <message>
+        <source>Cut mode</source>
+        <translation>Modo cortar</translation>
+    </message>
+    <message>
+        <source>Select the cut/razor tool in the timeline</source>
+        <translation>Seleccionar la herramienta de cortar en la linea de tiempo</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>Idioma</translation>
+    </message>
+    <message>
+        <source>The VLMC&apos;s UI language</source>
+        <translation>El idioma de la interfaz de VLMC</translation>
+    </message>
+    <message>
+        <source>Confirm clip deletion</source>
+        <translation>Confirmar eliminación de vídeo</translation>
+    </message>
+    <message>
+        <source>Ask for confirmation before deleting a clip from the timeline</source>
+        <translation>Preguntar antes de eliminar un vídeo de la linea de tiempo</translation>
     </message>
     <message>
         <source>Youtube Developer Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Clave de desarrollador de YouTube</translation>
     </message>
     <message>
         <source>Youtube Username</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de usuario de YouTube</translation>
     </message>
     <message>
         <source>Proxy Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Puerto de proxy</translation>
     </message>
     <message>
         <source>Proxy Username</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de usuario de proxy</translation>
     </message>
     <message>
         <source>Proxy Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Contraseña de proxy</translation>
     </message>
     <message>
         <source>The default location where to store projects folders</source>
-        <translation type="unfinished"></translation>
+        <translation>La localización predeterminada donde almacena las carpetas de proyectos</translation>
     </message>
     <message>
-        <source>The temporary folder used by VLMC to process videos.</source>
-        <translation type="unfinished"></translation>
+        <source>Output video FPS</source>
+        <translation>FPS del vídeo</translation>
     </message>
     <message>
-        <source>VLMC&apos;s Youtube Developer Key</source>
-        <translation type="unfinished"></translation>
+        <source>Frame Per Second used when previewing and rendering the project</source>
+        <translation>Cuadros por segundo usados al previsualizar y procesar el proyecto</translation>
     </message>
     <message>
-        <source>Valid YouTube username</source>
-        <translation type="unfinished"></translation>
+        <source>Video width</source>
+        <translation>Anchura del vídeo</translation>
     </message>
     <message>
-        <source>Youtube Password</source>
-        <translation type="unfinished"></translation>
+        <source>Width resolution of the output video</source>
+        <translation>Anchura de resolución del vídeo de salida</translation>
     </message>
     <message>
-        <source>Enable Proxy for VLMC</source>
-        <translation type="unfinished"></translation>
+        <source>Video height</source>
+        <translation>Altura del vídeo</translation>
     </message>
     <message>
-        <source>Enables Global Network Proxy for VLMC.</source>
-        <translation type="unfinished"></translation>
+        <source>Height resolution of the output video</source>
+        <translation>Altura de resolución del vídeo de salida</translation>
     </message>
     <message>
-        <source>Proxy Hostname</source>
-        <translation type="unfinished"></translation>
+        <source>Audio samplerate</source>
+        <translation>Tasa de muestreo del audio</translation>
     </message>
     <message>
-        <source>Set Proxy Hostname.</source>
-        <translation type="unfinished"></translation>
+        <source>Output project audio samplerate</source>
+        <translation>Tasa de muestreo del audio del proyecto</translation>
     </message>
     <message>
-        <source>Set Proxy Port.</source>
-        <translation type="unfinished"></translation>
+        <source>Project name</source>
+        <translation>Nombre del proyecto</translation>
     </message>
     <message>
-        <source>Set Proxy Username, if any.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set Proxy Password, if any.</source>
-        <translation type="unfinished"></translation>
+        <source>The project name</source>
+        <translation>El nombre del proyecto</translation>
     </message>
     <message>
         <source>Project default location</source>
-        <translation type="unfinished"></translation>
+        <translation>Localización por defecto del proyecto</translation>
     </message>
     <message>
         <source>Temporary folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta temporal</translation>
+    </message>
+    <message>
+        <source>The temporary folder used by VLMC to process videos.</source>
+        <translation>La carpeta temporal usada por VLMC para procesar los vídeos.</translation>
+    </message>
+    <message>
+        <source>VLMC&apos;s Youtube Developer Key</source>
+        <translation>Clave de desarollador de YouTube de VLMC</translation>
+    </message>
+    <message>
+        <source>Valid YouTube username</source>
+        <translation>Nombre de usuario de YouTube válido</translation>
+    </message>
+    <message>
+        <source>Youtube Password</source>
+        <translation>Contraseña de YouTube</translation>
     </message>
     <message>
         <source>Leave this field empty, password will be stored in unencrypted form.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dejar esta campo vació, la contraseña se guardará sin cifrar.</translation>
+    </message>
+    <message>
+        <source>Enable Proxy for VLMC</source>
+        <translation>Habilitar proxy para VLMC</translation>
+    </message>
+    <message>
+        <source>Enables Global Network Proxy for VLMC.</source>
+        <translation>Habilita proxy de red global para VLMC</translation>
+    </message>
+    <message>
+        <source>Proxy Hostname</source>
+        <translation>Nombre de máquina del proxy</translation>
+    </message>
+    <message>
+        <source>Set Proxy Hostname.</source>
+        <translation>Establecer nombre de máquina del proxy</translation>
+    </message>
+    <message>
+        <source>Set Proxy Port.</source>
+        <translation>Establecer puerto del proxy</translation>
+    </message>
+    <message>
+        <source>Set Proxy Username, if any.</source>
+        <translation>Establecer nombre de usuario del proxy, si hay alguno.</translation>
+    </message>
+    <message>
+        <source>Set Proxy Password, if any.</source>
+        <translation>Establecer contraseña del proxy, si hay alguno.</translation>
     </message>
     <message>
         <source>Video aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Proporción del vídeo</translation>
     </message>
     <message>
         <source>The rendered video aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Proporción del vídeo procesado</translation>
     </message>
     <message>
         <source>Audio channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Canales de audio</translation>
     </message>
     <message>
         <source>Number of audio channels</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de canales de audio</translation>
     </message>
 </context>
 <context>
     <name>PreviewWidget</name>
     <message>
         <source>Preview</source>
-        <translation>Vista previa</translation>
+        <translation>Provisualizar</translation>
     </message>
     <message>
         <source>Go to the previous frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Ir al fotograma anterior</translation>
     </message>
     <message>
         <source>Play / Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Reproducir / Pausar</translation>
     </message>
     <message>
         <source>Go to the next frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Ir al siguiente fotograma</translation>
     </message>
     <message>
         <source>Set marker A</source>
-        <translation type="unfinished"></translation>
+        <translation>Establecer marcador A</translation>
     </message>
     <message>
         <source>Set marker B</source>
-        <translation type="unfinished"></translation>
+        <translation>Establecer marcador B</translation>
     </message>
     <message>
         <source>Cut at markers position</source>
-        <translation type="unfinished"></translation>
+        <translation>Cortar en la posición del los marcadores</translation>
     </message>
     <message>
         <source>Stop the playback</source>
-        <translation type="unfinished"></translation>
+        <translation>Detener la reproducción</translation>
     </message>
     <message>
         <source>Rendering error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de procesador</translation>
     </message>
     <message>
         <source>An error occurred while rendering.
 Please check your VLC installation before reporting the issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha ocurrido un error en el procesamiento.
+Compruebe su instalación de VLC antes de informar de la incidencia.</translation>
     </message>
     <message>
         <source>Adjust Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustar volumen</translation>
     </message>
 </context>
 <context>
     <name>ProjectManager</name>
     <message>
         <source>Can&apos;t open project file. (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede abrir archivo de proyecto. (%1)</translation>
     </message>
     <message>
         <source>Failed to load the project file: %1. Aborting.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fallo al cargar el archivo del proyecto: %1. Abortando.</translation>
     </message>
     <message>
         <source>Untitled Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Proyecto sin nombre</translation>
     </message>
     <message>
         <source>Unsaved Project</source>
-        <translation type="unfinished"></translation>
+        <translation>Proyecto no guardado</translation>
     </message>
 </context>
 <context>
     <name>ProjectWizard</name>
     <message>
         <source>Project wizard</source>
-        <translation type="unfinished"></translation>
+        <translation>Asistente de proyecto</translation>
     </message>
     <message>
         <source>Choose the appropriate action then click Next to continue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccione la acción apropiada luego haga clic en Siguiente para continuar.</translation>
     </message>
     <message>
         <source>This help is likely not to be of any help.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esta ayuda seguramente no es de ninguna ayuda.</translation>
     </message>
     <message>
         <source>Project wizard help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayuda del asistente del proyecto</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Moving clip</source>
-        <translation>Moviendo clip</translation>
+        <translation>Moviendo vídeo</translation>
     </message>
     <message>
         <source>Unable to get backtrace</source>
-        <translation type="unfinished"></translation>
+        <translation>Imposible de obtener trazas</translation>
     </message>
     <message>
         <source>The XMLStream is not a valid YouTube Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>El XMLStream no es un feed válido de YouTube</translation>
     </message>
 </context>
 <context>
@@ -1237,7 +1241,7 @@ Please check your VLC installation before reporting the issue.</source>
     </message>
     <message>
         <source>Width</source>
-        <translation>Ancho</translation>
+        <translation>Anchura</translation>
     </message>
     <message>
         <source>Height</source>
@@ -1253,301 +1257,270 @@ Please check your VLC installation before reporting the issue.</source>
     </message>
     <message>
         <source>Enter the output file name</source>
-        <translation>Ingresar el nombre del archivo</translation>
-    </message>
-    <message>
-        <source>Invalid parameters</source>
-        <translation>Parametros inválidos</translation>
-    </message>
-    <message>
-        <source>Please enter valid rendering parameters</source>
-        <translation>Por favor ingrese parámetros validos para la renderización</translation>
-    </message>
-    <message>
-        <source>Please provide a valid output file!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File already exists!</source>
-        <translation>El archivo ya existe!</translation>
-    </message>
-    <message>
-        <source>Output file already exists, do you want to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nombre de archivo de salida</translation>
     </message>
     <message>
         <source>Videos(%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vídeos (%1)</translation>
+    </message>
+    <message>
+        <source>Invalid parameters</source>
+        <translation>Parámetros inválidos</translation>
+    </message>
+    <message>
+        <source>Please enter valid rendering parameters</source>
+        <translation>Introducir unos parámetros válidos de procesado</translation>
+    </message>
+    <message>
+        <source>Please provide a valid output file!</source>
+        <translation>Proporcione non nombre de archivo válido</translation>
+    </message>
+    <message>
+        <source>File already exists!</source>
+        <translation>El archivo ya existe</translation>
+    </message>
+    <message>
+        <source>Output file already exists, do you want to overwrite it?</source>
+        <translation>El archivo de salida ya existe, ¿desea sobreescribirlo?</translation>
     </message>
     <message>
         <source>Export Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencias de exportación</translation>
     </message>
     <message>
         <source>Output File</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de salida</translation>
     </message>
     <message>
         <source>Frame Rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tasa de fotogramas</translation>
     </message>
     <message>
         <source>Video Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>Calidad de vídeo</translation>
     </message>
     <message>
         <source>Audio Quality</source>
-        <translation type="unfinished"></translation>
+        <translation>Calidad de audio</translation>
     </message>
     <message>
         <source>Video Codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Códec de vídeo</translation>
     </message>
     <message>
         <source>Audio Codec</source>
-        <translation type="unfinished"></translation>
+        <translation>Códec de audio</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation type="unfinished">Personalizado</translation>
+        <translation>Personalizado</translation>
     </message>
     <message>
         <source>QVGA (320x240) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>QVGA (320x240) - 30 fps</translation>
     </message>
     <message>
         <source>VGA (640x480) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>VGA (640x480) - 30 fps</translation>
     </message>
     <message>
         <source>SVGA (800x600) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>SVGA (800x600) - 30 fps</translation>
     </message>
     <message>
         <source>XVGA (1024x768) - 30 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>XVGA (1024x768) - 30 fps</translation>
     </message>
     <message>
         <source>480p NTSC (720x480) - 29.97 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>480p NTSC (720x480) - 29.97 fps</translation>
     </message>
     <message>
         <source>576p PAL (720x576) - 25 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>576p PAL (720x576) - 25 fps</translation>
     </message>
     <message>
         <source>720p (1280x720) - 29.97 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>720p (1280x720) - 29.97 fps</translation>
     </message>
     <message>
         <source>1080p (1920x1080) - 29.97 fps</source>
-        <translation type="unfinished"></translation>
+        <translation>1080p (1920x1080) - 29.97 fps</translation>
     </message>
     <message>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation>Predefiniciones</translation>
     </message>
     <message>
         <source>Export Settings: Publish on Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar preferencias: publicar en internet</translation>
     </message>
 </context>
 <context>
     <name>SearchLineEdit</name>
     <message>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Limpiar</translation>
     </message>
     <message>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrar</translation>
     </message>
 </context>
 <context>
     <name>Settings</name>
     <message>
         <source>Project preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencias de proyecto</translation>
     </message>
     <message>
         <source>VLMC Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencias de VLMC</translation>
     </message>
     <message>
         <source>Restore default?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Restablecer predeterminados?</translation>
     </message>
     <message>
         <source>This will restore all settings default value.
 Are you sure you want to continue?</source>
-        <translation type="unfinished"></translation>
+        <translation>Esto restaurará todas las preferencias a sus valores por defecto.
+¿Desea continuar?</translation>
     </message>
     <message>
         <source>Invalid value</source>
-        <translation type="unfinished"></translation>
+        <translation>Valor inválido</translation>
     </message>
     <message>
         <source>Can&apos;t save settings due to an invalid value</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede guardar la preferencia debido a un valor inválido</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Teclado</translation>
     </message>
     <message>
         <source>YouTube</source>
-        <translation type="unfinished"></translation>
+        <translation>YouTube</translation>
     </message>
     <message>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>Red</translation>
     </message>
     <message>
         <source>Video</source>
-        <translation type="unfinished">Video</translation>
+        <translation>Vídeo</translation>
     </message>
     <message>
         <source>Audio</source>
-        <translation type="unfinished">Audio</translation>
+        <translation>Audio</translation>
     </message>
 </context>
 <context>
     <name>ShareOnInternet</name>
     <message>
         <source>Share Video On Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>Compartir vídeo en internet</translation>
     </message>
     <message>
         <source>Service</source>
-        <translation type="unfinished"></translation>
+        <translation>Servicio</translation>
     </message>
     <message>
         <source>YouTube</source>
-        <translation type="unfinished"></translation>
+        <translation>YouTube</translation>
     </message>
     <message>
         <source>Username</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de usuario</translation>
     </message>
     <message>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Contraseña</translation>
     </message>
     <message>
         <source>Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Categoría</translation>
     </message>
     <message>
         <source>Autos &amp; Vehicles</source>
-        <translation type="unfinished"></translation>
+        <translation>Coches y vehículos</translation>
     </message>
     <message>
         <source>Comedy</source>
-        <translation type="unfinished"></translation>
+        <translation>Comedia</translation>
     </message>
     <message>
         <source>Education</source>
-        <translation type="unfinished"></translation>
+        <translation>Educación</translation>
     </message>
     <message>
         <source>Entertainment</source>
-        <translation type="unfinished"></translation>
+        <translation>Entretenimiento</translation>
     </message>
     <message>
         <source>Film &amp; Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Películas y animación</translation>
     </message>
     <message>
         <source>Games</source>
-        <translation type="unfinished"></translation>
+        <translation>Juegos</translation>
     </message>
     <message>
         <source>Howto &amp; Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Como y estilo</translation>
     </message>
     <message>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Música</translation>
     </message>
     <message>
         <source>News &amp; Politics</source>
-        <translation type="unfinished"></translation>
+        <translation>Noticias y política</translation>
     </message>
     <message>
         <source>Nonprofit &amp; Activism</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin ánimo de lucro y activismo</translation>
     </message>
     <message>
         <source>People &amp; Blogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Gente y blogs</translation>
     </message>
     <message>
         <source>Animals &amp; Pets</source>
-        <translation type="unfinished"></translation>
+        <translation>Animales y animales de compañía</translation>
     </message>
     <message>
         <source>Tech &amp; Science</source>
-        <translation type="unfinished"></translation>
+        <translation>Tecnología y ciencia</translation>
     </message>
     <message>
         <source>Sports</source>
-        <translation type="unfinished"></translation>
+        <translation>Deportes</translation>
     </message>
     <message>
         <source>Travel &amp; Events</source>
-        <translation type="unfinished"></translation>
+        <translation>Viajes y eventos</translation>
     </message>
     <message>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Título</translation>
     </message>
     <message>
         <source>Description</source>
-        <translation type="unfinished">Descripción</translation>
+        <translation>Descripción</translation>
     </message>
     <message>
         <source>Keywords</source>
-        <translation type="unfinished"></translation>
+        <translation>Palabras clave</translation>
     </message>
     <message>
         <source>Make this video private</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Publish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&apos;Username&apos; or &apos;Password&apos; or &apos;Title&apos; cannot be empty. Please check these fields.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Authenticating...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Authenticated!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Video Uploaded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 kB Uploaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer este vídeo privado</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1555,7 +1528,31 @@ Are you sure you want to continue?</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;By publishing, you agree with the Terms Of Services of &lt;/span&gt;&lt;a href=&quot;http://code.google.com/apis/youtube/terms.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;YouTube&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;⏎ &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;⏎ p, li { white-space: pre-wrap; }⏎ &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Lucida Grande&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;⏎ &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;Al publicar, acepta los térmimos de servicio de  &lt;/span&gt;&lt;a href=&quot;http://code.google.com/apis/youtube/terms.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;YouTube&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans&apos;; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Cancelar</translation>
+    </message>
+    <message>
+        <source>&amp;Publish</source>
+        <translation>&amp;Publicar</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message>
+        <source>&apos;Username&apos; or &apos;Password&apos; or &apos;Title&apos; cannot be empty. Please check these fields.</source>
+        <translation>El nombre de usuario, la contraseña o el título no puede estar vacío. Compruebe estos campos.</translation>
+    </message>
+    <message>
+        <source>Authenticating...</source>
+        <translation>Autenticando...</translation>
+    </message>
+    <message>
+        <source>Authenticated!</source>
+        <translation>¡Autenticado!</translation>
     </message>
     <message>
         <source>Your video has been uploaded.
@@ -1563,60 +1560,73 @@ URL (copied to your clipboard):
 %1
 
 Open this in your default web browser?</source>
-        <translation type="unfinished"></translation>
+        <translation>Su vídeo ha sido subido.
+URL (copiada a su portapapeles):
+%1
+
+¿Abrirlo en su navegador web predeterminado?</translation>
     </message>
     <message>
         <source>Some error has occured while processing your video.
 Please check with your video service provider.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ha ocurrido algún error al procesar su vídeo.
+Compruebe su proveedor de servicio de vídeo.</translation>
+    </message>
+    <message>
+        <source>Video Uploaded</source>
+        <translation>Vídeo subido</translation>
+    </message>
+    <message>
+        <source>%1 kB Uploaded</source>
+        <translation>%1 kB subidos</translation>
     </message>
 </context>
 <context>
     <name>StackViewNavController</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <source>Previous</source>
-        <translation type="unfinished"></translation>
+        <translation>Anterior</translation>
     </message>
     <message>
         <source>Media List</source>
-        <translation type="unfinished">Lista Multimedia</translation>
+        <translation>Lista de medios</translation>
     </message>
 </context>
 <context>
     <name>TagWidget</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <source>Keyword Tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetas clave</translation>
     </message>
 </context>
 <context>
     <name>Timeline</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
 </context>
 <context>
     <name>TrackControls</name>
     <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta de texto</translation>
     </message>
     <message>
         <source>Video #%1</source>
-        <translation>Video #%1</translation>
+        <translation>Vídeo #%1</translation>
     </message>
     <message>
         <source>Audio #%1</source>
@@ -1624,68 +1634,60 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Rename track</source>
-        <translation type="unfinished"></translation>
+        <translation>Renombrar pista</translation>
     </message>
     <message>
         <source>Enter the track new name</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nuevo nombre de pista</translation>
     </message>
 </context>
 <context>
     <name>TracksScene</name>
     <message>
         <source>Confirm the deletion of the region?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Confirmar la eliminación de la región?</translation>
     </message>
     <message>
         <source>Confirm the deletion of those regions?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Confirmar la eliminación de esas regiones?</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Si</translation>
     </message>
     <message>
         <source>Yes, don&apos;t ask me again</source>
-        <translation type="unfinished"></translation>
+        <translation>Si, no preguntar de nuevo</translation>
     </message>
     <message>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>No</translation>
     </message>
 </context>
 <context>
     <name>UndoStack</name>
     <message>
         <source>Nothing to undo</source>
-        <translation>Nada que deshacer</translation>
+        <translation>Nada a deshacer</translation>
     </message>
 </context>
 <context>
     <name>VideoPage</name>
     <message>
-        <source>New project wizard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Configure Video settings</source>
-        <translation>Configurar los ajustes del video</translation>
-    </message>
-    <message>
         <source>WizardPage</source>
-        <translation type="unfinished"></translation>
+        <translation>Página de asistente</translation>
     </message>
     <message>
         <source>In this page you can fine tune some of the settings of your new project.</source>
-        <translation type="unfinished"></translation>
+        <translation>En esta página puede ajustar algunas preferencias de su nuevo proyecto.</translation>
     </message>
     <message>
         <source>Video</source>
-        <translation>Video</translation>
+        <translation>Vídeo</translation>
     </message>
     <message>
         <source>Width</source>
-        <translation>Ancho</translation>
+        <translation>Anchura</translation>
     </message>
     <message>
         <source>Height</source>
@@ -1693,7 +1695,7 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Custom</source>
-        <translation>Personalizado</translation>
+        <translation>Personalizada</translation>
     </message>
     <message>
         <source>SDTV/NTSC (480i)</source>
@@ -1725,7 +1727,7 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Frames / sec</source>
-        <translation>Cuadros por segundo</translation>
+        <translation>Fotogramas / seg</translation>
     </message>
     <message>
         <source>Audio</source>
@@ -1737,7 +1739,7 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Stereo</source>
-        <translation>Estereo</translation>
+        <translation>Estéreo</translation>
     </message>
     <message>
         <source>Mono</source>
@@ -1745,7 +1747,7 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>Sample rate</source>
-        <translation>Frecuencia de muestreo</translation>
+        <translation>Tasa de muestra</translation>
     </message>
     <message>
         <source>48000 Hz</source>
@@ -1753,48 +1755,38 @@ Please check with your video service provider.</source>
     </message>
     <message>
         <source>44100 Hz</source>
-        <translation type="unfinished">11000 Hz {44100 ?}</translation>
+        <translation>44100 Hz</translation>
     </message>
     <message>
         <source>22050 Hz</source>
-        <translation type="unfinished">11000 Hz {22050 ?}</translation>
+        <translation>22050 Hz</translation>
     </message>
     <message>
         <source>11025 Hz</source>
-        <translation type="unfinished">11000 Hz {11025 ?}</translation>
+        <translation>11025 Hz</translation>
+    </message>
+    <message>
+        <source>New project wizard</source>
+        <translation>Asistente de nuevo proyecto</translation>
+    </message>
+    <message>
+        <source>Configure Video settings</source>
+        <translation>Configurar preferencias de vídeo</translation>
     </message>
     <message>
         <source>16/9</source>
-        <translation type="unfinished"></translation>
+        <translation>16/9</translation>
     </message>
     <message>
         <source>Video aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Proporción de vídeo</translation>
     </message>
 </context>
 <context>
     <name>WelcomePage</name>
     <message>
-        <source>Project wizard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Open or create a project</source>
-        <translation>Abrir o crear un proyecto</translation>
-    </message>
-    <message>
-        <source>Sorry</source>
-        <translation>Perdón</translation>
-    </message>
-    <message>
-        <source>You first need to select a project from the list.
-Then click next to continue...</source>
-        <translation>Es necesario que elijas un proyecto de la lista primero.
-Luego precione siguiente para continuar...</translation>
-    </message>
-    <message>
         <source>Form</source>
-        <translation type="unfinished">Formulario</translation>
+        <translation>Forma</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1808,7 +1800,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This wizard will help you to create a new project, or open an already existing one.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please select your preferred action below then press next.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;⏎ &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;⏎ p, li { white-space: pre-wrap; }⏎ &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;⏎ &lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;⏎ &lt;tr&gt;⏎ &lt;td style=&quot;border: none;&quot;&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bienvenido al asistnte del proyecto.&lt;/span&gt;&lt;/p&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Este asistente la ayudará a crear un nuevo proyecto o abrir uno existente.&lt;/p&gt;⏎ &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;⏎ &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Seleccione su acción preferida abajo y pulse siguiente.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Create a new project</source>
@@ -1816,7 +1808,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open an existing project</source>
-        <translation>Abrir un archivo existente</translation>
+        <translation>Abrir un proyecto existente</translation>
     </message>
     <message>
         <source>Open...</source>
@@ -1824,19 +1816,37 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Do not show at startup.</source>
-        <translation type="unfinished"></translation>
+        <translation>No mostrar al iniciar.</translation>
+    </message>
+    <message>
+        <source>Project wizard</source>
+        <translation>Asistente de proyecto</translation>
+    </message>
+    <message>
+        <source>Open or create a project</source>
+        <translation>Abrir o crear un proyecto</translation>
+    </message>
+    <message>
+        <source>Sorry</source>
+        <translation>Lo sentimos</translation>
+    </message>
+    <message>
+        <source>You first need to select a project from the list.
+Then click next to continue...</source>
+        <translation>Necesita primero seleccionar un proyecto de la lisata.
+Luego haga clic en Siguiente para continuar...</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <source>Select a project file</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar un archivo de proyecto</translation>
     </message>
     <message>
         <source>VLMC project file(*.vlmc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de proyecto de VLMC  (*.vlmc)</translation>
     </message>
 </context>
 <context>
@@ -1846,54 +1856,54 @@ p, li { white-space: pre-wrap; }
         <translation>Diálogo</translation>
     </message>
     <message>
+        <source>Render in progress...</source>
+        <translation>Procesado en progreso...</translation>
+    </message>
+    <message>
         <source>Frame</source>
-        <translation>Cuadro</translation>
+        <translation>Fotograma</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta de texto</translation>
     </message>
     <message>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <source>Render in progress...</source>
-        <translation>Renderizado en progreso</translation>
-    </message>
-    <message>
         <source>Rendering frame %1 / %2</source>
-        <translation>Cuadros renderizados %1 / %2</translation>
+        <translation>Procesando fotograma %1 de %2</translation>
     </message>
 </context>
 <context>
     <name>Workspace</name>
     <message>
         <source>File already exists!</source>
-        <translation type="unfinished">El archivo ya existe!</translation>
+        <translation>¡El archivo ya existe!</translation>
     </message>
     <message>
         <source>A file with the same name already exists, do you want to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ya existe un archivo con el mismo nombre, ¿desea sobreescribirlo?</translation>
     </message>
     <message>
         <source>Workspace: </source>
-        <translation type="unfinished"></translation>
+        <translation>Espacio de trabajo:</translation>
     </message>
     <message>
         <source> copied to </source>
-        <translation type="unfinished"></translation>
+        <translation>copiado a</translation>
     </message>
 </context>
 <context>
     <name>YouTubeService</name>
     <message>
         <source>YouTube Authentication</source>
-        <translation type="unfinished"></translation>
+        <translation>Autenticación de YouTube</translation>
     </message>
     <message>
         <source>Connection may be insecure, do you want to continue? One or more SSL errors has occurred: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>La conexión puede ser insegura, ¿desea continuar? Han ocurrido uno o más errores SSL: %1</translation>
     </message>
 </context>
 </TS>
