@@ -95,10 +95,10 @@ QVariant MediaLibraryModel::data( const QModelIndex &index, int role ) const
         return QVariant( QUrl::fromPercentEncoding( QByteArray( m->title().c_str() ) ) );
 #ifdef WITH_GUI
     case Qt::DecorationRole:
-        return QPixmap( QString::fromStdString( m->thumbnail() ) );
+        return QPixmap( QString::fromStdString( m->thumbnailMrl(medialibrary::ThumbnailSizeType::Thumbnail) ) );
 #endif
     case Roles::ThumbnailPath:
-        return QVariant( QString::fromStdString( m->thumbnail() ) );
+        return QVariant( QString::fromStdString( m->thumbnailMrl(medialibrary::ThumbnailSizeType::Thumbnail) ) );
     case Roles::Duration:
         return QVariant::fromValue( m->duration() );
     case Roles::Id:
@@ -126,8 +126,8 @@ MediaLibraryModel::roleNames() const
 void MediaLibraryModel::refresh()
 {
     beginResetModel();
-    const auto& audioFiles = m_ml.audioFiles();
-    const auto& videoFiles = m_ml.videoFiles();
+    const auto& audioFiles = m_ml.audioFiles()->all();
+    const auto& videoFiles = m_ml.videoFiles()->all();
     m_media.insert( m_media.end(), audioFiles.begin(), audioFiles.end() );
     m_media.insert( m_media.end(), videoFiles.begin(), videoFiles.end() );
     endResetModel();

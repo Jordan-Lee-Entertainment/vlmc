@@ -205,7 +205,7 @@ Media::fromVariant( const QVariant& v )
 QString
 Media::snapshot()
 {
-    return QString::fromStdString( m_mlMedia->thumbnail() );
+    return QString::fromStdString( m_mlMedia->thumbnailMrl(medialibrary::ThumbnailSizeType::Thumbnail) );
 }
 
 QSharedPointer<Clip>

@@ -218,13 +218,13 @@ Library::onMediaAdded( std::vector<medialibrary::MediaPtr> mediaList )
 }
 
 void
-Library::onMediaUpdated( std::vector<medialibrary::MediaPtr> mediaList )
+Library::onMediaModified( std::vector<int64_t> mediaList )
 {
     for ( auto m : mediaList )
     {
         QMetaObject::invokeMethod( m_model, "updateMedia",
                                    Qt::QueuedConnection,
-                                   Q_ARG( medialibrary::MediaPtr, m ) );
+                                   Q_ARG( int64_t, m ) );
     }
 }
 
@@ -238,12 +238,17 @@ Library::onMediaDeleted( std::vector<int64_t> mediaList )
 }
 
 void
+Library::onMediaThumbnailReady( medialibrary::MediaPtr media, medialibrary::ThumbnailSizeType sizeType, bool success )
+{
+}
+
+void
 Library::onArtistsAdded( std::vector<medialibrary::ArtistPtr> )
 {
 }
 
 void
-Library::onArtistsModified( std::vector<medialibrary::ArtistPtr> )
+Library::onArtistsModified( std::vector<int64_t> )
 {
 }
 
@@ -258,7 +263,7 @@ Library::onAlbumsAdded( std::vector<medialibrary::AlbumPtr> )
 }
 
 void
-Library::onAlbumsModified( std::vector<medialibrary::AlbumPtr> )
+Library::onAlbumsModified( std::vector<int64_t> )
 {
 }
 
@@ -289,7 +294,7 @@ Library::onDiscoveryProgress( const std::string& entryPoint )
 }
 
 void
-Library::onDiscoveryCompleted( const std::string& entryPoint )
+Library::onDiscoveryCompleted( const std::string& entryPoint, bool success )
 {
     if ( entryPoint.empty() == true )
         QMetaObject::invokeMethod( m_model, "refresh",
@@ -310,7 +315,7 @@ Library::onPlaylistsAdded( std::vector<medialibrary::PlaylistPtr> )
 }
 
 void
-Library::onPlaylistsModified( std::vector<medialibrary::PlaylistPtr> )
+Library::onPlaylistsModified( std::vector<int64_t> )
 {
 }
 
@@ -325,16 +330,21 @@ Library::onReloadStarted( const std::string& )
 }
 
 void
-Library::onReloadCompleted( const std::string& entryPoint )
+Library::onEntryPointAdded( const std::string& entryPoint, bool success )
+{
+}
+
+void
+Library::onReloadCompleted( const std::string& entryPoint, bool success )
 {
     if ( entryPoint.empty() == true )
     {
-        for ( auto media : m_ml->videoFiles() )
+        for ( auto media : m_ml->videoFiles()->all() )
             QMetaObject::invokeMethod( m_model, "addMedia",
                                        Qt::QueuedConnection,
                                        Q_ARG( medialibrary::MediaPtr, media ) );
 
-        for ( auto media : m_ml->audioFiles() )
+        for ( auto media : m_ml->audioFiles()->all() )
             QMetaObject::invokeMethod( m_model, "addMedia",
                                        Qt::QueuedConnection,
                                        Q_ARG( medialibrary::MediaPtr, media ) );
@@ -359,5 +369,29 @@ Library::onEntryPointUnbanned( const std::string&, bool )
 void
 Library::onBackgroundTasksIdleChanged( bool )
 {
+}
 
+void
+Library::onGenresAdded( std::vector<medialibrary::GenrePtr> genres )
+{
+}
+
+void
+Library::onGenresModified( std::vector<int64_t> genres )
+{
+}
+
+void
+Library::onGenresDeleted( std::vector<int64_t> genreIds )
+{
+}
+
+void
+Library::onHistoryChanged( medialibrary::HistoryType type )
+{
+}
+
+void
+Library::onRescanStarted( )
+{
 }

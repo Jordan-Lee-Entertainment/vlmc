@@ -44,6 +44,7 @@
 #include "Backend/MLT/MLTInput.h"
 
 #include <medialibrary/IMedia.h>
+#include <medialibrary/IMediaLibrary.h>
 #include <medialibrary/IFile.h>
 
 namespace Backend

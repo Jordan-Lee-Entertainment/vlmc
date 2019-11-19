@@ -84,29 +84,36 @@ private:
 
 private:
     virtual void onMediaAdded( std::vector<medialibrary::MediaPtr> media ) override;
-    virtual void onMediaUpdated( std::vector<medialibrary::MediaPtr> media ) override;
+    virtual void onMediaModified( std::vector<int64_t> media ) override;
     virtual void onMediaDeleted( std::vector<int64_t> ids ) override;
+    virtual void onMediaThumbnailReady( medialibrary::MediaPtr media, medialibrary::ThumbnailSizeType sizeType, bool success ) override;
     virtual void onArtistsAdded( std::vector<medialibrary::ArtistPtr> artists ) override;
-    virtual void onArtistsModified( std::vector<medialibrary::ArtistPtr> artist ) override;
+    virtual void onArtistsModified( std::vector<int64_t> artist ) override;
     virtual void onArtistsDeleted( std::vector<int64_t> ids ) override;
     virtual void onAlbumsAdded( std::vector<medialibrary::AlbumPtr> albums ) override;
-    virtual void onAlbumsModified( std::vector<medialibrary::AlbumPtr> albums ) override;
+    virtual void onAlbumsModified( std::vector<int64_t> albums ) override;
     virtual void onAlbumsDeleted( std::vector<int64_t> ids ) override;
-    virtual void onTracksAdded( std::vector<medialibrary::AlbumTrackPtr> tracks ) override;
-    virtual void onTracksDeleted( std::vector<int64_t> trackIds ) override;
+    virtual void onTracksAdded( std::vector<medialibrary::AlbumTrackPtr> tracks );
+    virtual void onTracksDeleted( std::vector<int64_t> trackIds );
     virtual void onDiscoveryStarted( const std::string& entryPoint ) override;
     virtual void onDiscoveryProgress( const std::string& entryPoint ) override;
-    virtual void onDiscoveryCompleted( const std::string& entryPoint ) override;
+    virtual void onDiscoveryCompleted( const std::string& entryPoint, bool success ) override;
     virtual void onParsingStatsUpdated( uint32_t percent ) override;
     virtual void onPlaylistsAdded( std::vector<medialibrary::PlaylistPtr> playlists ) override;
-    virtual void onPlaylistsModified( std::vector<medialibrary::PlaylistPtr> playlists ) override;
+    virtual void onPlaylistsModified( std::vector<int64_t> playlists ) override;
     virtual void onPlaylistsDeleted( std::vector<int64_t> playlistIds ) override;
     virtual void onReloadStarted( const std::string& entryPoint ) override;
-    virtual void onReloadCompleted( const std::string& entryPoint ) override;
+    virtual void onReloadCompleted( const std::string& entryPoint, bool success ) override;
+    virtual void onEntryPointAdded( const std::string& entryPoint, bool success ) override;
     virtual void onEntryPointRemoved( const std::string& entryPoint, bool success ) override;
     virtual void onEntryPointBanned( const std::string& entryPoint, bool success ) override;
     virtual void onEntryPointUnbanned( const std::string& entryPoint, bool success ) override;
     virtual void onBackgroundTasksIdleChanged( bool isIdle ) override;
+    virtual void onGenresAdded( std::vector<medialibrary::GenrePtr> genres ) override;
+    virtual void onGenresModified( std::vector<int64_t> genres ) override;
+    virtual void onGenresDeleted( std::vector<int64_t> genreIds ) override;
+    virtual void onHistoryChanged( medialibrary::HistoryType type ) override;
+    virtual void onRescanStarted( ) override;
 
 private:
     std::unique_ptr<medialibrary::IMediaLibrary>    m_ml;
