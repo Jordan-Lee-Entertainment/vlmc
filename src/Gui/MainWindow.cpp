@@ -875,7 +875,17 @@ MainWindow::updateRecentProjects()
                                        );
         connect( action, &QAction::triggered, this, [this, file]()
         {
-            Core::instance()->project()->load( file );
+            if ( QFile::exists( file ) == false )
+            {
+                    QMessageBox::warning( this, tr( "Project file missing" ),
+                                          QStringLiteral( "%1\n%2" )
+                                          .arg( tr( "Sorry, we couldn't find your file. Was it moved, renamed, or deleted?" ) )
+                                          .arg( file ) );
+            }
+            else
+            {
+                    Core::instance()->project()->load( file );
+            }
         } );
     }
     m_ui.actionRecent_Projects->setMenu( menu );
